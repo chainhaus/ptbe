@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Question</title>
+</head>
+<body>
+<form method="post" action="@controllers.routes.PTBEController.submitAddQuestion">
+<table>
+<tr>
+	<td>Question</td><td><textarea name="question"></textarea></td>
+</tr>
+<tr>
+	<td>Choice1</td><td><input type="text" name="choice1"></td>
+</tr>
+<tr>
+	<td>Choice2</td><td><input type="text" name="choice2"></td>
+</tr>
+<tr>
+	<td>Choice3</td><td><input type="text" name="choice3"></td>
+</tr>
+<tr>
+	<td>Choice4</td><td><input type="text" name="choice4"></td>
+</tr>
+<tr>
+	<td>Choice5</td><td><input type="text" name="choice5"></td>
+</tr>
+<tr>
+	<td>Answer</td><td><input type="number" name="answer"></td>
+</tr>
+<tr>
+	<td>Free</td><td><input type="checkbox" name="free"></td>
+</tr>
+<tr>
+	<td>Disabled</td><td><input type="checkbox" name="disabled"></td>
+</tr>
+</table>
+<input type=submit>	
+</form>
+</body>
+</html>

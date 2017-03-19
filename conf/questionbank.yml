@@ -1,0 +1,19 @@
+# No tabs allowed in this file
+
+- !!models.ptbe.QuestionBank
+    question: What color is the sky?
+    choice1: Red
+    choice2: Blue
+    choice3: Green
+    choice4: Black
+    choice5: Pink
+    answer: 2
+    free: true
+
+- !!models.raven.AppVersion
+    majorVersion: 1
+    minorVersion: 0
+
+- !!models.raven.SecurityRole
+    name: NYC Salesperson
+    publicFacing: true
