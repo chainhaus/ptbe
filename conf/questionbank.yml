@@ -10,6 +10,19 @@
     answer: 2
     free: true
 
-- !!models.raven.SecurityRole
+- &nycsales !!models.raven.SecurityRole
     name: NYC Salesperson
     publicFacing: true
+    
+- &jamielau !!models.raven.AuthenticatedUser
+    fname: jamiel
+    email: i@jamiel.net
+    disabled: false
+    probation: false
+    password: jamiel
+    role: *nycsales
+    lname: Sheikh
+    sessionUUID: tempsuuid
+    picURL: https://lh3.googleusercontent.com/-1LR2CL6M6CE/AAAAAAAAAAI/AAAAAAAAAAA/3pTen0oTK0s/photo.jpg
+    slackID:  jamiel
+

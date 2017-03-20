@@ -4,9 +4,11 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 import models.ptbe.QuestionBank;
+import models.raven.AuthenticatedUser;
 import play.Application;
 import play.Configuration;
 import play.Environment;
+import play.Logger;
 import play.inject.ApplicationLifecycle;
 import raven.BaseLifecycle;
 import raven.services.ImageService;
@@ -22,7 +24,11 @@ public class Lifecycle extends BaseLifecycle {
 		if (QuestionBank.find.findRowCount() == 0) {
 			loadAndSave("questionbank.yml");
 		}
-			
+		
+
+		for(AuthenticatedUser u : AuthenticatedUser.getAllCurrentAuthenticatedUsers()) {
+			Logger.info("email " + u.getEmail() + " " + u.getSessionUUID());
+		}
 		al.addStopHook(() -> {
 			return CompletableFuture.completedFuture(null);
 		});
