@@ -3,17 +3,6 @@
 
 # --- !Ups
 
-create table app_version (
-  id                            bigint auto_increment not null,
-  uuid                          varchar(255),
-  major_version                 integer,
-  minor_version                 integer,
-  version                       bigint not null,
-  created_at                    DATETIME not null,
-  updated_at                    DATETIME not null,
-  constraint pk_app_version primary key (id)
-);
-
 create table audit_trail (
   id                            bigint auto_increment not null,
   uuid                          varchar(255),
@@ -54,6 +43,7 @@ create table authenticated_user (
   probation                     boolean,
   email_bounced                 boolean,
   proxy_email_id                varchar(255),
+  session_uuid                  varchar(255),
   force_change_password         boolean,
   last_login                    datetime,
   password_reminder             varchar(255),
@@ -312,8 +302,6 @@ drop index if exists ix_inbox_message_sender_id;
 
 alter table inbox_message drop constraint if exists fk_inbox_message_receiver_id;
 drop index if exists ix_inbox_message_receiver_id;
-
-drop table if exists app_version;
 
 drop table if exists audit_trail;
 

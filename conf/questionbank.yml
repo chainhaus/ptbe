@@ -10,10 +10,6 @@
     answer: 2
     free: true
 
-- !!models.raven.AppVersion
-    majorVersion: 1
-    minorVersion: 0
-
 - !!models.raven.SecurityRole
     name: NYC Salesperson
     publicFacing: true
