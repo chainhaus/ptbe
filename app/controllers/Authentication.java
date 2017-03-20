@@ -22,9 +22,10 @@ public class Authentication extends BaseAuthentication {
     	
     	if(super.authenticate(loginForm)) {
     		AuthenticatedUser u = AuthenticatedUser.findUserByEmail(loginForm.get().getEmail());
-    		if (u.isEmailVerified())
+    		if (u.isEmailVerified()) {
     			json.message="Success";
-    		else
+    			json.sessionUUID = u.getSessionUUID();
+    		} else
     			json.message="Email unverified";
     	}
     	else
