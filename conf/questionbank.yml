@@ -1,14 +1,80 @@
 # No tabs allowed in this file
 
 - !!models.ptbe.QuestionBank
-    question: What color is the sky?
-    choice1: Red
-    choice2: Blue
-    choice3: Green
-    choice4: Black
-    choice5: Pink
-    answer: 2
+    question: How many years is a salesperson license valid for?
+    choice1: 2
+    choice2: 5
+    choice3: Indefinite
+    choice4: 3
+    choice5: 1
+    answer: 1
     free: true
+
+- !!models.ptbe.QuestionBank
+    question: What does GCI stand for?
+    choice1: Gross Commission Income
+    choice2: Guest Common Incentive
+    choice3: Gas, Car and Incidentals
+    choice4: Geographic Commision Income
+    choice5: Global Committee on Income
+    answer: 1
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: What is the minimum age for a broker?
+    choice1: 19
+    choice2: 21
+    choice3: 18
+    choice4: 20
+    choice5: 16
+    answer: 4
+    free: true
+    
+- !!models.ptbe.QuestionBank
+    question: A disclosure form is required from
+    choice1: Buyers
+    choice2: Sellers
+    choice3: Renters
+    choice4: Landlords
+    choice5: All of the above
+    answer: 5
+    free: true  
+
+- !!models.ptbe.QuestionBank
+    question: The government agency that handles licenses is
+    choice1: Department of State
+    choice2: Department of Treasury
+    choice3: FDIC
+    choice4: IRS
+    choice5: Lawyers
+    answer: 1
+    free: false
+
+- !!models.ptbe.QuestionBank
+    question: Radon is best described as a
+    choice1: Liquid
+    choice2: Gas
+    choice3: Solid
+    choice4: Pulsar
+    choice5: Wave
+    answer: 2
+    free: false   
+
+- !!models.ptbe.QuestionBank
+    question: How many continuing education credits are required of agents?
+    choice1: 33.5
+    choice2: 37.5
+    choice3: 30
+    choice4: 20
+    choice5: 10
+    answer: 2
+    free: false 
+
+- !!models.raven.APIRegistry
+    appID: 1
+    apiKey: abc123
+    majorVersion: 1
+    minorVersion: 2
 
 - &nycsales !!models.raven.SecurityRole
     name: NYC Salesperson
@@ -20,6 +86,7 @@
     disabled: false
     probation: false
     password: jamiel
+    emailVerified: true
     role: *nycsales
     lname: Sheikh
     sessionUUID: tempsuuid

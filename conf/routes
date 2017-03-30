@@ -7,18 +7,18 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 
 
 
-GET		/							controllers.PTBEController.viewAddQuestion()
-GET		/ad							controllers.PTBEController.viewUpdateAdURL()
-GET		/viewRegisterUser			controllers.PTBEController.viewRegisterUser()
-POST	/submitAddQuestion			controllers.PTBEController.submitAddQuestion()	
-POST	/submitAdURL				controllers.PTBEController.submitAdURL()
+GET		/								controllers.PTBEController.viewAddQuestion()
+GET		/ad								controllers.PTBEController.viewUpdateAdURL()
+GET		/viewRegisterUser				controllers.PTBEController.viewRegisterUser()
+POST	/submitAddQuestion				controllers.PTBEController.submitAddQuestion()	
+POST	/submitAdURL					controllers.PTBEController.submitAdURL()
 
 
 # api
 GET		/api/1/getQuestionBank			controllers.PTBEController.getQuestionBank()
 GET		/api/1/getQuestionBankPremium	controllers.PTBEController.getQuestionBankPremium()
 GET		/api/1/resetPassword			controllers.PTBEController.resetPassword()
-POST	/api/1/loginUser				controllers.Authentication.authenticate()
+POST	/api/1/authenticateUser			controllers.PTBEController.authenticateUser()
 GET		/api/1/getVersion				controllers.PTBEController.getVersionJSON()
 GET		/api/1/getAd					controllers.PTBEController.getAd()
-POST	/api/1/submitSignUp				controllers.raven.SignupController.submitSignUp()
+POST	/api/1/submitSignUp				controllers.PTBEController.submitSignUp()

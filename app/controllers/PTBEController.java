@@ -4,25 +4,32 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import javax.inject.Inject;
+
 import com.avaje.ebean.Ebean;
 
 import controllers.raven.BaseAPIController;
 import models.ptbe.QuestionBank;
+import play.Configuration;
 import play.data.Form;
 import play.libs.Json;
 import play.mvc.Result;
 
 public class PTBEController extends BaseAPIController {
 	
+
+	@Inject
+	public PTBEController(Configuration conf) {
+		super(conf);
+		// TODO Auto-generated constructor stub
+	}
+
+
+
 	private String adImageURL;
 	private String adClickURL;
 	
 	public Result resetPassword() {
-		return ok("");
-	}
-	
-	public Result loginUser() {
-		
 		return ok("");
 	}
 	
@@ -32,10 +39,6 @@ public class PTBEController extends BaseAPIController {
 	
 	public Result viewRegisterUser() {
 		return ok(views.html.ptbe.ViewRegisterUser.render());
-	}
-	
-	public Result authenticateUser() {
-		return ok("");
 	}
 	
 	public Result submitAddQuestion() {
@@ -57,10 +60,6 @@ public class PTBEController extends BaseAPIController {
 		}
 		
 		return redirect(routes.PTBEController.viewAddQuestion());
-	}
-	
-	public void resetUserPassword() {
-		
 	}
 	
 	public Result getQuestionBank() {

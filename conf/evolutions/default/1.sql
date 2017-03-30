@@ -3,6 +3,26 @@
 
 # --- !Ups
 
+create table apiregistry (
+  id                            bigint auto_increment not null,
+  uuid                          varchar(255),
+  app_id                        integer,
+  app_name                      varchar(255),
+  api_key                       varchar(255),
+  major_version                 integer,
+  minor_version                 integer,
+  version                       bigint not null,
+  created_at                    DATETIME not null,
+  updated_at                    DATETIME not null,
+  constraint pk_apiregistry primary key (id)
+);
+
+create table apiregistry_authenticateduser (
+  apiregistry_id                bigint not null,
+  authenticated_user_id         bigint not null,
+  constraint pk_apiregistry_authenticateduser primary key (apiregistry_id,authenticated_user_id)
+);
+
 create table audit_trail (
   id                            bigint auto_increment not null,
   uuid                          varchar(255),
@@ -151,6 +171,16 @@ create table login_audit (
   constraint pk_login_audit primary key (id)
 );
 
+create table note (
+  id                            bigint auto_increment not null,
+  uuid                          varchar(255),
+  note                          TEXT,
+  version                       bigint not null,
+  created_at                    DATETIME not null,
+  updated_at                    DATETIME not null,
+  constraint pk_note primary key (id)
+);
+
 create table password_reset (
   id                            bigint auto_increment not null,
   uuid                          varchar(255),
@@ -264,6 +294,12 @@ create table word_list (
   constraint pk_word_list primary key (id)
 );
 
+alter table apiregistry_authenticateduser add constraint fk_apiregistry_authenticateduser_apiregistry foreign key (apiregistry_id) references apiregistry (id) on delete restrict on update restrict;
+create index ix_apiregistry_authenticateduser_apiregistry on apiregistry_authenticateduser (apiregistry_id);
+
+alter table apiregistry_authenticateduser add constraint fk_apiregistry_authenticateduser_authenticated_user foreign key (authenticated_user_id) references authenticated_user (id) on delete restrict on update restrict;
+create index ix_apiregistry_authenticateduser_authenticated_user on apiregistry_authenticateduser (authenticated_user_id);
+
 alter table authenticated_user_security_role add constraint fk_authenticated_user_security_role_authenticated_user foreign key (authenticated_user_id) references authenticated_user (id) on delete restrict on update restrict;
 create index ix_authenticated_user_security_role_authenticated_user on authenticated_user_security_role (authenticated_user_id);
 
@@ -285,6 +321,12 @@ create index ix_inbox_message_receiver_id on inbox_message (receiver_id);
 
 # --- !Downs
 
+alter table apiregistry_authenticateduser drop constraint if exists fk_apiregistry_authenticateduser_apiregistry;
+drop index if exists ix_apiregistry_authenticateduser_apiregistry;
+
+alter table apiregistry_authenticateduser drop constraint if exists fk_apiregistry_authenticateduser_authenticated_user;
+drop index if exists ix_apiregistry_authenticateduser_authenticated_user;
+
 alter table authenticated_user_security_role drop constraint if exists fk_authenticated_user_security_role_authenticated_user;
 drop index if exists ix_authenticated_user_security_role_authenticated_user;
 
@@ -303,6 +345,10 @@ drop index if exists ix_inbox_message_sender_id;
 alter table inbox_message drop constraint if exists fk_inbox_message_receiver_id;
 drop index if exists ix_inbox_message_receiver_id;
 
+drop table if exists apiregistry;
+
+drop table if exists apiregistry_authenticateduser;
+
 drop table if exists audit_trail;
 
 drop table if exists authenticated_user;
@@ -320,6 +366,8 @@ drop table if exists inbox_message;
 drop table if exists job;
 
 drop table if exists login_audit;
+
+drop table if exists note;
 
 drop table if exists password_reset;
 
