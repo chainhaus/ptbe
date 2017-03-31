@@ -181,6 +181,19 @@ create table note (
   constraint pk_note primary key (id)
 );
 
+create table ptbeuser (
+  id                            bigint auto_increment not null,
+  uuid                          varchar(255),
+  user_id                       bigint,
+  in_app_purchased              boolean,
+  disabled                      boolean,
+  version                       bigint not null,
+  created_at                    DATETIME not null,
+  updated_at                    DATETIME not null,
+  constraint uq_ptbeuser_user_id unique (user_id),
+  constraint pk_ptbeuser primary key (id)
+);
+
 create table password_reset (
   id                            bigint auto_increment not null,
   uuid                          varchar(255),
@@ -318,6 +331,8 @@ create index ix_inbox_message_sender_id on inbox_message (sender_id);
 alter table inbox_message add constraint fk_inbox_message_receiver_id foreign key (receiver_id) references authenticated_user (id) on delete restrict on update restrict;
 create index ix_inbox_message_receiver_id on inbox_message (receiver_id);
 
+alter table ptbeuser add constraint fk_ptbeuser_user_id foreign key (user_id) references authenticated_user (id) on delete restrict on update restrict;
+
 
 # --- !Downs
 
@@ -345,6 +360,8 @@ drop index if exists ix_inbox_message_sender_id;
 alter table inbox_message drop constraint if exists fk_inbox_message_receiver_id;
 drop index if exists ix_inbox_message_receiver_id;
 
+alter table ptbeuser drop constraint if exists fk_ptbeuser_user_id;
+
 drop table if exists apiregistry;
 
 drop table if exists apiregistry_authenticateduser;
@@ -368,6 +385,8 @@ drop table if exists job;
 drop table if exists login_audit;
 
 drop table if exists note;
+
+drop table if exists ptbeuser;
 
 drop table if exists password_reset;
 

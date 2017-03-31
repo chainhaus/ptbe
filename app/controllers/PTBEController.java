@@ -17,15 +17,12 @@ import play.mvc.Result;
 
 public class PTBEController extends BaseAPIController {
 	
-
 	@Inject
 	public PTBEController(Configuration conf) {
 		super(conf);
 		// TODO Auto-generated constructor stub
 	}
-
-
-
+	
 	private String adImageURL;
 	private String adClickURL;
 	
