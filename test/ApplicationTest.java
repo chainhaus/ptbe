@@ -4,10 +4,14 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.databind.JsonNode;
+
+import models.raven.AuthenticatedUser;
+
 import org.junit.*;
 
 import play.mvc.*;
 import play.test.*;
+import play.Application;
 import play.data.DynamicForm;
 import play.data.validation.ValidationError;
 import play.data.validation.Constraints.RequiredValidator;
@@ -33,13 +37,33 @@ public class ApplicationTest {
         int a = 1 + 1;
         assertEquals(2, a);
     }
-
-    @Test
-    public void renderTemplate() {
-        Content html = views.html.index.render("Your new application is ready.");
-        assertEquals("text/html", html.contentType());
-        assertTrue(html.body().contains("Your new application is ready."));
-    }
+    
+    
+	@Test
+	public void testPasswordHashingConsistency() {
+		String password = "abcd123!";
+		AuthenticatedUser u = new AuthenticatedUser();
+		u.setPassword(password);
+		boolean authenticated = u.authenticate(password);
+		assertTrue(authenticated);
+	}
+	
+	/*private Application fakeApp = Helpers.fakeApplication();
+	
+    @Test  
+    public void testEmailVerification2 () {  
+        Helpers.running(fakeApp, () -> {
+    		AuthenticatedUser u = new AuthenticatedUser();
+    		u.setEmail("i@jamiel.net");
+    		u.setFname("Jamiel");
+    		u.setLname("Sheikh");
+    		Call action = controllers.raven.routes.RavenController.verifyEmailAddress(); 
+            Result res = route(Helpers.fakeRequest(action)); 
+            //Optional<String> url = res.header(Http.HeaderNames.LOCATION);
+            //assertEquals("text/html", res.contentType());
+            
+        });
+    } */
 
 
 }
