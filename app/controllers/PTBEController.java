@@ -26,9 +26,7 @@ public class PTBEController extends BaseAPIController {
 	private String adImageURL;
 	private String adClickURL;
 	
-	public Result resetPassword() {
-		return ok("");
-	}
+
 	
 	public Result viewAddQuestion() {
 		return ok(views.html.ptbe.ViewAddQuestion.render());
@@ -193,7 +191,8 @@ public class PTBEController extends BaseAPIController {
 		public AdJSON getAd() {
 			return ad;
 		}
-		
 	}
+	
+	
 
 }
