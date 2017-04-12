@@ -36,6 +36,10 @@ public class PTBEController extends BaseAPIController {
 		return ok(views.html.ptbe.ViewRegisterUser.render());
 	}
 	
+	public Result viewVersion() {
+		return ok(views.html.ptbe.ViewUpdateVersion.render());
+	}
+	
 	public Result submitAddQuestion() {
 		Form<QuestionBank> qbf = ff.form(QuestionBank.class).bindFromRequest();
 		if(qbf.hasErrors()) {

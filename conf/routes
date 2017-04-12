@@ -9,6 +9,8 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 
 GET		/								controllers.PTBEController.viewAddQuestion()
 GET		/ad								controllers.PTBEController.viewUpdateAdURL()
+GET		/version						controllers.PTBEController.viewVersion()
+POST	/version						controllers.PTBEController.submitVersion()
 GET		/viewRegisterUser				controllers.PTBEController.viewRegisterUser()
 POST	/submitAddQuestion				controllers.PTBEController.submitAddQuestion()	
 POST	/submitAdURL					controllers.PTBEController.submitAdURL()

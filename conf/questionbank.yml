@@ -629,7 +629,437 @@
     choice5: Photocopy of a Band-Aid
     answer: 1
     free: true    
-                
+
+- !!models.ptbe.QuestionBank
+    question: Liquids used to cool power plants are called
+    choice1: PCs
+    choice2: PCDs
+    choice3: PCBs
+    choice4: PBCs
+    choice5: PDC
+    answer: 3
+    free: true  
+
+- !!models.ptbe.QuestionBank
+    question: The acronym for Poly-chlorinated Biphenyls is
+    choice1: PC
+    choice2: PCB
+    choice3: PoBi
+    choice4: PB
+    choice5: Phenyls
+    answer: 2
+    free: true
+    
+- !!models.ptbe.QuestionBank
+    question: Who is required to fill out the Property Condition Disclosure Statement?
+    choice1: Buyer's agent
+    choice2: Attorney
+    choice3: Seller's agent
+    choice4: Seller
+    choice5: Buyer
+    answer: 4
+    free: true    
+
+- !!models.ptbe.QuestionBank
+    question: If the basement has a sink hole, on which document does the seller disclose it?
+    choice1: Property Condition Disclosure Statement
+    choice2: Nowhere
+    choice3: Appraisal
+    choice4: In writing at the closing
+    choice5: Agency Disclosure
+    answer: 1
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: If the seller does not provide the a Property Condition Disclosure document, how much is the buyer entitled to?
+    choice1: $75
+    choice2: $100
+    choice3: $500
+    choice4: $97.25
+    choice5: Nothing
+    answer: 3
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Kim is buying a home and the seller declines to produce a Property Condition Disclosure. How much money is Kim entitled to at closing?
+    choice1: $500
+    choice2: $400
+    choice3: $92.22
+    choice4: $78.75
+    choice5: 1% of the closing cost
+    answer: 1
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Property Condition Disclosures are NOT required in which of the following
+    choice1: Commercial sales
+    choice2: Residential sales
+    choice3: A two-family home
+    choice4: Waterfront 1 bedroom townhouse
+    choice5: A one-family duplex brick house
+    answer: 1
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Capital gains are defined as
+    choice1: Excess profits from the sale of only condos
+    choice2: Taxable profits from a sale of an asset
+    choice3: Cash left over from a liquidation
+    choice4: Inheritance money from a death
+    choice5: Progress in Washington DC
+    answer: 2
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: For a single, unmarried person, how much of profit is initially tax-free on the sale of an asset?
+    choice1: $50,000
+    choice2: $205,000
+    choice3: $250,000
+    choice4: $25,000
+    choice5: $249,999
+    answer: 3
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: John buys a home in 2008 for $320,000. Three years later he sells it for $580,000. What is his taxable capital gains?
+    choice1: $250,000
+    choice2: $580,000
+    choice3: $260,000
+    choice4: $10,000
+    choice5: $0
+    answer: 4
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Veronica sells her home for $820,000, owning it for 5 years. Her accountant says her taxable capital gains is $100,000. How much did she buy the home for?
+    choice1: $570,000 
+    choice2: $100,000
+    choice3: $470,001
+    choice4: $820,000
+    choice5: $470,000
+    answer: 5
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Grigorio does quick flips and buys a home for $120,000 only to sell it a week later for $140,000. What is his taxable capital gains?
+    choice1: $140,000
+    choice2: $0
+    choice3: $65,000
+    choice4: $20,000
+    choice5: $120,000
+    answer: 4
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: How much profit is tax-exempt on a sale of home owned by a married couple?
+    choice1: $250,000
+    choice2: $500,000
+    choice3: $84,572
+    choice4: Depends on price
+    choice5: $20,000
+    answer: 2
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: George and Georgina have been married for the past 10 years and own a Manhattan studio for 3 years. If they decide to sell it, how much profit is tax-free?
+    choice1: $0
+    choice2: Depends on purchase and sale price
+    choice3: $250,000
+    choice4: $300,000
+    choice5: $500,000
+    answer: 5
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Frank and Aleena married last week and decided to sell Frank's Upper East Side co-op to fund a world trip. How much profit is tax-free?
+    choice1: Cannot be determined from the given information
+    choice2: $250,000
+    choice3: $500,000
+    choice4: $200,000
+    choice5: $750,000
+    answer: 1
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: You plan on purchasing a property for $100,000. How many years do you need to hold it before your first $250k in profits are tax-exempt?
+    choice1: 2 years
+    choice2: 5 years
+    choice3: 3-4 months
+    choice4: 3 years
+    choice5: A day
+    answer: 1
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: A blind advertisement
+    choice1: Has insufficient or vague information
+    choice2: Is printed without thought
+    choice3: Details the exact location of the property
+    choice4: States precisely the name of the agent
+    choice5: None of these
+    answer: 1
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Moe places an ad in the classified sections of the Times and states only the following '3 Bedroom, $3900, UES'. This is known as a
+    choice1: Quickie ad
+    choice2: Blind ad
+    choice3: Bumper ad
+    choice4: Bait and switch
+    choice5: Leadership advertising
+    answer: 2
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Catherine takes an ad out in the Times and states a rental unit, address and her name and that she's an agent. This is not a blind ad because
+    choice1: It's in the Times
+    choice2: Catherine paid for it
+    choice3: The font size was large
+    choice4: Relevant and pertinent details were provided
+    choice5: It ran on Sunday
+    answer: 4
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Do foreclosure sales require a Property Condition Disclosure Statement?
+    choice1: Yes, it is still a sale
+    choice2: No, the law makes an exception for foreclosures
+    choice3: Yes, the courts will require it
+    choice4: No, it is a commercial sale
+    choice5: Yes, all sales do
+    answer: 2
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: If owning is called freehold, then leasing is
+    choice1: Freelease
+    choice2: Freeleasing
+    choice3: Rent to buy
+    choice4: Leasehold
+    choice5: Leasing
+    answer: 4
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: If leasing is called leasehold, then owning is
+    choice1: Ownhold
+    choice2: Freehold
+    choice3: Freeown
+    choice4: Leasehold also
+    choice5: Lease
+    answer: 2
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: The most common form of freehold bundle of rights is
+    choice1: Simple and freehold
+    choice2: Simply free
+    choice3: Freehold
+    choice4: Free and simple
+    choice5: Fee simple
+    answer: 5
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Having all the rights of ownership is referred to as
+    choice1: Fee simple absolute
+    choice2: Seizin
+    choice3: Carpe Diem
+    choice4: Absolute free
+    choice5: Freehold
+    answer: 1
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: The most common form of freehold is
+    choice1: Coops
+    choice2: Bargain and sale
+    choice3: Lesser estates
+    choice4: Fee simple
+    choice5: Commercial property
+    answer: 4
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Which of the following is NOT a right of ownership?
+    choice1: Disposition
+    choice2: Control
+    choice3: Exclusion
+    choice4: Renovation
+    choice5: Quiet enjoyment
+    answer: 4
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Which right of ownership gives the owner the ability to renovate?
+    choice1: Control
+    choice2: Possession
+    choice3: Disposition
+    choice4: Redaction
+    choice5: Alteration
+    answer: 1
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Which right of ownership gives the owner access to the property?
+    choice1: Induction
+    choice2: Possession
+    choice3: Enjoyment
+    choice4: Disposition
+    choice5: Control
+    answer: 2
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Quit enjoyment entitles to the owner to an environment with the following EXCEPT
+    choice1: Nuisance
+    choice2: Noise
+    choice3: Danger
+    choice4: Clean air
+    choice5: Loud neighbors
+    answer: 4
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: The following right best allows an owner to disallow public access, if s/he so chooses
+    choice1: Barrier and Moats Act
+    choice2: Privacy rights
+    choice3: Easement
+    choice4: Egress
+    choice5: Exclusion
+    answer: 5
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: A deed, in the context of real estate, is
+    choice1: Created at the bank
+    choice2: An owner
+    choice3: An act
+    choice4: Proof of title
+    choice5: Title
+    answer: 4
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Which of the following is a document that demonstrates ownership of property
+    choice1: Lease
+    choice2: Deed
+    choice3: Stock certificates
+    choice4: Notarization
+    choice5: Mortgage note
+    answer: 2
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: The difference between a deed and title is
+    choice1: Deed is the paper demonstrating ownership; Title is the concept of ownership
+    choice2: Deed is the concept of ownership; Title is the paper demonstrating ownership
+    choice3: Deed is the concept of ownership; Title is insurance that protects the deed
+    choice4: Deed is the paper demonstrating ownership; Title is the paper demonstrating ownership
+    choice5: Deed and title mean exactly the same thing
+    answer: 1
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: The conveyance of title means that
+    choice1: Title is transferred via a deed
+    choice2: Seller is made aware of title costs
+    choice3: Buyer is made aware of title costs
+    choice4: Deed is transferred via a title
+    choice5: Offer and acceptance have not occurred
+    answer: 1
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: In the context of real estate, what is flashing?
+    choice1: Security panel fixes
+    choice2: Front porch lighting system
+    choice3: Flood prevention
+    choice4: A material used to cover cracks
+    choice5: Closing on a sale in under an hour
+    answer: 4
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: To become a broker, you have to take these many hous of classes in total
+    choice1: 120
+    choice2: 75
+    choice3: 45
+    choice4: 150
+    choice5: 20
+    answer: 1
+    free: true
+    
+- !!models.ptbe.QuestionBank
+    question: An additional these many hours of class are required beyond the salesperson class to be a broker
+    choice1: 55
+    choice2: 40
+    choice3: 75
+    choice4: 120
+    choice5: 45
+    answer: 5
+    free: true
+    
+- !!models.ptbe.QuestionBank
+    question: John is 18. What is earliest age he can be a broker, assuming he is a salesperson now?
+    choice1: 23
+    choice2: 22
+    choice3: 21
+    choice4: 18
+    choice5: 20
+    answer: 5
+    free: true
+    
+- !!models.ptbe.QuestionBank
+    question: How many class hours is the real estate salesperson requirement?
+    choice1: 40
+    choice2: 120
+    choice3: 45
+    choice4: 75
+    choice5: 100
+    answer: 4
+    free: true
+    
+- !!models.ptbe.QuestionBank
+    question: Alicia is 20 years old and a broker. She got her salesperson license at what age?
+    choice1: 17
+    choice2: 18
+    choice3: 19
+    choice4: 16
+    choice5: 20
+    answer: 2
+    free: true
+    
+- !!models.ptbe.QuestionBank
+    question: An aluminum material used to cover cracks and waterproofing roofs is called
+    choice1: Spackle
+    choice2: Flashing
+    choice3: Grout
+    choice4: Cinder
+    choice5: Vent fan
+    answer: 2
+    free: true
+    
+- !!models.ptbe.QuestionBank
+    question: Do two parties in a joint tenancy have right of survivorship if one dies?
+    choice1: Yes
+    choice2: No, if one dies the other loses the property
+    choice3: No, the deceased party's heirs own it now
+    choice4: The courts decide
+    choice5: It is based on financial need
+    answer: 1
+    free: true
+    
+- !!models.ptbe.QuestionBank
+    question: Margaret and Thompson are married and since bought a townhouse in the Upper East Side. This ownership is known as
+    choice1: Ownership by Entirety
+    choice2: For Better Or Worse Tenancy
+    choice3: Tenants In Common
+    choice4: Joint Severalty
+    choice5: Joint Seizin
+    answer: 1
+    free: true
+                    
 - !!models.raven.APIRegistry
     appID: 1
     apiKey: abc123
