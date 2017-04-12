@@ -60,6 +60,7 @@ public class PTBEController extends BaseAPIController {
 	public Result getQuestionBank() {
 		if(!isValidAPIKey() || !isValidSessionKey())
 			return ok("");	
+		l(" -- Question bank retrieved by " + getEmailKey());
 		QuestionBankResponseJSON json = new QuestionBankResponseJSON();
 		List<QuestionBank> qb = QuestionBank.find.where().eq("free", true).and().eq("disabled", false).findList();
 		List<QuestionBankItemResponseJSON> qbi = new ArrayList<QuestionBankItemResponseJSON>(qb.size());
@@ -77,6 +78,7 @@ public class PTBEController extends BaseAPIController {
 	public Result getQuestionBankPremium() {
 		if(!isValidAPIKey() || !isValidSessionKey())
 			return ok("");	
+		l(" -- Question premium bank retrieved by " + getEmailKey());
 		QuestionBankResponseJSON json = new QuestionBankResponseJSON();
 		List<QuestionBank> qb = QuestionBank.find.where().eq("disabled", false).findList();
 		List<QuestionBankItemResponseJSON> qbi = new ArrayList<QuestionBankItemResponseJSON>(qb.size());
@@ -105,6 +107,7 @@ public class PTBEController extends BaseAPIController {
 	public Result getAd() {
 		if(!isValidAPIKey() || !isValidSessionKey())
 			return ok("");	
+		l(" -- Ad retrieved by " + getEmailKey());
 		AdJSON json = new AdJSON();
 		json.adImageURL = adImageURL;
 		json.adClickURL = adClickURL;

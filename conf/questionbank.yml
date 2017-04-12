@@ -41,15 +41,345 @@
     free: true  
 
 - !!models.ptbe.QuestionBank
-    question: The government agency that handles licenses is
+    question: Sheathing is
+    choice1: Cancelling a contract a day before
+    choice2: Waterproof exterior panels on a house
+    choice3: Wiring money without a beneficiary
+    choice4: Removing of bad title on a property
+    choice5: A scene in the Game of Thrones
+    answer: 2
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: A condo is considered
+    choice1: A positive attitude
+    choice2: Restricted by zoning
+    choice3: Shares in a corporation
+    choice4: Real property
+    choice5: Requiring a graduated mortgage
+    answer: 4
+    free: true
+    
+- !!models.ptbe.QuestionBank
+    question: Which of the following is NOT part of OLDCAR
+    choice1: Disclosure
+    choice2: Obedience
+    choice3: Resilience
+    choice4: Accountability
+    choice5: Loyalty
+    answer: 3
+    free: true
+    
+- !!models.ptbe.QuestionBank
+    question: Which of the following is NOT part of OLDCAR
+    choice1: Loving care
+    choice2: Disclosure
+    choice3: Confidentiality
+    choice4: Reasonable care and skill
+    choice5: Obedience
+    answer: 1
+    free: true
+    
+- !!models.ptbe.QuestionBank
+    question: Which of the following is NOT part of OLDCAR
+    choice1: Obeyance
+    choice2: Accountability
+    choice3: Confidentiality
+    choice4: Obedience
+    choice5: Loyalty
+    answer: 1
+    free: true
+    
+- !!models.ptbe.QuestionBank
+    question: Which of the following IS part of OLDCAR
+    choice1: Accounting
+    choice2: Accountability
+    choice3: Financial projections
+    choice4: Response time
+    choice5: Days on market
+    answer: 2
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Which of the following IS part of OLDCAR
+    choice1: Competence
+    choice2: Closure
+    choice3: Ensure
+    choice4: Enclosure
+    choice5: Disclosure
+    answer: 5
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Which of the following IS part of OLDCAR
+    choice1: Accounts
+    choice2: Orally
+    choice3: Royalty
+    choice4: Loyalty
+    choice5: Disloyal
+    answer: 4
+    free: true     
+    
+- !!models.ptbe.QuestionBank
+    question: FNMA is also referred to as
+    choice1: Fannie Mae
+    choice2: Aunt Jemima
+    choice3: Fanny Pack
+    choice4: Fannie May
+    choice5: Mortgage Association
+    answer: 1
+    free: true  
+
+- !!models.ptbe.QuestionBank
+    question: When a loan exceeds FNMA loan parameters, the loan is called
+    choice1: Blockbusted
+    choice2: Non-conforming
+    choice3: A variance
+    choice4: Illiquid
+    choice5: Invalid
+    answer: 2
+    free: true      
+
+- !!models.ptbe.QuestionBank
+    question: FNMA stands for
+    choice1: Future Nation Mortgage Act
+    choice2: Federal Nation Mortgage Associated
+    choice3: Federal National Money Accord
+    choice4: Feudal Network Monetary Association
+    choice5: Federal National Mortgate Association
+    answer: 5
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: A flip tax is
+    choice1: Optional costs incurred by brokerages
+    choice2: Tax on property thats flipped within 60 days
+    choice3: A fee paid by seller to co-op board
+    choice4: 3.75% transaction tax on short sales
+    choice5: A refundable fee
+    answer: 3
+    free: true
+    
+- !!models.ptbe.QuestionBank
+    question: A convenant of seizin promises
+    choice1: To cancel a contract within a number of days
+    choice2: If you seize it, it's yours
+    choice3: An unreasonable delay by plaintiff in filing a lawsuit
+    choice4: The grantor indeed owns the property in the deed
+    choice5: A clause authorizing the Sheriff can possess the land if mortgage is not paid
+    answer: 4
+    free: true
+    
+- !!models.ptbe.QuestionBank
+    question: The convenant that promises the grantor owns the property sold is called
+    choice1: Laches
+    choice2: Seizin
+    choice3: Acceleration
+    choice4: Ensurement
+    choice5: Confirmation
+    answer: 2
+    free: true        
+    
+- !!models.ptbe.QuestionBank
+    question: The covenant of seizin is contained in a
+    choice1: City Register
+    choice2: Sales contract
+    choice3: Lease
+    choice4: Deed
+    choice5: Title policy
+    answer: 4
+    free: true    
+    
+- !!models.ptbe.QuestionBank
+    question: A rise in the CPI most probably indicates
+    choice1: Deflation
+    choice2: Inflation
+    choice3: Stagflation
+    choice4: Negative GDP growth
+    choice5: Positive GDP growth
+    answer: 2
+    free: true    
+    
+- !!models.ptbe.QuestionBank
+    question: An economic inflation is necessarily when there is
+    choice1: A general increase in prices of goods
+    choice2: An increase in workforce productivity
+    choice3: A hyped broker commissions
+    choice4: A real estate bubble
+    choice5: An increase of purchasing power
+    answer: 1
+    free: true    
+    
+- !!models.ptbe.QuestionBank
+    question: An economic inflation is necessarily when there is
+    choice1: A real estate bubble
+    choice2: A decrease in workforce productivity
+    choice3: Increase in minimum wage
+    choice4: Reversal of GDP stagflation
+    choice5: A fall in purchasing power
+    answer: 5
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: An economic deflation is necessarily when there is
+    choice1: Markets cool down
+    choice2: A decrease in prices
+    choice3: Demand for condos hit a new low
+    choice4: The Fed drops interest rate
+    choice5: Stagflation rises
+    answer: 2
+    free: true
+    
+- !!models.ptbe.QuestionBank
+    question: An economic stagflation is necessarily when there is
+    choice1: Zero growth
+    choice2: Growth cycles rapidly
+    choice3: Inflation drops twice
+    choice4: Inflation followed by deflation
+    choice5: Stagnant employment numbers
+    answer: 1
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: When the CPI index drops and purchasing power increases, it's called
+    choice1: Deflation
+    choice2: Staflation
+    choice3: Stagnation
+    choice4: Reverse bubble
+    choice5: Inflation
+    answer: 1
+    free: true      
+
+- !!models.ptbe.QuestionBank
+    question: Illegal mixing of funds that should have been isolated is called
+    choice1: Mixer
+    choice2: Comixing
+    choice3: Commingling
+    choice4: Ponzi
+    choice5: Mingling
+    answer: 3
+    free: true
+        
+- !!models.ptbe.QuestionBank
+    question: Commingling refers to when
+    choice1: The commissioner directly investigates
+    choice2: Investor money is used to pay off other investors
+    choice3: Brokerages keep deposits in escrow
+    choice4: A salesperson's commissions are tallied
+    choice5: There is mixing of monies in the same account that should be separate
+    answer: 5
+    free: true        
+        
+- !!models.ptbe.QuestionBank
+    question: The FHA refers to an act and stands for
+    choice1: Fair Housing Act
+    choice2: Free Home Act
+    choice3: Federal Home Act
+    choice4: Federal Housing Accord
+    choice5: Federal Housing Acts
+    answer: 1
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: The Fair Housing Act was passed in
+    choice1: 1969
+    choice2: 1968
+    choice3: 1966
+    choice4: 1967
+    choice5: 1939
+    answer: 2
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: An Amendment to the FHA was made in
+    choice1: 1990
+    choice2: 1980
+    choice3: 1988
+    choice4: 1968
+    choice5: 1898
+    answer: 3
+    free: true
+            
+- !!models.ptbe.QuestionBank
+    question: The 1988 FHA Amendment protects from discrimination by
+    choice1: Nationality
+    choice2: Race
+    choice3: Family status and the disabled
+    choice4: Income source
+    choice5: Sexual orientation
+    answer: 3
+    free: true
+             
+- !!models.ptbe.QuestionBank
+    question: The FHA of 1968 protects from discrimination by
+    choice1: National origin and religion
+    choice2: Race and national origin
+    choice3: Religion and race
+    choice4: Color and race
+    choice5: Origin and income
+    answer: 1
+    free: true             
+
+- !!models.ptbe.QuestionBank
+    question: Religion and national origin is a protected class under
+    choice1: FHA Amendment 1988
+    choice2: FHA 1968
+    choice3: Civil Rights
+    choice4: FHA 1988
+    choice5: IRS
+    answer: 2
+    free: true
+                        
+- !!models.ptbe.QuestionBank
+    question: The government agency that handles real estate salesperson licenses is
     choice1: Department of State
     choice2: Department of Treasury
-    choice3: FDIC
+    choice3: MIB
     choice4: IRS
     choice5: Lawyers
     answer: 1
-    free: false
+    free: true
 
+- !!models.ptbe.QuestionBank
+    question: In a mortgage loan, one point equals
+    choice1: A 1% reduction in the loan rate
+    choice2: 1% of the interest rate
+    choice3: 1% increase in the loan
+    choice4: .01% of the loan amount
+    choice5: 1% of the loan amount
+    answer: 5
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: A reason a borrow may purchase mortgage points is to
+    choice1: Put money into the mortgage savings account
+    choice2: Lower the loan interest rate
+    choice3: Get costs out of the way upfront
+    choice4: Convert a fixed loan to variable
+    choice5: Protect against inflation
+    answer: 2
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: A bank most likely prefers to sell mortgage points as a means to
+    choice1: Get money upfront and reduce mortgage risks
+    choice2: Meet sales target
+    choice3: Reduce bank's closing costs
+    choice4: Increase customer satisfaction
+    choice5: Satisfy government regulation
+    answer: 1
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: A landlord changes the locks on their non-paying tenant. This is known as
+    choice1: Police power
+    choice2: Laws of escheat
+    choice3: Eminent domain
+    choice4: Seizin
+    choice5: Constructive eviction
+    answer: 5
+    free: true
+    
 - !!models.ptbe.QuestionBank
     question: Radon is best described as a
     choice1: Liquid
@@ -58,18 +388,248 @@
     choice4: Pulsar
     choice5: Wave
     answer: 2
-    free: false   
+    free: true   
 
 - !!models.ptbe.QuestionBank
-    question: How many continuing education credits are required of agents?
+    question: How many continuing education credits are required of agents per 2 year period?
     choice1: 33.5
     choice2: 37.5
     choice3: 30
     choice4: 20
     choice5: 10
     answer: 2
-    free: false 
+    free: true 
 
+- !!models.ptbe.QuestionBank
+    question: A loan amount is $500,000. What is 2 points equal to?
+    choice1: $1,000,000
+    choice2: $2,000
+    choice3: $10,000
+    choice4: $20,000
+    choice5: $110.92
+    answer: 3
+    free: true     
+
+- !!models.ptbe.QuestionBank
+    question: A borrower purchases points for $18,000 on a $600,000 loan. How many points did they purchase?
+    choice1: 18
+    choice2: 3
+    choice3: 60
+    choice4: 38
+    choice5: 20
+    answer: 2
+    free: true    
+
+- !!models.ptbe.QuestionBank
+    question: Samantha lowers her loan interest rate amount by purchasing this at origination
+    choice1: Mortgage insurance
+    choice2: Mortgage points
+    choice3: Title policy
+    choice4: Title insurance
+    choice5: Fixed rate agreement
+    answer: 2
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Jack purchases 3 points on a loan of $1,200,000. Jack is prepaying how much on his loan?
+    choice1: $40,000
+    choice2: $36,000
+    choice3: $42,000
+    choice4: $3,600
+    choice5: $4,000
+    answer: 2
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Which of the following is NOT a type of deed?
+    choice1: Full convenant and warranty
+    choice2: Bargain and sale
+    choice3: Quitclaim
+    choice4: Judicial
+    choice5: County clerk mandated
+    answer: 5
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Which of the following is NOT a type of deed?
+    choice1: Full convenant and warranty
+    choice2: Bargain and sale
+    choice3: Quitclaim
+    choice4: Judicial
+    choice5: Sherrif
+    answer: 5
+    free: true    
+
+- !!models.ptbe.QuestionBank
+    question: Which of the following is NOT true about a Full Covenant & Warranty deed?
+    choice1: Offers the most protection for the buyer
+    choice2: Contains covenants from the seller to the buyer
+    choice3: Contains covenant of seizin
+    choice4: Extremely popular
+    choice5: Is used for future title searches
+    answer: 4
+    free: true 
+
+- !!models.ptbe.QuestionBank
+    question: Which of the following is NOT true about a Quitclaim deed?
+    choice1: Offers the most protection for the buyer
+    choice2: Offers the most protection for the seller
+    choice3: Is commonly used in divorce or title disputes
+    choice4: Resolves a cloud over title
+    choice5: If given a choice, buyers do not prefer it
+    answer: 1
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Which of the following is NOT true about a Full Covenant & Warranty deed?
+    choice1: Offers the most protection for the buyer
+    choice2: Contains covenants from the seller to the buyer
+    choice3: Contains covenant of seizin
+    choice4: Extremely popular
+    choice5: Is used for future title searches
+    answer: 4
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Which of the following is NOT true about a Bargain & Sale deed?
+    choice1: Extremely uncommon
+    choice2: Doesn't protect buyer as much as Full Covenant deed
+    choice3: Might contain covenant of seizin
+    choice4: Contains a few covenants
+    choice5: Could be used in future title searches
+    answer: 1
+    free: true
+    
+- !!models.ptbe.QuestionBank
+    question: Which of the following is NOT a type of deed?
+    choice1: Full convenant and warranty
+    choice2: Bargain and sale
+    choice3: Quitclaim
+    choice4: Judicial
+    choice5: Auctioned or Foreclosed
+    answer: 5
+    free: true 
+
+- !!models.ptbe.QuestionBank
+    question: A deed issued by a court is known as a
+    choice1: Clerk's deed
+    choice2: Judge's deed
+    choice3: Judicial deed
+    choice4: County deed
+    choice5: Magistrate's deed
+    answer: 3
+    free: true 
+
+- !!models.ptbe.QuestionBank
+    question: Ownership is transferred when which of the following occurs
+    choice1: Buyer puts in an offer
+    choice2: Handshake
+    choice3: Title search returns clear
+    choice4: Exchange of money
+    choice5: Offer and acceptance of the deed
+    answer: 5
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Tom wishes to sell his house quickly and drops the price from $475,000 to $450,000. A buyer puts in an offer at $460,000. Which of the following is true?
+    choice1: Offer and acceptance has occurred
+    choice2: Seller has not accepted
+    choice3: The buyer's offer is invalid
+    choice4: The seller's price drop is invalid
+    choice5: The broker is owed commission
+    answer: 2
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Article 12A of the NY State Real Property Law is known as
+    choice1: Building zoning regulation
+    choice2: Salesperson Regulation
+    choice3: Real Estate License Law
+    choice4: Broker Conduct Code
+    choice5: Real Estate Ethics
+    answer: 3
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Which of the following is NOT associated with violations of Article 12A?
+    choice1: $1000 fine
+    choice2: 1 year in jail
+    choice3: Misdemeanor charge
+    choice4: Loss of real estate license
+    choice5: Felony charge
+    answer: 5
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: New York Real Estate License law is Article
+    choice1: 12A
+    choice2: 12
+    choice3: 13
+    choice4: A12
+    choice5: 401k
+    answer: 1
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: If a broker's license is suspended, the licenses of their salespersons is
+    choice1: Revoked
+    choice2: Also suspended
+    choice3: Upgraded to a broker
+    choice4: Transferred to another brokerage
+    choice5: Unaffected
+    answer: 2
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Bradley is a broker and just had his license suspended. Erica and Wayne work as salesperson for Bradley. Their licenses are now
+    choice1: Upgraded to a broker's license
+    choice2: Suspended
+    choice3: Invalid
+    choice4: Have a cloud over them
+    choice5: Have an uncertain future
+    answer: 2
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: Indira's broker license was revoked. How long does she need to wait to reinstate it?
+    choice1: At minimum a year, and it's not guaranteed to be re-issued
+    choice2: Depends on the judge
+    choice3: Indira needs to attend a hearing that will determine when
+    choice4: 6 months
+    choice5: Once all salespersons are paid their commissions owed
+    answer: 1
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: In the context of Article 12A, a licensee is
+    choice1: A broker or salesperson
+    choice2: A broker
+    choice3: A salesperson
+    choice4: Property manager
+    choice5: Landlord
+    answer: 1
+    free: true
+
+- !!models.ptbe.QuestionBank
+    question: A salesperson can only represent a buyer or seller by first associating with a broker
+    choice1: False, a salesperson is an independent contractor
+    choice2: True, a salesperson must work with a licensed broker
+    choice3: True, as long as the broker's license was never suspended
+    choice4: False, Article 12A allows for exceptions for salesperons to operate independently
+    choice5: False, a salesperson and broker differ only in experience
+    answer: 2
+    free: true
+    
+- !!models.ptbe.QuestionBank
+    question: 
+    choice1: 
+    choice2: 
+    choice3: 
+    choice4: 
+    choice5: 
+    answer: 
+    free: true    
+                
 - !!models.raven.APIRegistry
     appID: 1
     apiKey: abc123
