@@ -621,13 +621,13 @@
     free: true
     
 - !!models.ptbe.QuestionBank
-    question: 
-    choice1: 
-    choice2: 
-    choice3: 
-    choice4: 
-    choice5: 
-    answer: 
+    question: What are PCBs in the context of real estate?
+    choice1: Poly-chlorinated Biphenyls
+    choice2: PC Boards
+    choice3: Professional Commercial Board
+    choice4: Pre-closing Buyer
+    choice5: Photocopy of a Band-Aid
+    answer: 1
     free: true    
                 
 - !!models.raven.APIRegistry
