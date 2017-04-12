@@ -53,6 +53,7 @@ create table authenticated_user (
   mobile_verification_code      varchar(255),
   mobile_verification_code_generated boolean,
   mobile_verification_code_date_generated datetime,
+  link_uuid                     varchar(255),
   email_verified                boolean,
   email_verified_date           datetime,
   email_verification_last_sent  datetime,

@@ -14,6 +14,8 @@ POST	/version						controllers.PTBEController.submitVersion()
 GET		/viewRegisterUser				controllers.PTBEController.viewRegisterUser()
 POST	/submitAddQuestion				controllers.PTBEController.submitAddQuestion()	
 POST	/submitAdURL					controllers.PTBEController.submitAdURL()
+GET		/viewResetPassword				controllers.PTBEController.viewResetPassword()
+POST	/submitResetPassword			controllers.PTBEController.submitResetPassword()
 
 
 # api

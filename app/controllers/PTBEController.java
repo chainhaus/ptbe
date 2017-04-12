@@ -10,10 +10,12 @@ import com.avaje.ebean.Ebean;
 
 import controllers.raven.BaseAPIController;
 import models.ptbe.QuestionBank;
+import models.raven.AuthenticatedUser;
 import play.Configuration;
 import play.data.Form;
 import play.libs.Json;
 import play.mvc.Result;
+import raven.forms.ResetPasswordForm;
 
 public class PTBEController extends BaseAPIController {
 	
@@ -27,6 +29,7 @@ public class PTBEController extends BaseAPIController {
 	private String adClickURL;
 	
 
+	// TODO refactor methods into base
 	
 	public Result viewAddQuestion() {
 		return ok(views.html.ptbe.ViewAddQuestion.render());
@@ -38,6 +41,39 @@ public class PTBEController extends BaseAPIController {
 	
 	public Result viewVersion() {
 		return ok(views.html.ptbe.ViewUpdateVersion.render());
+	}
+	
+	public Result viewResetPassword() {
+		String linkUUID = request().getQueryString("linkuuid");
+		if(linkUUID==null || linkUUID.isEmpty())
+			return ok("no link UUID");
+		AuthenticatedUser u = AuthenticatedUser.findUserByLinkUUID(linkUUID);
+		if(u==null)
+			return ok("User not found");
+		if(u.isDisabled())
+			return ok("User is disabled");
+		return ok(views.html.ptbe.ViewResetPassword.render(linkUUID));
+	}
+	
+	public Result submitResetPassword() {
+		Form<ResetPasswordForm> rpf = ff.form(ResetPasswordForm.class).bindFromRequest();
+		if(rpf.hasErrors()) {
+			showFormBindingErrors(rpf);
+			return ok("error");
+		}
+		
+		ResetPasswordForm rp = rpf.get();
+		String linkUUID = rp.getLinkUUID();
+		if(linkUUID==null || linkUUID.isEmpty())
+			return ok("no link UUID");
+		AuthenticatedUser u = AuthenticatedUser.findUserByLinkUUID(linkUUID);
+		if(u==null)
+			return ok("User not found");
+		if(u.isDisabled())
+			return ok("User is disabled");	
+		u.setPassword(rp.getNewPassword());
+		Ebean.update(u);
+		return ok("Successfully updated password");
 	}
 	
 	public Result submitAddQuestion() {
