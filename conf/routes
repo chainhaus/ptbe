@@ -17,7 +17,6 @@ POST	/submitAdURL					controllers.PTBEController.submitAdURL()
 GET		/viewResetPassword				controllers.PTBEController.viewResetPassword()
 POST	/submitResetPassword			controllers.PTBEController.submitResetPassword()
 
-
 # api
 GET		/api/1/getQuestionBank			controllers.PTBEController.getQuestionBank()
 GET		/api/1/getQuestionBankPremium	controllers.PTBEController.getQuestionBankPremium()
