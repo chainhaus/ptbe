@@ -15,6 +15,7 @@ import play.Configuration;
 import play.data.Form;
 import play.libs.Json;
 import play.mvc.Result;
+import raven.forms.ChangePasswordForm;
 import raven.forms.ResetPasswordForm;
 
 public class PTBEController extends BaseAPIController {
@@ -56,7 +57,7 @@ public class PTBEController extends BaseAPIController {
 	}
 	
 	public Result submitResetPassword() {
-		l("Password reset credentials submitted ");
+		l("Password set credentials submitted ");
 		Form<ResetPasswordForm> rpf = ff.form(ResetPasswordForm.class).bindFromRequest();
 		if(rpf.hasErrors()) {
 			showFormBindingErrors(rpf);
@@ -76,7 +77,41 @@ public class PTBEController extends BaseAPIController {
 		Ebean.update(u);
 		return ok("Successfully updated password");
 	}
-	
+
+	public Result submitChangePassword() {
+		l("Password change credentials submitted ");
+		if(!isValidAPIKey() || !isValidSessionKey())
+			return ok("");	
+		Form<ChangePasswordForm> cpf = ff.form(ChangePasswordForm.class).bindFromRequest();
+		if(cpf.hasErrors()) {
+			showFormBindingErrors(cpf);
+			return ok("error");
+		}
+		
+		ChangePasswordForm cp = cpf.get();
+		String email = getEmailKey();
+		AuthenticatedUser u = AuthenticatedUser.findUserByEmail(email);
+		GenericResponseJSON json = new GenericResponseJSON();
+		if(u==null){
+			
+			json.errorCode = -1;
+			json.status = "User not found";
+			return ok(Json.toJson(json));
+		}
+		if(u.isDisabled()){
+			
+			json.errorCode = -2;
+			json.status = "User not found";
+			return ok(Json.toJson(json));
+		}	
+		
+		u.setPassword(cp.getNewPassword());
+		Ebean.update(u);
+		json.errorCode = 0;
+		json.status = "Successfully updated password";		
+		return ok(Json.toJson(json));
+	}
+
 	public Result submitAddQuestion() {
 		Form<QuestionBank> qbf = ff.form(QuestionBank.class).bindFromRequest();
 		if(qbf.hasErrors()) {
