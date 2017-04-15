@@ -6,7 +6,7 @@
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
 
-
+# ui
 GET		/								controllers.PTBEController.viewAddQuestion()
 GET		/ad								controllers.PTBEController.viewUpdateAdURL()
 GET		/version						controllers.PTBEController.viewVersion()
@@ -27,3 +27,5 @@ GET		/api/1/getAd					controllers.PTBEController.getAd()
 POST	/api/1/submitSignUp				controllers.PTBEController.submitSignUp()
 POST	/api/1/purchaseInAppMade		controllers.PTBEController.purchaseInAppMade()
 POST	/api/1/changePassword			controllers.PTBEController.submitChangePassword()
+POST	/api/1/submitTestResult			controllers.PTBEController.submitTestResult()
+GET		/api/1/motd						controllers.PTBEController.getMOTD()

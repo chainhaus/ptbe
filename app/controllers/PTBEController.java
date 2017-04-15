@@ -9,7 +9,11 @@ import javax.inject.Inject;
 import com.avaje.ebean.Ebean;
 
 import controllers.raven.BaseAPIController;
+import controllers.raven.BaseAPIController.GenericResponseJSON;
+import forms.ptbe.TestResultForm;
+import models.ptbe.MOTD;
 import models.ptbe.QuestionBank;
+import models.ptbe.TestResult;
 import models.raven.AuthenticatedUser;
 import play.Configuration;
 import play.data.Form;
@@ -17,6 +21,7 @@ import play.libs.Json;
 import play.mvc.Result;
 import raven.forms.ChangePasswordForm;
 import raven.forms.ResetPasswordForm;
+import raven.forms.SignInForm;
 
 public class PTBEController extends BaseAPIController {
 	
@@ -29,7 +34,114 @@ public class PTBEController extends BaseAPIController {
 	private String adImageURL;
 	private String adClickURL;
 	
-
+	public Result getMOTD() {
+		MOTD m = MOTD.getCurrentMOTD();
+		MOTDResponseJSON json = new MOTDResponseJSON();
+		if(m==null) {
+			json.id = 0;
+			return ok(Json.toJson(json));
+		}
+		json.id = m.getId();
+		json.message = m.getMessage();
+		return ok(Json.toJson(json));
+	}
+	
+	public Result getTestResult() {
+		if(!isValidAPIKey() || !isValidSessionKey())
+			return ok("");
+		GenericResponseJSON jsonError = new GenericResponseJSON();
+		String email = getEmailKey();
+		if(email==null || email.isEmpty()) {
+			jsonError.errorCode = -1;
+			jsonError.status = "Email key blank or null";
+			return ok(Json.toJson(jsonError));
+		}
+		
+		AuthenticatedUser u = AuthenticatedUser.findUserByEmail(email);
+		
+		if(u==null) {
+			jsonError.errorCode = -3;
+			jsonError.status = "User not registered";
+			return ok(Json.toJson(jsonError));
+		}
+		if(u.isDisabled()) {
+			jsonError.errorCode = -4;
+			jsonError.status = "User account is disabled";
+			return ok(Json.toJson(jsonError));
+		}
+		
+		if(!u.isEmailVerified()) {
+			jsonError.errorCode = -5;
+			jsonError.status = "User email not verified";
+			return ok(Json.toJson(jsonError));
+		}
+		
+		List<TestResult> trs = TestResult.getTestHistoryByUser(u);
+		List<TestHistoryJSON> json = new ArrayList<TestHistoryJSON>(trs.size());
+		TestHistoryJSON tj = null;
+		for(TestResult t : trs) {
+			tj = new TestHistoryJSON();
+			tj.date = t.getCreatedAt().toString();
+			tj.testName = t.getTestName();
+			tj.score = String.valueOf(t.getScore());
+			json.add(tj);
+		}
+		return ok(Json.toJson(json));
+	}
+	
+	public Result submitTestResult() {
+		if(!isValidAPIKey() || !isValidSessionKey())
+			return ok("");
+		
+		GenericResponseJSON json = new GenericResponseJSON();
+		String email = getEmailKey();
+		if(email==null || email.isEmpty()) {
+			json.errorCode = -1;
+			json.status = "Email key blank or null";
+			return ok(Json.toJson(json));
+		}
+		AuthenticatedUser u = AuthenticatedUser.findUserByEmail(email);
+		
+		if(u==null) {
+			json.errorCode = -3;
+			json.status = "User not registered";
+			return ok(Json.toJson(json));
+		}
+		if(u.isDisabled()) {
+			json.errorCode = -4;
+			json.status = "User account is disabled";
+			return ok(Json.toJson(json));
+		}
+		
+		if(!u.isEmailVerified()) {
+			json.errorCode = -5;
+			json.status = "User email not verified";
+			return ok(Json.toJson(json));
+		}
+		
+		Form<TestResultForm> trf = ff.form(TestResultForm.class).bindFromRequest();
+		if(trf.hasErrors()) {
+			showFormBindingErrors(trf);		
+			json.errorCode = -1;
+			json.status = "Error";
+			return ok(Json.toJson(json));
+		}
+		
+		TestResultForm tr = trf.get();
+		TestResult t = new TestResult();
+		t.setAnsweredCorrect(tr.getAnsweredCorrect());
+		t.setTestName(tr.getTestName());
+		t.setTotalQuestions(tr.getTotalQuestions());
+		double correct = tr.getAnsweredCorrect();
+		double total = tr.getTotalQuestions();
+		double score = correct / total;
+		t.setScore(score);
+		t.setU(u);
+		Ebean.save(t);
+		json.errorCode = 0;
+		json.status = "Test result recorded successfully";
+		return ok(Json.toJson(json));
+	}
 	// TODO refactor methods into base
 	
 	public Result viewAddQuestion() {
@@ -78,39 +190,7 @@ public class PTBEController extends BaseAPIController {
 		return ok("Successfully updated password");
 	}
 
-	public Result submitChangePassword() {
-		l("Password change credentials submitted ");
-		if(!isValidAPIKey() || !isValidSessionKey())
-			return ok("");	
-		Form<ChangePasswordForm> cpf = ff.form(ChangePasswordForm.class).bindFromRequest();
-		if(cpf.hasErrors()) {
-			showFormBindingErrors(cpf);
-			return ok("error");
-		}
-		
-		ChangePasswordForm cp = cpf.get();
-		String email = getEmailKey();
-		AuthenticatedUser u = AuthenticatedUser.findUserByEmail(email);
-		GenericResponseJSON json = new GenericResponseJSON();
-		if(u==null){
-			
-			json.errorCode = -1;
-			json.status = "User not found";
-			return ok(Json.toJson(json));
-		}
-		if(u.isDisabled()){
-			
-			json.errorCode = -2;
-			json.status = "User not found";
-			return ok(Json.toJson(json));
-		}	
-		
-		u.setPassword(cp.getNewPassword());
-		Ebean.update(u);
-		json.errorCode = 0;
-		json.status = "Successfully updated password";		
-		return ok(Json.toJson(json));
-	}
+
 
 	public Result submitAddQuestion() {
 		Form<QuestionBank> qbf = ff.form(QuestionBank.class).bindFromRequest();
@@ -216,7 +296,22 @@ public class PTBEController extends BaseAPIController {
 		}
 	}
 	
-
+	public class MOTDResponseJSON {
+		public long id;
+		public String message;
+		public long getId() {
+			return id;
+		}
+		public String getMessage() {
+			return message;
+		}
+	}
+	
+	public class TestHistoryJSON {
+		public String testName;
+		public String score;
+		public String date;
+	}
 	
 	public class QuestionBankItemResponseJSON {
 		public long id;

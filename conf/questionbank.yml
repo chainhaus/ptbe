@@ -1083,3 +1083,6 @@
     picURL: https://lh3.googleusercontent.com/-1LR2CL6M6CE/AAAAAAAAAAI/AAAAAAAAAAA/3pTen0oTK0s/photo.jpg
     slackID:  jamiel
 
+- !!models.ptbe.MOTD
+    message: This is a test MOTD
+    disabled: false
