@@ -1,7 +1,12 @@
 package models.ptbe;
 
-import javax.persistence.Entity;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
 
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import com.avaje.ebean.Model.Finder;
 import com.avaje.ebean.annotation.CacheStrategy;
 
@@ -11,15 +16,50 @@ import models.raven.BaseModel;
 @Entity
 public class QuestionBank extends BaseModel {
 	public static Finder<Long, QuestionBank> find = new Finder<>(QuestionBank.class);
+	private static Random seed = new Random(System.nanoTime());
 	private String question;
+	private List<String> choices;
 	private String choice1;
 	private String choice2;
 	private String choice3;
 	private String choice4;
 	private String choice5;
+	@ManyToOne
+	private Topic topic;
 	private boolean free;
 	private boolean disabled;
 	private int answer;
+	
+	public class Stem {
+		public Stem (String choice){
+			this.choice = choice;
+		}
+		public String choice;
+		public boolean answer;
+	}
+	
+	public void shuffleStem() {
+
+		List<Stem> choices = new ArrayList<Stem>(5);
+		choices.add(new Stem(choice1));
+		choices.add(new Stem(choice2));
+		choices.add(new Stem(choice3));
+		choices.add(new Stem(choice4));
+		choices.add(new Stem(choice5));
+		choices.get(answer-1).answer=true;
+		Collections.shuffle(choices,seed);
+		this.choice1 = choices.get(0).choice;
+		if(choices.get(0).answer) this.answer = 1;
+		this.choice2 = choices.get(1).choice;
+		if(choices.get(1).answer) this.answer = 2;
+		this.choice3 = choices.get(2).choice;
+		if(choices.get(2).answer) this.answer = 3;
+		this.choice4 = choices.get(3).choice;
+		if(choices.get(3).answer) this.answer = 4;
+		this.choice5 = choices.get(4).choice;
+		if(choices.get(4).answer) this.answer = 5;
+		
+	}
 	
 	public String getQuestion() {
 		return question;
@@ -75,6 +115,24 @@ public class QuestionBank extends BaseModel {
 	}
 	public void setDisabled(boolean disabled) {
 		this.disabled = disabled;
+	}
+	public Topic getTopic() {
+		return topic;
+	}
+	public void setTopic(Topic topic) {
+		this.topic = topic;
+	}
+
+	public List<String> getChoices() {
+		return choices;
+	}
+
+	public void setChoices(List<String> choices) {
+		this.choices = choices;
+	}
+	
+	public void addChoices(String choices) {
+		this.addChoices(choices);
 	}
 
 }

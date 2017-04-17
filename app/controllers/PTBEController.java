@@ -1,8 +1,10 @@
 package controllers;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 import javax.inject.Inject;
 
@@ -14,6 +16,7 @@ import forms.ptbe.TestResultForm;
 import models.ptbe.MOTD;
 import models.ptbe.QuestionBank;
 import models.ptbe.TestResult;
+import models.ptbe.Topic;
 import models.raven.AuthenticatedUser;
 import play.Configuration;
 import play.data.Form;
@@ -28,11 +31,35 @@ public class PTBEController extends BaseAPIController {
 	@Inject
 	public PTBEController(Configuration conf) {
 		super(conf);
-		// TODO Auto-generated constructor stub
+		this.adImageURL = "http://52.206.94.249:5000/assets/img/adDelease.png";
+		this.adClickURL = "http://beta.delease.com";
 	}
 	
 	private String adImageURL;
 	private String adClickURL;
+	
+	public Result getTopics() {
+		if(!isValidAPIKey() || !isValidSessionKey())
+			return ok("");
+		List<Topic> ts = Topic.getCurrentAll();
+		List<TopicResponseJSON> json = new ArrayList<TopicResponseJSON>(ts.size());
+		TopicResponseJSON j = null;
+		for (Topic t : ts) {
+			j = new TopicResponseJSON();
+			j.id = t.getId();
+			j.topicName = t.getName();
+			json.add(j);
+		}
+		return ok(Json.toJson(json));
+	}
+	
+	public class TopicResponseJSON {
+		public Long id;
+		public String topicName;
+		public String getTopicName() {
+			return topicName;
+		}
+	}
 	
 	public Result getMOTD() {
 		MOTD m = MOTD.getCurrentMOTD();
@@ -52,7 +79,7 @@ public class PTBEController extends BaseAPIController {
 		GenericResponseJSON jsonError = new GenericResponseJSON();
 		String email = getEmailKey();
 		if(email==null || email.isEmpty()) {
-			jsonError.errorCode = -1;
+			jsonError.statusCode = -1;
 			jsonError.status = "Email key blank or null";
 			return ok(Json.toJson(jsonError));
 		}
@@ -60,18 +87,18 @@ public class PTBEController extends BaseAPIController {
 		AuthenticatedUser u = AuthenticatedUser.findUserByEmail(email);
 		
 		if(u==null) {
-			jsonError.errorCode = -3;
+			jsonError.statusCode = -3;
 			jsonError.status = "User not registered";
 			return ok(Json.toJson(jsonError));
 		}
 		if(u.isDisabled()) {
-			jsonError.errorCode = -4;
+			jsonError.statusCode = -4;
 			jsonError.status = "User account is disabled";
 			return ok(Json.toJson(jsonError));
 		}
 		
 		if(!u.isEmailVerified()) {
-			jsonError.errorCode = -5;
+			jsonError.statusCode = -5;
 			jsonError.status = "User email not verified";
 			return ok(Json.toJson(jsonError));
 		}
@@ -96,25 +123,25 @@ public class PTBEController extends BaseAPIController {
 		GenericResponseJSON json = new GenericResponseJSON();
 		String email = getEmailKey();
 		if(email==null || email.isEmpty()) {
-			json.errorCode = -1;
+			json.statusCode = -1;
 			json.status = "Email key blank or null";
 			return ok(Json.toJson(json));
 		}
 		AuthenticatedUser u = AuthenticatedUser.findUserByEmail(email);
 		
 		if(u==null) {
-			json.errorCode = -3;
+			json.statusCode = -3;
 			json.status = "User not registered";
 			return ok(Json.toJson(json));
 		}
 		if(u.isDisabled()) {
-			json.errorCode = -4;
+			json.statusCode = -4;
 			json.status = "User account is disabled";
 			return ok(Json.toJson(json));
 		}
 		
 		if(!u.isEmailVerified()) {
-			json.errorCode = -5;
+			json.statusCode = -5;
 			json.status = "User email not verified";
 			return ok(Json.toJson(json));
 		}
@@ -122,7 +149,7 @@ public class PTBEController extends BaseAPIController {
 		Form<TestResultForm> trf = ff.form(TestResultForm.class).bindFromRequest();
 		if(trf.hasErrors()) {
 			showFormBindingErrors(trf);		
-			json.errorCode = -1;
+			json.statusCode = -1;
 			json.status = "Error";
 			return ok(Json.toJson(json));
 		}
@@ -138,7 +165,7 @@ public class PTBEController extends BaseAPIController {
 		t.setScore(score);
 		t.setU(u);
 		Ebean.save(t);
-		json.errorCode = 0;
+		json.statusCode = 0;
 		json.status = "Test result recorded successfully";
 		return ok(Json.toJson(json));
 	}
@@ -221,33 +248,29 @@ public class PTBEController extends BaseAPIController {
 		List<QuestionBank> qb = QuestionBank.find.where().eq("free", true).and().eq("disabled", false).findList();
 		List<QuestionBankItemResponseJSON> qbi = new ArrayList<QuestionBankItemResponseJSON>(qb.size());
 		for(QuestionBank q : qb) {
+			q.shuffleStem();
 			qbi.add(convert(q));
 		}
-		json.freeQuestions = qbi;
-		json.version = getVersionResponseJSON();
-		json.ad = new AdJSON();
-		json.ad.adImageURL = adImageURL;
-		json.ad.adClickURL = adClickURL;
+		json.statusCode = 0;
+		json.questions = qbi;
 		return ok(Json.toJson(json));
 	}
 
 	public Result getQuestionBankPremium() {
-		if(!isValidAPIKey() || !isValidSessionKey())
+		if(!isValidAPIKey() || !isValidSessionKey() || !isPurchasedInApp())
 			return ok("");	
 		l("Question premium bank retrieved by " + getEmailKey());
 		QuestionBankResponseJSON json = new QuestionBankResponseJSON();
 		List<QuestionBank> qb = QuestionBank.find.where().eq("disabled", false).findList();
 		List<QuestionBankItemResponseJSON> qbi = new ArrayList<QuestionBankItemResponseJSON>(qb.size());
 		for(QuestionBank q : qb) {
+			q.shuffleStem();
 			qbi.add(convert(q));
 		}
-		json.allQuestions= qbi;
-		json.version = getVersionResponseJSON();
-		json.ad = new AdJSON();
-		json.ad.adImageURL = adImageURL;
-		json.ad.adClickURL = adClickURL;
+		json.questions = qbi;
 		return ok(Json.toJson(json));
 	}
+	
 	
 	public Result submitAdURL() {
 		Map<String, String[]> formValues = getFormValues();
@@ -267,6 +290,8 @@ public class PTBEController extends BaseAPIController {
 		AdJSON json = new AdJSON();
 		json.adImageURL = adImageURL;
 		json.adClickURL = adClickURL;
+		json.statusCode = 0;
+		json.status = "Ok";
 		return ok(Json.toJson(json));
 	}
 	
@@ -280,12 +305,16 @@ public class PTBEController extends BaseAPIController {
 		qbi.choice3 = qb.getChoice3();
 		qbi.choice4 = qb.getChoice4();
 		qbi.choice5 = qb.getChoice5();
+		qbi.topicId = qb.getTopic().getId();
+		qbi.topicName = qb.getTopic().getName();
 		return qbi;
 	}
 	
 
 	
 	public class AdJSON {
+		public int statusCode;
+		public String status;
 		public String adImageURL;
 		public String adClickURL;
 		public String getAdImageURL() {
@@ -293,6 +322,12 @@ public class PTBEController extends BaseAPIController {
 		}
 		public String getAdClickURL() {
 			return adClickURL;
+		}
+		public int getStatusCode() {
+			return statusCode;
+		}
+		public String getStatus() {
+			return status;
 		}
 	}
 	
@@ -311,6 +346,23 @@ public class PTBEController extends BaseAPIController {
 		public String testName;
 		public String score;
 		public String date;
+		public int statusCode;
+		public String status;
+		public String getTestName() {
+			return testName;
+		}
+		public String getScore() {
+			return score;
+		}
+		public String getDate() {
+			return date;
+		}
+		public int getStatusCode() {
+			return statusCode;
+		}
+		public String getStatus() {
+			return status;
+		}
 	}
 	
 	public class QuestionBankItemResponseJSON {
@@ -321,6 +373,8 @@ public class PTBEController extends BaseAPIController {
 		public String choice3;
 		public String choice4;
 		public String choice5;
+		public Long topicId;
+		public String topicName;
 		public int answer;
 		public String getQuestion() {
 			return question;
@@ -343,30 +397,24 @@ public class PTBEController extends BaseAPIController {
 		public int getAnswer() {
 			return answer;
 		}
+		public long getId() {
+			return id;
+		}
+		public Long getTopicId() {
+			return topicId;
+		}
+		public String getTopicName() {
+			return topicName;
+		}
 	}
 	
 
-	
 	public class QuestionBankResponseJSON {
-		private List<QuestionBankItemResponseJSON> freeQuestions;
-		private List<QuestionBankItemResponseJSON> allQuestions;
-		private VersionResponseJSON version;
-		private AdJSON ad;
-		
-		public List<QuestionBankItemResponseJSON> getFreeQuestions() {
-			return freeQuestions;
+		private List<QuestionBankItemResponseJSON> questions;
+		public int statusCode;
+		public List<QuestionBankItemResponseJSON> getQuestions() {
+			return questions;
 		}
-		public List<QuestionBankItemResponseJSON> getAllQuestions() {
-			return allQuestions;
-		}
-		public VersionResponseJSON getVersion() {
-			return version;
-		}
-		public AdJSON getAd() {
-			return ad;
-		}
-	}
-	
-	
 
+	}
 }

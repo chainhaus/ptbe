@@ -69,6 +69,7 @@ create table authenticated_user (
   force_change_password         boolean,
   last_login                    datetime,
   purchased_in_app              boolean,
+  receipt                       TEXT,
   password_reminder             varchar(255),
   password_reset_required       boolean,
   version                       bigint not null,
@@ -174,6 +175,17 @@ create table login_audit (
   constraint pk_login_audit primary key (id)
 );
 
+create table motd (
+  id                            bigint auto_increment not null,
+  uuid                          varchar(255),
+  message                       varchar(255),
+  disabled                      boolean,
+  version                       bigint not null,
+  created_at                    DATETIME not null,
+  updated_at                    DATETIME not null,
+  constraint pk_motd primary key (id)
+);
+
 create table note (
   id                            bigint auto_increment not null,
   uuid                          varchar(255),
@@ -203,6 +215,7 @@ create table question_bank (
   choice3                       varchar(255),
   choice4                       varchar(255),
   choice5                       varchar(255),
+  topic_id                      bigint,
   free                          boolean,
   disabled                      boolean,
   answer                        integer,
@@ -277,6 +290,31 @@ create table site_visitor (
   constraint pk_site_visitor primary key (id)
 );
 
+create table test_result (
+  id                            bigint auto_increment not null,
+  uuid                          varchar(255),
+  u_id                          bigint,
+  test_name                     varchar(255),
+  answered_correct              integer,
+  total_questions               integer,
+  score                         double,
+  version                       bigint not null,
+  created_at                    DATETIME not null,
+  updated_at                    DATETIME not null,
+  constraint pk_test_result primary key (id)
+);
+
+create table topic (
+  id                            bigint auto_increment not null,
+  uuid                          varchar(255),
+  name                          varchar(255),
+  disabled                      boolean,
+  version                       bigint not null,
+  created_at                    DATETIME not null,
+  updated_at                    DATETIME not null,
+  constraint pk_topic primary key (id)
+);
+
 create table user_permission (
   id                            bigint auto_increment not null,
   uuid                          varchar(255),
@@ -321,6 +359,12 @@ create index ix_inbox_message_sender_id on inbox_message (sender_id);
 alter table inbox_message add constraint fk_inbox_message_receiver_id foreign key (receiver_id) references authenticated_user (id) on delete restrict on update restrict;
 create index ix_inbox_message_receiver_id on inbox_message (receiver_id);
 
+alter table question_bank add constraint fk_question_bank_topic_id foreign key (topic_id) references topic (id) on delete restrict on update restrict;
+create index ix_question_bank_topic_id on question_bank (topic_id);
+
+alter table test_result add constraint fk_test_result_u_id foreign key (u_id) references authenticated_user (id) on delete restrict on update restrict;
+create index ix_test_result_u_id on test_result (u_id);
+
 
 # --- !Downs
 
@@ -348,6 +392,12 @@ drop index if exists ix_inbox_message_sender_id;
 alter table inbox_message drop constraint if exists fk_inbox_message_receiver_id;
 drop index if exists ix_inbox_message_receiver_id;
 
+alter table question_bank drop constraint if exists fk_question_bank_topic_id;
+drop index if exists ix_question_bank_topic_id;
+
+alter table test_result drop constraint if exists fk_test_result_u_id;
+drop index if exists ix_test_result_u_id;
+
 drop table if exists apiregistry;
 
 drop table if exists apiregistry_authenticateduser;
@@ -370,6 +420,8 @@ drop table if exists job;
 
 drop table if exists login_audit;
 
+drop table if exists motd;
+
 drop table if exists note;
 
 drop table if exists password_reset;
@@ -383,6 +435,10 @@ drop table if exists sms;
 drop table if exists security_role;
 
 drop table if exists site_visitor;
+
+drop table if exists test_result;
+
+drop table if exists topic;
 
 drop table if exists user_permission;
 

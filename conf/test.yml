@@ -1,0 +1,95 @@
+# No tabs allowed in this file
+
+- &topicll !!models.ptbe.Topic
+    name: Real Estate License Law
+- !!models.ptbe.Topic
+    name: Disclosure and Listing Forms
+- !!models.ptbe.Topic
+    name: Easement and Liens
+- !!models.ptbe.Topic
+    name: Real Estate Closings
+- !!models.ptbe.Topic
+    name: Estates and Interests
+- !!models.ptbe.Topic
+    name: Land Use Regulation
+- !!models.ptbe.Topic
+    name: Construction
+- !!models.ptbe.Topic
+    name: Environmental Issues
+- &topicval !!models.ptbe.Topic
+    name: Valuation and Pricing
+- !!models.ptbe.Topic
+    name: Real Estate Math
+- !!models.ptbe.Topic
+    name: Fair Housing
+- !!models.ptbe.Topic
+    name: Contracts
+- !!models.ptbe.Topic
+    name: Leases
+- !!models.ptbe.Topic
+    name: Real Estate Finance
+- &topicmortgage !!models.ptbe.Topic
+    name: Mortgage
+- !!models.ptbe.Topic
+    name: Municipal
+- !!models.ptbe.Topic
+    name: Property Insurance
+- !!models.ptbe.Topic
+    name: Taxes and Assessments
+- !!models.ptbe.Topic
+    name: Income Tax
+- !!models.ptbe.Topic
+    name: Condos and Coops
+- !!models.ptbe.Topic
+    name: Property Management
+- !!models.ptbe.Topic
+    name: Commercial / Investment
+
+- !!models.ptbe.QuestionBank
+    question: How many years is a salesperson license valid for?
+    choice1: 2
+    choice2: 30
+    choice3: 22
+    choice4: 32
+    choice5: 21
+    answer: 1
+    topic: *topicll
+    free: true
+                    
+- !!models.raven.APIRegistry
+    appID: 1
+    apiKey: abc123
+    majorVersion: 1
+    minorVersion: 2
+
+- &nycsales !!models.raven.SecurityRole
+    name: NYC Salesperson
+    publicFacing: true
+    
+- &jamielau !!models.raven.AuthenticatedUser
+    fname: jamiel
+    email: i@jamiel.net
+    disabled: false
+    probation: false
+    password: jamiel
+    emailVerified: true
+    role: *nycsales
+    lname: Sheikh
+    sessionUUID: tempsuuid
+    picURL: https://lh3.googleusercontent.com/-1LR2CL6M6CE/AAAAAAAAAAI/AAAAAAAAAAA/3pTen0oTK0s/photo.jpg
+    slackID:  jamiel
+
+- !!models.ptbe.MOTD
+    message: This is a test MOTD
+    disabled: false
+    
+- !!models.ptbe.Topic
+    name: Real Estate License Law
+
+- !!models.ptbe.Topic
+    name: Law of Agency
+    
+
+
+
+   

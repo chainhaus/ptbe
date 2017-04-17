@@ -2,6 +2,7 @@ package models.ptbe;
 
 import java.util.List;
 
+import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
 import com.avaje.ebean.Model.Finder;
@@ -9,6 +10,7 @@ import com.avaje.ebean.Model.Finder;
 import models.raven.AuthenticatedUser;
 import models.raven.BaseModel;
 
+@Entity
 public class TestResult extends BaseModel {
 	public static Finder<Long, TestResult> find = new Finder<>(TestResult.class);
 	
@@ -20,8 +22,8 @@ public class TestResult extends BaseModel {
 	private double score;
 
 	public static List<TestResult> getTestHistoryByUser (AuthenticatedUser u) {
-		List<TestResult> trs = find.where().eq("u", u).order().desc("id").findList();
-		return trs;
+		return find.where().eq("u", u).order().desc("id").findList();
+		
 	}
 	
 	public AuthenticatedUser getU() {

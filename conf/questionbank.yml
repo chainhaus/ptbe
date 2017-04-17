@@ -1,5 +1,50 @@
 # No tabs allowed in this file
 
+- &topicll !!models.ptbe.Topic
+    name: Real Estate License Law
+- !!models.ptbe.Topic
+    name: Disclosure and Listing Forms
+- !!models.ptbe.Topic
+    name: Easement and Liens
+- !!models.ptbe.Topic
+    name: Real Estate Closings
+- !!models.ptbe.Topic
+    name: Estates and Interests
+- !!models.ptbe.Topic
+    name: Land Use Regulation
+- !!models.ptbe.Topic
+    name: Construction
+- !!models.ptbe.Topic
+    name: Environmental Issues
+- &topicval !!models.ptbe.Topic
+    name: Valuation and Pricing
+- !!models.ptbe.Topic
+    name: Real Estate Math
+- !!models.ptbe.Topic
+    name: Fair Housing
+- !!models.ptbe.Topic
+    name: Contracts
+- !!models.ptbe.Topic
+    name: Leases
+- !!models.ptbe.Topic
+    name: Real Estate Finance
+- &topicmortgage !!models.ptbe.Topic
+    name: Mortgage
+- !!models.ptbe.Topic
+    name: Municipal
+- !!models.ptbe.Topic
+    name: Property Insurance
+- !!models.ptbe.Topic
+    name: Taxes and Assessments
+- !!models.ptbe.Topic
+    name: Income Tax
+- !!models.ptbe.Topic
+    name: Condos and Coops
+- !!models.ptbe.Topic
+    name: Property Management
+- !!models.ptbe.Topic
+    name: Commercial / Investment
+
 - !!models.ptbe.QuestionBank
     question: How many years is a salesperson license valid for?
     choice1: 2
@@ -8,6 +53,7 @@
     choice4: 3
     choice5: 1
     answer: 1
+    topic: *topicll
     free: true
 
 - !!models.ptbe.QuestionBank
@@ -17,6 +63,7 @@
     choice3: Gas, Car and Incidentals
     choice4: Geographic Commision Income
     choice5: Global Committee on Income
+    topic: *topicll
     answer: 1
     free: true
 
@@ -27,6 +74,7 @@
     choice3: 18
     choice4: 20
     choice5: 16
+    topic: *topicll
     answer: 4
     free: true
     
@@ -37,6 +85,7 @@
     choice3: Renters
     choice4: Landlords
     choice5: All of the above
+    topic: *topicll
     answer: 5
     free: true  
 
@@ -47,6 +96,7 @@
     choice3: Wiring money without a beneficiary
     choice4: Removing of bad title on a property
     choice5: A scene in the Game of Thrones
+    topic: *topicll
     answer: 2
     free: true
 
@@ -57,6 +107,7 @@
     choice3: Shares in a corporation
     choice4: Real property
     choice5: Requiring a graduated mortgage
+    topic: *topicll
     answer: 4
     free: true
     
@@ -67,6 +118,7 @@
     choice3: Resilience
     choice4: Accountability
     choice5: Loyalty
+    topic: *topicll
     answer: 3
     free: true
     
@@ -77,6 +129,7 @@
     choice3: Confidentiality
     choice4: Reasonable care and skill
     choice5: Obedience
+    topic: *topicll
     answer: 1
     free: true
     
@@ -87,6 +140,7 @@
     choice3: Confidentiality
     choice4: Obedience
     choice5: Loyalty
+    topic: *topicll
     answer: 1
     free: true
     
@@ -97,6 +151,7 @@
     choice3: Financial projections
     choice4: Response time
     choice5: Days on market
+    topic: *topicll
     answer: 2
     free: true
 
@@ -107,6 +162,7 @@
     choice3: Ensure
     choice4: Enclosure
     choice5: Disclosure
+    topic: *topicll
     answer: 5
     free: true
 
@@ -117,6 +173,7 @@
     choice3: Royalty
     choice4: Loyalty
     choice5: Disloyal
+    topic: *topicll
     answer: 4
     free: true     
     
@@ -127,6 +184,7 @@
     choice3: Fanny Pack
     choice4: Fannie May
     choice5: Mortgage Association
+    topic: *topicll
     answer: 1
     free: true  
 
@@ -137,6 +195,7 @@
     choice3: A variance
     choice4: Illiquid
     choice5: Invalid
+    topic: *topicll
     answer: 2
     free: true      
 
@@ -147,6 +206,7 @@
     choice3: Federal National Money Accord
     choice4: Feudal Network Monetary Association
     choice5: Federal National Mortgate Association
+    topic: *topicll
     answer: 5
     free: true
 
@@ -157,6 +217,7 @@
     choice3: A fee paid by seller to co-op board
     choice4: 3.75% transaction tax on short sales
     choice5: A refundable fee
+    topic: *topicll
     answer: 3
     free: true
     
@@ -167,6 +228,7 @@
     choice3: An unreasonable delay by plaintiff in filing a lawsuit
     choice4: The grantor indeed owns the property in the deed
     choice5: A clause authorizing the Sheriff can possess the land if mortgage is not paid
+    topic: *topicll
     answer: 4
     free: true
     
@@ -177,6 +239,7 @@
     choice3: Acceleration
     choice4: Ensurement
     choice5: Confirmation
+    topic: *topicll
     answer: 2
     free: true        
     
@@ -187,6 +250,7 @@
     choice3: Lease
     choice4: Deed
     choice5: Title policy
+    topic: *topicll
     answer: 4
     free: true    
     
@@ -197,6 +261,7 @@
     choice3: Stagflation
     choice4: Negative GDP growth
     choice5: Positive GDP growth
+    topic: *topicll
     answer: 2
     free: true    
     
@@ -207,6 +272,7 @@
     choice3: A hyped broker commissions
     choice4: A real estate bubble
     choice5: An increase of purchasing power
+    topic: *topicll
     answer: 1
     free: true    
     
@@ -217,6 +283,7 @@
     choice3: Increase in minimum wage
     choice4: Reversal of GDP stagflation
     choice5: A fall in purchasing power
+    topic: *topicll
     answer: 5
     free: true
 
@@ -227,6 +294,7 @@
     choice3: Demand for condos hit a new low
     choice4: The Fed drops interest rate
     choice5: Stagflation rises
+    topic: *topicll
     answer: 2
     free: true
     
@@ -237,6 +305,7 @@
     choice3: Inflation drops twice
     choice4: Inflation followed by deflation
     choice5: Stagnant employment numbers
+    topic: *topicll
     answer: 1
     free: true
 
@@ -247,6 +316,7 @@
     choice3: Stagnation
     choice4: Reverse bubble
     choice5: Inflation
+    topic: *topicll
     answer: 1
     free: true      
 
@@ -257,6 +327,7 @@
     choice3: Commingling
     choice4: Ponzi
     choice5: Mingling
+    topic: *topicll
     answer: 3
     free: true
         
@@ -267,6 +338,7 @@
     choice3: Brokerages keep deposits in escrow
     choice4: A salesperson's commissions are tallied
     choice5: There is mixing of monies in the same account that should be separate
+    topic: *topicll
     answer: 5
     free: true        
         
@@ -277,6 +349,7 @@
     choice3: Federal Home Act
     choice4: Federal Housing Accord
     choice5: Federal Housing Acts
+    topic: *topicll
     answer: 1
     free: true
 
@@ -287,6 +360,7 @@
     choice3: 1966
     choice4: 1967
     choice5: 1939
+    topic: *topicll
     answer: 2
     free: true
 
@@ -297,6 +371,7 @@
     choice3: 1988
     choice4: 1968
     choice5: 1898
+    topic: *topicll
     answer: 3
     free: true
             
@@ -307,6 +382,7 @@
     choice3: Family status and the disabled
     choice4: Income source
     choice5: Sexual orientation
+    topic: *topicll
     answer: 3
     free: true
              
@@ -317,6 +393,7 @@
     choice3: Religion and race
     choice4: Color and race
     choice5: Origin and income
+    topic: *topicll
     answer: 1
     free: true             
 
@@ -327,6 +404,7 @@
     choice3: Civil Rights
     choice4: FHA 1988
     choice5: IRS
+    topic: *topicll
     answer: 2
     free: true
                         
@@ -337,6 +415,7 @@
     choice3: MIB
     choice4: IRS
     choice5: Lawyers
+    topic: *topicll
     answer: 1
     free: true
 
@@ -347,6 +426,7 @@
     choice3: 1% increase in the loan
     choice4: .01% of the loan amount
     choice5: 1% of the loan amount
+    topic: *topicll
     answer: 5
     free: true
 
@@ -357,6 +437,7 @@
     choice3: Get costs out of the way upfront
     choice4: Convert a fixed loan to variable
     choice5: Protect against inflation
+    topic: *topicll
     answer: 2
     free: true
 
@@ -367,6 +448,7 @@
     choice3: Reduce bank's closing costs
     choice4: Increase customer satisfaction
     choice5: Satisfy government regulation
+    topic: *topicll
     answer: 1
     free: true
 
@@ -377,6 +459,7 @@
     choice3: Eminent domain
     choice4: Seizin
     choice5: Constructive eviction
+    topic: *topicll
     answer: 5
     free: true
     
@@ -387,6 +470,7 @@
     choice3: Solid
     choice4: Pulsar
     choice5: Wave
+    topic: *topicll
     answer: 2
     free: true   
 
@@ -397,6 +481,7 @@
     choice3: 30
     choice4: 20
     choice5: 10
+    topic: *topicll
     answer: 2
     free: true 
 
@@ -407,6 +492,7 @@
     choice3: $10,000
     choice4: $20,000
     choice5: $110.92
+    topic: *topicll
     answer: 3
     free: true     
 
@@ -417,6 +503,7 @@
     choice3: 60
     choice4: 38
     choice5: 20
+    topic: *topicll
     answer: 2
     free: true    
 
@@ -427,6 +514,7 @@
     choice3: Title policy
     choice4: Title insurance
     choice5: Fixed rate agreement
+    topic: *topicll
     answer: 2
     free: true
 
@@ -437,6 +525,7 @@
     choice3: $42,000
     choice4: $3,600
     choice5: $4,000
+    topic: *topicll
     answer: 2
     free: true
 
@@ -447,6 +536,7 @@
     choice3: Quitclaim
     choice4: Judicial
     choice5: County clerk mandated
+    topic: *topicll
     answer: 5
     free: true
 
@@ -457,6 +547,7 @@
     choice3: Quitclaim
     choice4: Judicial
     choice5: Sherrif
+    topic: *topicll
     answer: 5
     free: true    
 
@@ -467,6 +558,7 @@
     choice3: Contains covenant of seizin
     choice4: Extremely popular
     choice5: Is used for future title searches
+    topic: *topicval
     answer: 4
     free: true 
 
@@ -477,6 +569,7 @@
     choice3: Is commonly used in divorce or title disputes
     choice4: Resolves a cloud over title
     choice5: If given a choice, buyers do not prefer it
+    topic: *topicval
     answer: 1
     free: true
 
@@ -487,6 +580,7 @@
     choice3: Contains covenant of seizin
     choice4: Extremely popular
     choice5: Is used for future title searches
+    topic: *topicval
     answer: 4
     free: true
 
@@ -497,6 +591,7 @@
     choice3: Might contain covenant of seizin
     choice4: Contains a few covenants
     choice5: Could be used in future title searches
+    topic: *topicval
     answer: 1
     free: true
     
@@ -507,6 +602,7 @@
     choice3: Quitclaim
     choice4: Judicial
     choice5: Auctioned or Foreclosed
+    topic: *topicval
     answer: 5
     free: true 
 
@@ -517,6 +613,7 @@
     choice3: Judicial deed
     choice4: County deed
     choice5: Magistrate's deed
+    topic: *topicval
     answer: 3
     free: true 
 
@@ -527,6 +624,7 @@
     choice3: Title search returns clear
     choice4: Exchange of money
     choice5: Offer and acceptance of the deed
+    topic: *topicll
     answer: 5
     free: true
 
@@ -537,6 +635,7 @@
     choice3: The buyer's offer is invalid
     choice4: The seller's price drop is invalid
     choice5: The broker is owed commission
+    topic: *topicll
     answer: 2
     free: true
 
@@ -547,6 +646,7 @@
     choice3: Real Estate License Law
     choice4: Broker Conduct Code
     choice5: Real Estate Ethics
+    topic: *topicll
     answer: 3
     free: true
 
@@ -557,6 +657,7 @@
     choice3: Misdemeanor charge
     choice4: Loss of real estate license
     choice5: Felony charge
+    topic: *topicll
     answer: 5
     free: true
 
@@ -567,6 +668,7 @@
     choice3: 13
     choice4: A12
     choice5: 401k
+    topic: *topicll
     answer: 1
     free: true
 
@@ -577,6 +679,7 @@
     choice3: Upgraded to a broker
     choice4: Transferred to another brokerage
     choice5: Unaffected
+    topic: *topicll
     answer: 2
     free: true
 
@@ -587,6 +690,7 @@
     choice3: Invalid
     choice4: Have a cloud over them
     choice5: Have an uncertain future
+    topic: *topicll
     answer: 2
     free: true
 
@@ -597,6 +701,7 @@
     choice3: Indira needs to attend a hearing that will determine when
     choice4: 6 months
     choice5: Once all salespersons are paid their commissions owed
+    topic: *topicll
     answer: 1
     free: true
 
@@ -607,6 +712,7 @@
     choice3: A salesperson
     choice4: Property manager
     choice5: Landlord
+    topic: *topicll
     answer: 1
     free: true
 
@@ -617,6 +723,7 @@
     choice3: True, as long as the broker's license was never suspended
     choice4: False, Article 12A allows for exceptions for salesperons to operate independently
     choice5: False, a salesperson and broker differ only in experience
+    topic: *topicll
     answer: 2
     free: true
     
@@ -627,6 +734,7 @@
     choice3: Professional Commercial Board
     choice4: Pre-closing Buyer
     choice5: Photocopy of a Band-Aid
+    topic: *topicll
     answer: 1
     free: true    
 
@@ -637,6 +745,7 @@
     choice3: PCBs
     choice4: PBCs
     choice5: PDC
+    topic: *topicll
     answer: 3
     free: true  
 
@@ -647,6 +756,7 @@
     choice3: PoBi
     choice4: PB
     choice5: Phenyls
+    topic: *topicll
     answer: 2
     free: true
     
@@ -657,6 +767,7 @@
     choice3: Seller's agent
     choice4: Seller
     choice5: Buyer
+    topic: *topicll
     answer: 4
     free: true    
 
@@ -667,6 +778,7 @@
     choice3: Appraisal
     choice4: In writing at the closing
     choice5: Agency Disclosure
+    topic: *topicll
     answer: 1
     free: true
 
@@ -677,6 +789,7 @@
     choice3: $500
     choice4: $97.25
     choice5: Nothing
+    topic: *topicll
     answer: 3
     free: true
 
@@ -687,6 +800,7 @@
     choice3: $92.22
     choice4: $78.75
     choice5: 1% of the closing cost
+    topic: *topicll
     answer: 1
     free: true
 
@@ -697,6 +811,7 @@
     choice3: A two-family home
     choice4: Waterfront 1 bedroom townhouse
     choice5: A one-family duplex brick house
+    topic: *topicll
     answer: 1
     free: true
 
@@ -707,6 +822,7 @@
     choice3: Cash left over from a liquidation
     choice4: Inheritance money from a death
     choice5: Progress in Washington DC
+    topic: *topicll
     answer: 2
     free: true
 
@@ -717,6 +833,7 @@
     choice3: $250,000
     choice4: $25,000
     choice5: $249,999
+    topic: *topicll
     answer: 3
     free: true
 
@@ -727,6 +844,7 @@
     choice3: $260,000
     choice4: $10,000
     choice5: $0
+    topic: *topicll
     answer: 4
     free: true
 
@@ -737,6 +855,7 @@
     choice3: $470,001
     choice4: $820,000
     choice5: $470,000
+    topic: *topicll
     answer: 5
     free: true
 
@@ -747,6 +866,7 @@
     choice3: $65,000
     choice4: $20,000
     choice5: $120,000
+    topic: *topicll
     answer: 4
     free: true
 
@@ -757,6 +877,7 @@
     choice3: $84,572
     choice4: Depends on price
     choice5: $20,000
+    topic: *topicll
     answer: 2
     free: true
 
@@ -767,6 +888,7 @@
     choice3: $250,000
     choice4: $300,000
     choice5: $500,000
+    topic: *topicll
     answer: 5
     free: true
 
@@ -777,6 +899,7 @@
     choice3: $500,000
     choice4: $200,000
     choice5: $750,000
+    topic: *topicll
     answer: 1
     free: true
 
@@ -787,6 +910,7 @@
     choice3: 3-4 months
     choice4: 3 years
     choice5: A day
+    topic: *topicll
     answer: 1
     free: true
 
@@ -797,6 +921,7 @@
     choice3: Details the exact location of the property
     choice4: States precisely the name of the agent
     choice5: None of these
+    topic: *topicll
     answer: 1
     free: true
 
@@ -807,6 +932,7 @@
     choice3: Bumper ad
     choice4: Bait and switch
     choice5: Leadership advertising
+    topic: *topicll
     answer: 2
     free: true
 
@@ -817,6 +943,7 @@
     choice3: The font size was large
     choice4: Relevant and pertinent details were provided
     choice5: It ran on Sunday
+    topic: *topicll
     answer: 4
     free: true
 
@@ -827,6 +954,7 @@
     choice3: Yes, the courts will require it
     choice4: No, it is a commercial sale
     choice5: Yes, all sales do
+    topic: *topicll
     answer: 2
     free: true
 
@@ -837,6 +965,7 @@
     choice3: Rent to buy
     choice4: Leasehold
     choice5: Leasing
+    topic: *topicll
     answer: 4
     free: true
 
@@ -847,6 +976,7 @@
     choice3: Freeown
     choice4: Leasehold also
     choice5: Lease
+    topic: *topicll
     answer: 2
     free: true
 
@@ -857,6 +987,7 @@
     choice3: Freehold
     choice4: Free and simple
     choice5: Fee simple
+    topic: *topicll
     answer: 5
     free: true
 
@@ -867,6 +998,7 @@
     choice3: Carpe Diem
     choice4: Absolute free
     choice5: Freehold
+    topic: *topicll
     answer: 1
     free: true
 
@@ -877,6 +1009,7 @@
     choice3: Lesser estates
     choice4: Fee simple
     choice5: Commercial property
+    topic: *topicval
     answer: 4
     free: true
 
@@ -887,6 +1020,7 @@
     choice3: Exclusion
     choice4: Renovation
     choice5: Quiet enjoyment
+    topic: *topicval
     answer: 4
     free: true
 
@@ -897,6 +1031,7 @@
     choice3: Disposition
     choice4: Redaction
     choice5: Alteration
+    topic: *topicval
     answer: 1
     free: true
 
@@ -907,6 +1042,7 @@
     choice3: Enjoyment
     choice4: Disposition
     choice5: Control
+    topic: *topicval
     answer: 2
     free: true
 
@@ -917,6 +1053,7 @@
     choice3: Danger
     choice4: Clean air
     choice5: Loud neighbors
+    topic: *topicval
     answer: 4
     free: true
 
@@ -927,6 +1064,7 @@
     choice3: Easement
     choice4: Egress
     choice5: Exclusion
+    topic: *topicval
     answer: 5
     free: true
 
@@ -937,6 +1075,7 @@
     choice3: An act
     choice4: Proof of title
     choice5: Title
+    topic: *topicval
     answer: 4
     free: true
 
@@ -947,6 +1086,7 @@
     choice3: Stock certificates
     choice4: Notarization
     choice5: Mortgage note
+    topic: *topicmortgage
     answer: 2
     free: true
 
@@ -957,6 +1097,7 @@
     choice3: Deed is the concept of ownership; Title is insurance that protects the deed
     choice4: Deed is the paper demonstrating ownership; Title is the paper demonstrating ownership
     choice5: Deed and title mean exactly the same thing
+    topic: *topicmortgage
     answer: 1
     free: true
 
@@ -967,6 +1108,7 @@
     choice3: Buyer is made aware of title costs
     choice4: Deed is transferred via a title
     choice5: Offer and acceptance have not occurred
+    topic: *topicmortgage
     answer: 1
     free: true
 
@@ -977,6 +1119,7 @@
     choice3: Flood prevention
     choice4: A material used to cover cracks
     choice5: Closing on a sale in under an hour
+    topic: *topicmortgage
     answer: 4
     free: true
 
@@ -987,6 +1130,7 @@
     choice3: 45
     choice4: 150
     choice5: 20
+    topic: *topicmortgage
     answer: 1
     free: true
     
@@ -997,6 +1141,7 @@
     choice3: 75
     choice4: 120
     choice5: 45
+    topic: *topicmortgage
     answer: 5
     free: true
     
@@ -1007,6 +1152,7 @@
     choice3: 21
     choice4: 18
     choice5: 20
+    topic: *topicmortgage
     answer: 5
     free: true
     
@@ -1017,6 +1163,7 @@
     choice3: 45
     choice4: 75
     choice5: 100
+    topic: *topicmortgage
     answer: 4
     free: true
     
@@ -1027,6 +1174,7 @@
     choice3: 19
     choice4: 16
     choice5: 20
+    topic: *topicmortgage
     answer: 2
     free: true
     
@@ -1037,6 +1185,7 @@
     choice3: Grout
     choice4: Cinder
     choice5: Vent fan
+    topic: *topicmortgage
     answer: 2
     free: true
     
@@ -1047,6 +1196,7 @@
     choice3: No, the deceased party's heirs own it now
     choice4: The courts decide
     choice5: It is based on financial need
+    topic: *topicmortgage
     answer: 1
     free: true
     
@@ -1057,6 +1207,7 @@
     choice3: Tenants In Common
     choice4: Joint Severalty
     choice5: Joint Seizin
+    topic: *topicmortgage
     answer: 1
     free: true
                     
@@ -1086,3 +1237,14 @@
 - !!models.ptbe.MOTD
     message: This is a test MOTD
     disabled: false
+    
+- !!models.ptbe.Topic
+    name: Real Estate License Law
+
+- !!models.ptbe.Topic
+    name: Law of Agency
+    
+
+
+
+   
