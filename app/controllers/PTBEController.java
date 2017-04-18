@@ -9,6 +9,7 @@ import java.util.Random;
 import javax.inject.Inject;
 
 import com.avaje.ebean.Ebean;
+import com.fasterxml.jackson.databind.JsonNode;
 
 import controllers.raven.BaseAPIController;
 import controllers.raven.BaseAPIController.GenericResponseJSON;
@@ -37,10 +38,10 @@ public class PTBEController extends BaseAPIController {
 	
 	private String adImageURL;
 	private String adClickURL;
-	
+		
 	public Result getTopics() {
 		if(!isValidAPIKey() || !isValidSessionKey())
-			return ok("");
+			return ok(cachedErrorInvalidKey);
 		List<Topic> ts = Topic.getCurrentAll();
 		List<TopicResponseJSON> json = new ArrayList<TopicResponseJSON>(ts.size());
 		TopicResponseJSON j = null;
@@ -75,33 +76,21 @@ public class PTBEController extends BaseAPIController {
 	
 	public Result getTestResult() {
 		if(!isValidAPIKey() || !isValidSessionKey())
-			return ok("");
-		GenericResponseJSON jsonError = new GenericResponseJSON();
+			return ok(cachedErrorInvalidKey);
 		String email = getEmailKey();
-		if(email==null || email.isEmpty()) {
-			jsonError.statusCode = -1;
-			jsonError.status = "Email key blank or null";
-			return ok(Json.toJson(jsonError));
-		}
+		if(email==null || email.isEmpty())
+			return ok(cachedErrorInvalidKey);
+		
 		
 		AuthenticatedUser u = AuthenticatedUser.findUserByEmail(email);
 		
-		if(u==null) {
-			jsonError.statusCode = -3;
-			jsonError.status = "User not registered";
-			return ok(Json.toJson(jsonError));
-		}
-		if(u.isDisabled()) {
-			jsonError.statusCode = -4;
-			jsonError.status = "User account is disabled";
-			return ok(Json.toJson(jsonError));
-		}
+		if(u==null) 
+			return ok(cachedErrorUserNotFound);
+		if(u.isDisabled()) 
+			return ok(cachedErrorUserDisabled);	
+		if(!u.isEmailVerified())
+			return ok(cachedErrorEmailNotVerified);
 		
-		if(!u.isEmailVerified()) {
-			jsonError.statusCode = -5;
-			jsonError.status = "User email not verified";
-			return ok(Json.toJson(jsonError));
-		}
 		
 		List<TestResult> trs = TestResult.getTestHistoryByUser(u);
 		List<TestHistoryJSON> json = new ArrayList<TestHistoryJSON>(trs.size());
@@ -115,43 +104,30 @@ public class PTBEController extends BaseAPIController {
 		}
 		return ok(Json.toJson(json));
 	}
-	
+		
 	public Result submitTestResult() {
 		if(!isValidAPIKey() || !isValidSessionKey())
-			return ok("");
+			return ok(cachedErrorInvalidKey);
 		
-		GenericResponseJSON json = new GenericResponseJSON();
 		String email = getEmailKey();
-		if(email==null || email.isEmpty()) {
-			json.statusCode = -1;
-			json.status = "Email key blank or null";
-			return ok(Json.toJson(json));
-		}
+		if(email==null || email.isEmpty())
+			return ok(cachedErrorInvalidKey);
+		
 		AuthenticatedUser u = AuthenticatedUser.findUserByEmail(email);
 		
-		if(u==null) {
-			json.statusCode = -3;
-			json.status = "User not registered";
-			return ok(Json.toJson(json));
-		}
-		if(u.isDisabled()) {
-			json.statusCode = -4;
-			json.status = "User account is disabled";
-			return ok(Json.toJson(json));
-		}
+		if(u==null) 
+			return ok(cachedErrorUserNotFound);
+		if(u.isDisabled()) 
+			return ok(cachedErrorUserDisabled);
 		
-		if(!u.isEmailVerified()) {
-			json.statusCode = -5;
-			json.status = "User email not verified";
-			return ok(Json.toJson(json));
-		}
+		
+		if(!u.isEmailVerified())
+			return ok(cachedErrorEmailNotVerified);
 		
 		Form<TestResultForm> trf = ff.form(TestResultForm.class).bindFromRequest();
 		if(trf.hasErrors()) {
 			showFormBindingErrors(trf);		
-			json.statusCode = -1;
-			json.status = "Error";
-			return ok(Json.toJson(json));
+			return ok(cachedErrorFormBinding);
 		}
 		
 		TestResultForm tr = trf.get();
@@ -165,9 +141,7 @@ public class PTBEController extends BaseAPIController {
 		t.setScore(score);
 		t.setU(u);
 		Ebean.save(t);
-		json.statusCode = 0;
-		json.status = "Test result recorded successfully";
-		return ok(Json.toJson(json));
+		return ok(cachedSuccess);
 	}
 	// TODO refactor methods into base
 	
@@ -186,12 +160,12 @@ public class PTBEController extends BaseAPIController {
 	public Result viewResetPassword() {
 		String linkUUID = request().getQueryString("linkuuid");
 		if(linkUUID==null || linkUUID.isEmpty())
-			return ok("no link UUID");
+			return ok(cachedErrorNoLinkUUID);
 		AuthenticatedUser u = AuthenticatedUser.findUserByLinkUUID(linkUUID);
 		if(u==null)
-			return ok("User not found");
+			return ok(cachedErrorUserNotFound);
 		if(u.isDisabled())
-			return ok("User is disabled");
+			return ok(cachedErrorUserDisabled);
 		return ok(views.html.ptbe.ViewResetPassword.render(linkUUID));
 	}
 	
@@ -200,21 +174,21 @@ public class PTBEController extends BaseAPIController {
 		Form<ResetPasswordForm> rpf = ff.form(ResetPasswordForm.class).bindFromRequest();
 		if(rpf.hasErrors()) {
 			showFormBindingErrors(rpf);
-			return ok("error");
+			return ok(cachedErrorFormBinding);
 		}
 		
 		ResetPasswordForm rp = rpf.get();
 		String linkUUID = rp.getLinkUUID();
 		if(linkUUID==null || linkUUID.isEmpty())
-			return ok("no link UUID");
+			return ok(cachedErrorNoLinkUUID);
 		AuthenticatedUser u = AuthenticatedUser.findUserByLinkUUID(linkUUID);
 		if(u==null)
-			return ok("User not found");
+			return ok(cachedErrorUserNotFound);
 		if(u.isDisabled())
-			return ok("User is disabled");	
+			return ok(cachedErrorUserDisabled);	
 		u.setPassword(rp.getNewPassword());
 		Ebean.update(u);
-		return ok("Successfully updated password");
+		return ok(cachedSuccess);
 	}
 
 
@@ -242,7 +216,7 @@ public class PTBEController extends BaseAPIController {
 	
 	public Result getQuestionBank() {
 		if(!isValidAPIKey() || !isValidSessionKey())
-			return ok("");	
+			return ok(cachedErrorInvalidKey);	
 		l("Question bank retrieved by " + getEmailKey());
 		QuestionBankResponseJSON json = new QuestionBankResponseJSON();
 		List<QuestionBank> qb = QuestionBank.find.where().eq("free", true).and().eq("disabled", false).findList();
@@ -258,7 +232,7 @@ public class PTBEController extends BaseAPIController {
 
 	public Result getQuestionBankPremium() {
 		if(!isValidAPIKey() || !isValidSessionKey() || !isPurchasedInApp())
-			return ok("");	
+			return ok(cachedErrorInvalidKey);	
 		l("Question premium bank retrieved by " + getEmailKey());
 		QuestionBankResponseJSON json = new QuestionBankResponseJSON();
 		List<QuestionBank> qb = QuestionBank.find.where().eq("disabled", false).findList();
@@ -285,13 +259,13 @@ public class PTBEController extends BaseAPIController {
 	
 	public Result getAd() {
 		if(!isValidAPIKey() || !isValidSessionKey())
-			return ok("");	
+			return ok(cachedErrorInvalidKey);	
 		l("Ad retrieved by " + getEmailKey());
 		AdJSON json = new AdJSON();
 		json.adImageURL = adImageURL;
 		json.adClickURL = adClickURL;
 		json.statusCode = 0;
-		json.status = "Ok";
+		json.status = "Success";
 		return ok(Json.toJson(json));
 	}
 	
