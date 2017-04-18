@@ -70,6 +70,7 @@ create table authenticated_user (
   last_login                    datetime,
   purchased_in_app              boolean,
   receipt                       TEXT,
+  date_of_iap                   timestamp,
   password_reminder             varchar(255),
   password_reset_required       boolean,
   version                       bigint not null,
