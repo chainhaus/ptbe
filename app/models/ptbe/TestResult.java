@@ -22,8 +22,7 @@ public class TestResult extends BaseModel {
 	private double score;
 
 	public static List<TestResult> getTestHistoryByUser (AuthenticatedUser u) {
-		return find.where().eq("u", u).order().desc("id").findList();
-		
+		return find.where().eq("u", u).order().desc("id").findList();	
 	}
 	
 	public AuthenticatedUser getU() {

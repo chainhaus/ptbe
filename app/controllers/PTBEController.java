@@ -231,8 +231,11 @@ public class PTBEController extends BaseAPIController {
 	}
 
 	public Result getQuestionBankPremium() {
-		if(!isValidAPIKey() || !isValidSessionKey() || !isPurchasedInApp())
+		if(!isValidAPIKey() || !isValidSessionKey())
 			return ok(cachedErrorInvalidKey);	
+		if(!isPurchasedInApp())
+			return ok(cachedErrorUnauthorized);
+
 		l("Question premium bank retrieved by " + getEmailKey());
 		QuestionBankResponseJSON json = new QuestionBankResponseJSON();
 		List<QuestionBank> qb = QuestionBank.find.where().eq("disabled", false).findList();
