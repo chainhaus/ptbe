@@ -74,7 +74,7 @@ public class PTBEController extends BaseAPIController {
 		return ok(Json.toJson(json));
 	}
 	
-	public Result getTestHistoy() {
+	public Result getTestHistory() {
 		if(!isValidAPIKey() || !isValidSessionKey())
 			return ok(cachedErrorInvalidKey);
 		String email = getEmailKey();
