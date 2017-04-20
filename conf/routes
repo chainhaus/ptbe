@@ -20,7 +20,7 @@ POST	/submitResetPassword			controllers.PTBEController.submitResetPassword()
 # api
 GET		/api/1/getQuestionBank			controllers.PTBEController.getQuestionBank()
 GET		/api/1/getQuestionBankPremium	controllers.PTBEController.getQuestionBankPremium()
-GET		/api/1/resetPassword			controllers.PTBEController.resetPassword()
+POST	/api/1/resetPassword			controllers.PTBEController.resetPassword()
 POST	/api/1/authenticateUser			controllers.PTBEController.authenticateUser()
 GET		/api/1/getVersion				controllers.PTBEController.getVersionJSON()
 GET		/api/1/getAd					controllers.PTBEController.getAd()
