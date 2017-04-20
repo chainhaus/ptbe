@@ -95,8 +95,9 @@ public class PTBEController extends BaseAPIController {
 		List<TestResult> trs = TestResult.getTestHistoryByUser(u);
 		List<TestHistoryJSON> json = new ArrayList<TestHistoryJSON>(trs.size());
 		TestHistoryJSON tj = null;
-		for(TestResult t : trs) {
+		for(TestResult t : trs) {	
 			tj = new TestHistoryJSON();
+			tj.id = t.getId();
 			tj.date = t.getCreatedAt().toString();
 			tj.testName = t.getTestName();
 			tj.score = String.valueOf(t.getScore());
@@ -320,6 +321,7 @@ public class PTBEController extends BaseAPIController {
 	}
 	
 	public class TestHistoryJSON {
+		public Long id;
 		public String testName;
 		public String score;
 		public String date;
@@ -339,6 +341,9 @@ public class PTBEController extends BaseAPIController {
 		}
 		public String getStatus() {
 			return status;
+		}
+		public Long getId() {
+			return id;
 		}
 	}
 	
