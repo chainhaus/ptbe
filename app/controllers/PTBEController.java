@@ -100,7 +100,7 @@ public class PTBEController extends BaseAPIController {
 			tj.id = t.getId();
 			tj.date = t.getCreatedAt().toString();
 			tj.testName = t.getTestName();
-			tj.score = String.valueOf(t.getScore());
+			tj.score = t.getScore();
 			json.add(tj);
 		}
 		return ok(Json.toJson(json));
@@ -323,14 +323,14 @@ public class PTBEController extends BaseAPIController {
 	public class TestHistoryJSON {
 		public Long id;
 		public String testName;
-		public String score;
+		public double score;
 		public String date;
 		public int statusCode;
 		public String status;
 		public String getTestName() {
 			return testName;
 		}
-		public String getScore() {
+		public double getScore() {
 			return score;
 		}
 		public String getDate() {
