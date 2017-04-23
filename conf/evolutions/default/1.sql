@@ -66,6 +66,7 @@ create table authenticated_user (
   email_bounced                 boolean,
   proxy_email_id                varchar(255),
   session_uuid                  varchar(255),
+  publishable_uuid              varchar(255),
   force_change_password         boolean,
   last_login                    datetime,
   purchased_in_app              boolean,
@@ -195,6 +196,16 @@ create table note (
   created_at                    DATETIME not null,
   updated_at                    DATETIME not null,
   constraint pk_note primary key (id)
+);
+
+create table organization (
+  id                            bigint auto_increment not null,
+  uuid                          varchar(255),
+  name                          varchar(255),
+  version                       bigint not null,
+  created_at                    DATETIME not null,
+  updated_at                    DATETIME not null,
+  constraint pk_organization primary key (id)
 );
 
 create table password_reset (
@@ -424,6 +435,8 @@ drop table if exists login_audit;
 drop table if exists motd;
 
 drop table if exists note;
+
+drop table if exists organization;
 
 drop table if exists password_reset;
 
