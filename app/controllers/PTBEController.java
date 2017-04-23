@@ -234,8 +234,8 @@ public class PTBEController extends BaseAPIController {
 	public Result getQuestionBankPremium() {
 		if(!isValidAPIKey() || !isValidSessionKey())
 			return ok(cachedErrorInvalidKey);	
-		if(!isPurchasedInApp())
-			return ok(cachedErrorUnauthorized);
+		//if(!isPurchasedInApp())
+			//return ok(cachedErrorUnauthorized);
 
 		l("Question premium bank retrieved by " + getEmailKey());
 		QuestionBankResponseJSON json = new QuestionBankResponseJSON();
