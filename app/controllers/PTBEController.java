@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 import javax.inject.Inject;
 
@@ -29,16 +30,25 @@ import raven.forms.SignInForm;
 
 public class PTBEController extends BaseAPIController {
 	
+	private List<AdJSON> ads = new ArrayList<AdJSON>();
+	
 	@Inject
 	public PTBEController(Configuration conf) {
 		super(conf);
-		this.adImageURL = "http://52.206.94.249:5000/assets/img/adDelease.png";
-		this.adClickURL = "http://beta.delease.com";
+		AdJSON json = new AdJSON();
+		json.adImageURL = "http://52.206.94.249:5000/assets/img/adDelease.png";
+		json.adClickURL = "http://beta.delease.com";
+		ads.add(json);
+		json = new AdJSON();
+		json.adImageURL = "http://52.206.94.249:5000/assets/img/adMaven.png";
+		json.adClickURL = "http://mavennewyork.com";
+		ads.add(json);
+		json = new AdJSON();
+		json.adImageURL = "http://52.206.94.249:5000/assets/img/adBIQ.png";
+		json.adClickURL = "http://brokerageiq.com";
+		ads.add(json);		
 	}
-	
-	private String adImageURL;
-	private String adClickURL;
-		
+			
 	public Result getTopics() {
 		if(!isValidAPIKey() || !isValidSessionKey())
 			return ok(cachedErrorInvalidKey);
@@ -252,8 +262,10 @@ public class PTBEController extends BaseAPIController {
 	
 	public Result submitAdURL() {
 		Map<String, String[]> formValues = getFormValues();
-		adImageURL = formValues.get("adImageURL")[0];
-		adClickURL = formValues.get("adClickURL")[0];
+		AdJSON json = new AdJSON();
+		json.adImageURL = formValues.get("adImageURL")[0];
+		json.adClickURL = formValues.get("adClickURL")[0];
+		ads.add(json);
 		return redirect(routes.PTBEController.viewAddQuestion());
 	}
 	
@@ -265,9 +277,8 @@ public class PTBEController extends BaseAPIController {
 		if(!isValidAPIKey() || !isValidSessionKey())
 			return ok(cachedErrorInvalidKey);	
 		l("Ad retrieved by " + getEmailKey());
-		AdJSON json = new AdJSON();
-		json.adImageURL = adImageURL;
-		json.adClickURL = adClickURL;
+		int randomNum = ThreadLocalRandom.current().nextInt(0, ads.size()-1);
+		AdJSON json = ads.get(randomNum);
 		json.statusCode = 0;
 		json.status = "Success";
 		return ok(Json.toJson(json));
