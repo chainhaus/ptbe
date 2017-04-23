@@ -277,7 +277,7 @@ public class PTBEController extends BaseAPIController {
 		if(!isValidAPIKey() || !isValidSessionKey())
 			return ok(cachedErrorInvalidKey);	
 		l("Ad retrieved by " + getEmailKey());
-		int randomNum = ThreadLocalRandom.current().nextInt(0, ads.size()-1);
+		int randomNum = ThreadLocalRandom.current().nextInt(0, ads.size());
 		AdJSON json = ads.get(randomNum);
 		json.statusCode = 0;
 		json.status = "Success";
