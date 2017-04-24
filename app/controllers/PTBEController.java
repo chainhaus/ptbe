@@ -15,6 +15,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import controllers.raven.BaseAPIController;
 import controllers.raven.BaseAPIController.GenericResponseJSON;
 import forms.ptbe.TestResultForm;
+import models.ptbe.Ad;
 import models.ptbe.MOTD;
 import models.ptbe.QuestionBank;
 import models.ptbe.TestResult;
@@ -30,23 +31,43 @@ import raven.forms.SignInForm;
 
 public class PTBEController extends BaseAPIController {
 	
-	private List<AdJSON> ads = new ArrayList<AdJSON>();
+	private List<AdJSON> ads = null;
 	
 	@Inject
 	public PTBEController(Configuration conf) {
 		super(conf);
-		AdJSON json = new AdJSON();
-		json.adImageURL = "http://52.206.94.249:5000/assets/img/adDelease.png";
-		json.adClickURL = "http://beta.delease.com";
-		ads.add(json);
-		json = new AdJSON();
-		json.adImageURL = "http://52.206.94.249:5000/assets/img/adMaven.png";
-		json.adClickURL = "http://mavennewyork.com";
-		ads.add(json);
-		json = new AdJSON();
-		json.adImageURL = "http://52.206.94.249:5000/assets/img/adBIQ.png";
-		json.adClickURL = "http://brokerageiq.com";
-		ads.add(json);		
+		if(Ad.find.findRowCount()<1) {
+			Ad ad = null;
+			ad = new Ad();
+			ad.setAdImageURL("http://52.206.94.249:5000/assets/img/adDelease.png");
+			ad.setAdClickURL("http://beta.delease.com");
+			Ebean.save(ad);
+
+			ad = new Ad();
+			ad.setAdImageURL("http://52.206.94.249:5000/assets/img/adMaven.png");
+			ad.setAdClickURL("http://mavennewyork.com");
+			Ebean.save(ad);
+			
+			ad = new Ad();
+			ad.setAdImageURL("http://52.206.94.249:5000/assets/img/adBIQ.png");
+			ad.setAdClickURL("http://brokerageiq.com");
+			Ebean.save(ad);	
+		}
+		
+		loadAdCache();
+	}
+	
+	private void loadAdCache() {
+		List<Ad> ads = Ad.find.where().eq("disabled",false).findList();
+		AdJSON aj = null;
+		this.ads = new ArrayList<AdJSON>(ads.size());
+		for(Ad a : ads ) {
+			aj = new AdJSON();
+			aj.id = a.getId();
+			aj.adClickURL = a.getAdClickURL();
+			aj.adImageURL = a.getAdImageURL();
+			this.ads.add(aj);
+		}
 	}
 			
 	public Result getTopics() {
@@ -262,10 +283,11 @@ public class PTBEController extends BaseAPIController {
 	
 	public Result submitAdURL() {
 		Map<String, String[]> formValues = getFormValues();
-		AdJSON json = new AdJSON();
-		json.adImageURL = formValues.get("adImageURL")[0];
-		json.adClickURL = formValues.get("adClickURL")[0];
-		ads.add(json);
+		Ad ad = new Ad();
+		ad.setAdImageURL(formValues.get("adImageURL")[0]);
+		ad.setAdClickURL(formValues.get("adClickURL")[0]);
+		Ebean.save(ad);
+		loadAdCache();
 		return redirect(routes.PTBEController.viewAddQuestion());
 	}
 	
@@ -276,8 +298,9 @@ public class PTBEController extends BaseAPIController {
 	public Result getAd() {
 		if(!isValidAPIKey() || !isValidSessionKey())
 			return ok(cachedErrorInvalidKey);	
-		l("Ad retrieved by " + getEmailKey());
-		return ok(Json.toJson(ads));
+	
+		l("Ads retrieved by " + getEmailKey());
+		return ok(Json.toJson(this.ads));
 	}
 	
 	private QuestionBankItemResponseJSON convert(QuestionBank qb) {
@@ -294,12 +317,9 @@ public class PTBEController extends BaseAPIController {
 		qbi.topicName = qb.getTopic().getName();
 		return qbi;
 	}
-	
-
-	
+		
 	public class AdJSON {
-		public int statusCode;
-		public String status;
+		public long id;
 		public String adImageURL;
 		public String adClickURL;
 		public String getAdImageURL() {
@@ -308,11 +328,8 @@ public class PTBEController extends BaseAPIController {
 		public String getAdClickURL() {
 			return adClickURL;
 		}
-		public int getStatusCode() {
-			return statusCode;
-		}
-		public String getStatus() {
-			return status;
+		public long getId() {
+			return id;
 		}
 	}
 	

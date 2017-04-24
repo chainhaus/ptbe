@@ -24,6 +24,18 @@ create table apiregistry_authenticateduser (
   constraint pk_apiregistry_authenticateduser primary key (apiregistry_id,authenticated_user_id)
 );
 
+create table ad (
+  id                            bigint auto_increment not null,
+  uuid                          varchar(255),
+  ad_image_url                  varchar(255),
+  ad_click_url                  varchar(255),
+  disabled                      boolean,
+  version                       bigint not null,
+  created_at                    DATETIME not null,
+  updated_at                    DATETIME not null,
+  constraint pk_ad primary key (id)
+);
+
 create table audit_trail (
   id                            bigint auto_increment not null,
   uuid                          varchar(255),
@@ -413,6 +425,8 @@ drop index if exists ix_test_result_u_id;
 drop table if exists apiregistry;
 
 drop table if exists apiregistry_authenticateduser;
+
+drop table if exists ad;
 
 drop table if exists audit_trail;
 
