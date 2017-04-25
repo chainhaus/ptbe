@@ -1,0 +1,3 @@
+/home/ec2-user/activator/bin/activator clean-files
+/home/ec2-user/activator/bin/activator clean
+/home/ec2-user/activator/bin/activator stage
