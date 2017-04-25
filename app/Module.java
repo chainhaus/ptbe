@@ -5,10 +5,6 @@ import raven.services.SiteTrackingService;
 
 import java.time.Clock;
 
-import services.ApplicationTimer;
-import services.AtomicCounter;
-import services.Counter;
-
 /**
  * This class is a Guice module that tells Guice how to bind several
  * different types. This Guice module is created when the Play
@@ -23,8 +19,6 @@ public class Module extends AbstractModule {
 
     @Override
     public void configure() {
-        // Use the system clock as the default implementation of Clock
-        bind(Lifecycle.class).asEagerSingleton();
         bind(SiteTrackingService.class).asEagerSingleton();
     }
 

@@ -3,27 +3,6 @@
 
 # --- !Ups
 
-create table apiregistry (
-  id                            bigint auto_increment not null,
-  uuid                          varchar(255),
-  app_id                        integer,
-  remove_me                     varchar(255),
-  app_name                      varchar(255),
-  api_key                       varchar(255),
-  major_version                 integer,
-  minor_version                 integer,
-  version                       bigint not null,
-  created_at                    DATETIME not null,
-  updated_at                    DATETIME not null,
-  constraint pk_apiregistry primary key (id)
-);
-
-create table apiregistry_authenticateduser (
-  apiregistry_id                bigint not null,
-  authenticated_user_id         bigint not null,
-  constraint pk_apiregistry_authenticateduser primary key (apiregistry_id,authenticated_user_id)
-);
-
 create table ad (
   id                            bigint auto_increment not null,
   uuid                          varchar(255),
@@ -34,6 +13,26 @@ create table ad (
   created_at                    DATETIME not null,
   updated_at                    DATETIME not null,
   constraint pk_ad primary key (id)
+);
+
+create table app_registry (
+  id                            bigint auto_increment not null,
+  uuid                          varchar(255),
+  app_id                        integer,
+  app_name                      varchar(255),
+  api_key                       varchar(255),
+  major_version                 integer,
+  minor_version                 integer,
+  version                       bigint not null,
+  created_at                    DATETIME not null,
+  updated_at                    DATETIME not null,
+  constraint pk_app_registry primary key (id)
+);
+
+create table appregistry_authenticateduser (
+  app_registry_id               bigint not null,
+  authenticated_user_id         bigint not null,
+  constraint pk_appregistry_authenticateduser primary key (app_registry_id,authenticated_user_id)
 );
 
 create table audit_trail (
@@ -49,6 +48,7 @@ create table audit_trail (
 create table authenticated_user (
   id                            bigint auto_increment not null,
   uuid                          varchar(255),
+  org_id                        bigint,
   password                      varchar(255),
   salt                          varbinary(255),
   fname                         varchar(255),
@@ -249,6 +249,12 @@ create table question_bank (
   constraint pk_question_bank primary key (id)
 );
 
+create table question_bank_app_registry (
+  question_bank_id              bigint not null,
+  app_registry_id               bigint not null,
+  constraint pk_question_bank_app_registry primary key (question_bank_id,app_registry_id)
+);
+
 create table registrant (
   id                            bigint auto_increment not null,
   uuid                          varchar(255),
@@ -359,11 +365,14 @@ create table word_list (
   constraint pk_word_list primary key (id)
 );
 
-alter table apiregistry_authenticateduser add constraint fk_apiregistry_authenticateduser_apiregistry foreign key (apiregistry_id) references apiregistry (id) on delete restrict on update restrict;
-create index ix_apiregistry_authenticateduser_apiregistry on apiregistry_authenticateduser (apiregistry_id);
+alter table appregistry_authenticateduser add constraint fk_appregistry_authenticateduser_app_registry foreign key (app_registry_id) references app_registry (id) on delete restrict on update restrict;
+create index ix_appregistry_authenticateduser_app_registry on appregistry_authenticateduser (app_registry_id);
 
-alter table apiregistry_authenticateduser add constraint fk_apiregistry_authenticateduser_authenticated_user foreign key (authenticated_user_id) references authenticated_user (id) on delete restrict on update restrict;
-create index ix_apiregistry_authenticateduser_authenticated_user on apiregistry_authenticateduser (authenticated_user_id);
+alter table appregistry_authenticateduser add constraint fk_appregistry_authenticateduser_authenticated_user foreign key (authenticated_user_id) references authenticated_user (id) on delete restrict on update restrict;
+create index ix_appregistry_authenticateduser_authenticated_user on appregistry_authenticateduser (authenticated_user_id);
+
+alter table authenticated_user add constraint fk_authenticated_user_org_id foreign key (org_id) references organization (id) on delete restrict on update restrict;
+create index ix_authenticated_user_org_id on authenticated_user (org_id);
 
 alter table authenticated_user_security_role add constraint fk_authenticated_user_security_role_authenticated_user foreign key (authenticated_user_id) references authenticated_user (id) on delete restrict on update restrict;
 create index ix_authenticated_user_security_role_authenticated_user on authenticated_user_security_role (authenticated_user_id);
@@ -386,17 +395,26 @@ create index ix_inbox_message_receiver_id on inbox_message (receiver_id);
 alter table question_bank add constraint fk_question_bank_topic_id foreign key (topic_id) references topic (id) on delete restrict on update restrict;
 create index ix_question_bank_topic_id on question_bank (topic_id);
 
+alter table question_bank_app_registry add constraint fk_question_bank_app_registry_question_bank foreign key (question_bank_id) references question_bank (id) on delete restrict on update restrict;
+create index ix_question_bank_app_registry_question_bank on question_bank_app_registry (question_bank_id);
+
+alter table question_bank_app_registry add constraint fk_question_bank_app_registry_app_registry foreign key (app_registry_id) references app_registry (id) on delete restrict on update restrict;
+create index ix_question_bank_app_registry_app_registry on question_bank_app_registry (app_registry_id);
+
 alter table test_result add constraint fk_test_result_u_id foreign key (u_id) references authenticated_user (id) on delete restrict on update restrict;
 create index ix_test_result_u_id on test_result (u_id);
 
 
 # --- !Downs
 
-alter table apiregistry_authenticateduser drop constraint if exists fk_apiregistry_authenticateduser_apiregistry;
-drop index if exists ix_apiregistry_authenticateduser_apiregistry;
+alter table appregistry_authenticateduser drop constraint if exists fk_appregistry_authenticateduser_app_registry;
+drop index if exists ix_appregistry_authenticateduser_app_registry;
 
-alter table apiregistry_authenticateduser drop constraint if exists fk_apiregistry_authenticateduser_authenticated_user;
-drop index if exists ix_apiregistry_authenticateduser_authenticated_user;
+alter table appregistry_authenticateduser drop constraint if exists fk_appregistry_authenticateduser_authenticated_user;
+drop index if exists ix_appregistry_authenticateduser_authenticated_user;
+
+alter table authenticated_user drop constraint if exists fk_authenticated_user_org_id;
+drop index if exists ix_authenticated_user_org_id;
 
 alter table authenticated_user_security_role drop constraint if exists fk_authenticated_user_security_role_authenticated_user;
 drop index if exists ix_authenticated_user_security_role_authenticated_user;
@@ -419,14 +437,20 @@ drop index if exists ix_inbox_message_receiver_id;
 alter table question_bank drop constraint if exists fk_question_bank_topic_id;
 drop index if exists ix_question_bank_topic_id;
 
+alter table question_bank_app_registry drop constraint if exists fk_question_bank_app_registry_question_bank;
+drop index if exists ix_question_bank_app_registry_question_bank;
+
+alter table question_bank_app_registry drop constraint if exists fk_question_bank_app_registry_app_registry;
+drop index if exists ix_question_bank_app_registry_app_registry;
+
 alter table test_result drop constraint if exists fk_test_result_u_id;
 drop index if exists ix_test_result_u_id;
 
-drop table if exists apiregistry;
-
-drop table if exists apiregistry_authenticateduser;
-
 drop table if exists ad;
+
+drop table if exists app_registry;
+
+drop table if exists appregistry_authenticateduser;
 
 drop table if exists audit_trail;
 
@@ -455,6 +479,8 @@ drop table if exists organization;
 drop table if exists password_reset;
 
 drop table if exists question_bank;
+
+drop table if exists question_bank_app_registry;
 
 drop table if exists registrant;
 

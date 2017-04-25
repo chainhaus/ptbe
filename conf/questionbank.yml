@@ -1,51 +1,57 @@
 # No tabs allowed in this file
 
-- &topicll !!models.ptbe.Topic
+- &appID !!models.raven.APIRegistry
+    appID: 1
+    apiKey: abc123
+    majorVersion: 1
+    minorVersion: 2
+
+- &topicll !!models.raven.quiz.Topic
     name: Real Estate License Law
-- !!models.ptbe.Topic
+- !!models.raven.quiz.Topic
     name: Disclosure and Listing Forms
-- !!models.ptbe.Topic
+- !!models.raven.quiz.Topic
     name: Easement and Liens
-- !!models.ptbe.Topic
+- !!models.raven.quiz.Topic
     name: Real Estate Closings
-- !!models.ptbe.Topic
+- !!models.raven.quiz.Topic
     name: Estates and Interests
-- !!models.ptbe.Topic
+- !!models.raven.quiz.Topic
     name: Land Use Regulation
-- !!models.ptbe.Topic
+- !!models.raven.quiz.Topic
     name: Construction
-- !!models.ptbe.Topic
+- !!models.raven.quiz.Topic
     name: Environmental Issues
-- &topicval !!models.ptbe.Topic
+- &topicval !!models.raven.quiz.Topic
     name: Valuation and Pricing
-- !!models.ptbe.Topic
+- !!models.raven.quiz.Topic
     name: Real Estate Math
-- !!models.ptbe.Topic
+- !!models.raven.quiz.Topic
     name: Fair Housing
-- !!models.ptbe.Topic
+- !!models.raven.quiz.Topic
     name: Contracts
-- !!models.ptbe.Topic
+- !!models.raven.quiz.Topic
     name: Leases
-- !!models.ptbe.Topic
+- !!models.raven.quiz.Topic
     name: Real Estate Finance
-- &topicmortgage !!models.ptbe.Topic
+- &topicmortgage !!models.raven.quiz.Topic
     name: Mortgage
-- !!models.ptbe.Topic
+- !!models.raven.quiz.Topic
     name: Municipal
-- !!models.ptbe.Topic
+- !!models.raven.quiz.Topic
     name: Property Insurance
-- !!models.ptbe.Topic
+- !!models.raven.quiz.Topic
     name: Taxes and Assessments
-- !!models.ptbe.Topic
+- !!models.raven.quiz.Topic
     name: Income Tax
-- !!models.ptbe.Topic
+- !!models.raven.quiz.Topic
     name: Condos and Coops
-- !!models.ptbe.Topic
+- !!models.raven.quiz.Topic
     name: Property Management
-- !!models.ptbe.Topic
+- !!models.raven.quiz.Topic
     name: Commercial / Investment
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: How many years is a salesperson license valid for?
     choice1: 2
     choice2: 5
@@ -55,8 +61,9 @@
     answer: 1
     topic: *topicll
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: What does GCI stand for?
     choice1: Gross Commission Income
     choice2: Guest Common Incentive
@@ -66,8 +73,9 @@
     topic: *topicll
     answer: 1
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: What is the minimum age for a broker?
     choice1: 19
     choice2: 21
@@ -77,8 +85,9 @@
     topic: *topicll
     answer: 4
     free: true
+    app: *appID
     
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: A disclosure form is required from
     choice1: Buyers
     choice2: Sellers
@@ -87,9 +96,10 @@
     choice5: All of the above
     topic: *topicll
     answer: 5
-    free: true  
+    free: true
+    app: *appID  
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Sheathing is
     choice1: Cancelling a contract a day before
     choice2: Waterproof exterior panels on a house
@@ -99,8 +109,9 @@
     topic: *topicll
     answer: 2
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: A condo is considered
     choice1: A positive attitude
     choice2: Restricted by zoning
@@ -110,8 +121,9 @@
     topic: *topicll
     answer: 4
     free: true
+    app: *appID
     
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Which of the following is NOT part of OLDCAR
     choice1: Disclosure
     choice2: Obedience
@@ -121,8 +133,9 @@
     topic: *topicll
     answer: 3
     free: true
+    app: *appID
     
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Which of the following is NOT part of OLDCAR
     choice1: Loving care
     choice2: Disclosure
@@ -132,8 +145,9 @@
     topic: *topicll
     answer: 1
     free: true
+    app: *appID
     
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Which of the following is NOT part of OLDCAR
     choice1: Obeyance
     choice2: Accountability
@@ -143,8 +157,9 @@
     topic: *topicll
     answer: 1
     free: true
+    app: *appID
     
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Which of the following IS part of OLDCAR
     choice1: Accounting
     choice2: Accountability
@@ -154,8 +169,9 @@
     topic: *topicll
     answer: 2
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Which of the following IS part of OLDCAR
     choice1: Competence
     choice2: Closure
@@ -165,8 +181,9 @@
     topic: *topicll
     answer: 5
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Which of the following IS part of OLDCAR
     choice1: Accounts
     choice2: Orally
@@ -175,9 +192,10 @@
     choice5: Disloyal
     topic: *topicll
     answer: 4
-    free: true     
+    free: true 
+    app: *appID    
     
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: FNMA is also referred to as
     choice1: Fannie Mae
     choice2: Aunt Jemima
@@ -186,9 +204,10 @@
     choice5: Mortgage Association
     topic: *topicll
     answer: 1
-    free: true  
+    free: true
+    app: *appID  
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: When a loan exceeds FNMA loan parameters, the loan is called
     choice1: Blockbusted
     choice2: Non-conforming
@@ -197,9 +216,10 @@
     choice5: Invalid
     topic: *topicll
     answer: 2
-    free: true      
+    free: true
+    app: *appID      
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: FNMA stands for
     choice1: Future Nation Mortgage Act
     choice2: Federal Nation Mortgage Associated
@@ -209,8 +229,9 @@
     topic: *topicll
     answer: 5
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: A flip tax is
     choice1: Optional costs incurred by brokerages
     choice2: Tax on property thats flipped within 60 days
@@ -220,8 +241,9 @@
     topic: *topicll
     answer: 3
     free: true
+    app: *appID
     
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: A convenant of seizin promises
     choice1: To cancel a contract within a number of days
     choice2: If you seize it, it's yours
@@ -231,8 +253,9 @@
     topic: *topicll
     answer: 4
     free: true
+    app: *appID
     
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: The convenant that promises the grantor owns the property sold is called
     choice1: Laches
     choice2: Seizin
@@ -241,9 +264,10 @@
     choice5: Confirmation
     topic: *topicll
     answer: 2
-    free: true        
+    free: true
+    app: *appID        
     
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: The covenant of seizin is contained in a
     choice1: City Register
     choice2: Sales contract
@@ -252,9 +276,10 @@
     choice5: Title policy
     topic: *topicll
     answer: 4
-    free: true    
+    free: true
+    app: *appID    
     
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: A rise in the CPI most probably indicates
     choice1: Deflation
     choice2: Inflation
@@ -263,9 +288,10 @@
     choice5: Positive GDP growth
     topic: *topicll
     answer: 2
-    free: true    
+    free: true
+    app: *appID    
     
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: An economic inflation is necessarily when there is
     choice1: A general increase in prices of goods
     choice2: An increase in workforce productivity
@@ -274,9 +300,10 @@
     choice5: An increase of purchasing power
     topic: *topicll
     answer: 1
-    free: true    
+    free: true
+    app: *appID    
     
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: An economic inflation is necessarily when there is
     choice1: A real estate bubble
     choice2: A decrease in workforce productivity
@@ -286,8 +313,9 @@
     topic: *topicll
     answer: 5
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: An economic deflation is necessarily when there is
     choice1: Markets cool down
     choice2: A decrease in prices
@@ -297,8 +325,9 @@
     topic: *topicll
     answer: 2
     free: true
+    app: *appID
     
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: An economic stagflation is necessarily when there is
     choice1: Zero growth
     choice2: Growth cycles rapidly
@@ -308,8 +337,9 @@
     topic: *topicll
     answer: 1
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: When the CPI index drops and purchasing power increases, it's called
     choice1: Deflation
     choice2: Staflation
@@ -318,9 +348,10 @@
     choice5: Inflation
     topic: *topicll
     answer: 1
-    free: true      
+    free: true
+    app: *appID      
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Illegal mixing of funds that should have been isolated is called
     choice1: Mixer
     choice2: Comixing
@@ -330,8 +361,9 @@
     topic: *topicll
     answer: 3
     free: true
+    app: *appID
         
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Commingling refers to when
     choice1: The commissioner directly investigates
     choice2: Investor money is used to pay off other investors
@@ -340,9 +372,10 @@
     choice5: There is mixing of monies in the same account that should be separate
     topic: *topicll
     answer: 5
-    free: true        
+    free: true
+    app: *appID        
         
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: The FHA refers to an act and stands for
     choice1: Fair Housing Act
     choice2: Free Home Act
@@ -352,8 +385,9 @@
     topic: *topicll
     answer: 1
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: The Fair Housing Act was passed in
     choice1: 1969
     choice2: 1968
@@ -363,8 +397,9 @@
     topic: *topicll
     answer: 2
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: An Amendment to the FHA was made in
     choice1: 1990
     choice2: 1980
@@ -374,8 +409,9 @@
     topic: *topicll
     answer: 3
     free: true
+    app: *appID
             
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: The 1988 FHA Amendment protects from discrimination by
     choice1: Nationality
     choice2: Race
@@ -385,8 +421,9 @@
     topic: *topicll
     answer: 3
     free: true
+    app: *appID
              
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: The FHA of 1968 protects from discrimination by
     choice1: National origin and religion
     choice2: Race and national origin
@@ -395,9 +432,10 @@
     choice5: Origin and income
     topic: *topicll
     answer: 1
-    free: true             
+    free: true
+    app: *appID             
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Religion and national origin is a protected class under
     choice1: FHA Amendment 1988
     choice2: FHA 1968
@@ -407,8 +445,9 @@
     topic: *topicll
     answer: 2
     free: true
+    app: *appID
                         
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: The government agency that handles real estate salesperson licenses is
     choice1: Department of State
     choice2: Department of Treasury
@@ -418,8 +457,9 @@
     topic: *topicll
     answer: 1
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: In a mortgage loan, one point equals
     choice1: A 1% reduction in the loan rate
     choice2: 1% of the interest rate
@@ -429,8 +469,9 @@
     topic: *topicll
     answer: 5
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: A reason a borrow may purchase mortgage points is to
     choice1: Put money into the mortgage savings account
     choice2: Lower the loan interest rate
@@ -440,8 +481,9 @@
     topic: *topicll
     answer: 2
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: A bank most likely prefers to sell mortgage points as a means to
     choice1: Get money upfront and reduce mortgage risks
     choice2: Meet sales target
@@ -451,8 +493,9 @@
     topic: *topicll
     answer: 1
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: A landlord changes the locks on their non-paying tenant. This is known as
     choice1: Police power
     choice2: Laws of escheat
@@ -462,8 +505,9 @@
     topic: *topicll
     answer: 5
     free: true
+    app: *appID
     
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Radon is best described as a
     choice1: Liquid
     choice2: Gas
@@ -472,9 +516,10 @@
     choice5: Wave
     topic: *topicll
     answer: 2
-    free: true   
+    free: true
+    app: *appID   
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: How many continuing education credits are required of agents per 2 year period?
     choice1: 33.5
     choice2: 37.5
@@ -483,9 +528,10 @@
     choice5: 10
     topic: *topicll
     answer: 2
-    free: true 
+    free: true
+    app: *appID 
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: A loan amount is $500,000. What is 2 points equal to?
     choice1: $1,000,000
     choice2: $2,000
@@ -494,9 +540,10 @@
     choice5: $110.92
     topic: *topicll
     answer: 3
-    free: true     
+    free: true
+    app: *appID     
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: A borrower purchases points for $18,000 on a $600,000 loan. How many points did they purchase?
     choice1: 18
     choice2: 3
@@ -505,9 +552,10 @@
     choice5: 20
     topic: *topicll
     answer: 2
-    free: true    
+    free: true
+    app: *appID    
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Samantha lowers her loan interest rate amount by purchasing this at origination
     choice1: Mortgage insurance
     choice2: Mortgage points
@@ -517,8 +565,9 @@
     topic: *topicll
     answer: 2
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Jack purchases 3 points on a loan of $1,200,000. Jack is prepaying how much on his loan?
     choice1: $40,000
     choice2: $36,000
@@ -528,8 +577,9 @@
     topic: *topicll
     answer: 2
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Which of the following is NOT a type of deed?
     choice1: Full convenant and warranty
     choice2: Bargain and sale
@@ -539,8 +589,9 @@
     topic: *topicll
     answer: 5
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Which of the following is NOT a type of deed?
     choice1: Full convenant and warranty
     choice2: Bargain and sale
@@ -549,9 +600,10 @@
     choice5: Sherrif
     topic: *topicll
     answer: 5
-    free: true    
+    free: true
+    app: *appID    
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Which of the following is NOT true about a Full Covenant & Warranty deed?
     choice1: Offers the most protection for the buyer
     choice2: Contains covenants from the seller to the buyer
@@ -560,9 +612,10 @@
     choice5: Is used for future title searches
     topic: *topicval
     answer: 4
-    free: true 
+    free: true
+    app: *appID 
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Which of the following is NOT true about a Quitclaim deed?
     choice1: Offers the most protection for the buyer
     choice2: Offers the most protection for the seller
@@ -572,8 +625,9 @@
     topic: *topicval
     answer: 1
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Which of the following is NOT true about a Full Covenant & Warranty deed?
     choice1: Offers the most protection for the buyer
     choice2: Contains covenants from the seller to the buyer
@@ -583,8 +637,9 @@
     topic: *topicval
     answer: 4
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Which of the following is NOT true about a Bargain & Sale deed?
     choice1: Extremely uncommon
     choice2: Doesn't protect buyer as much as Full Covenant deed
@@ -594,8 +649,9 @@
     topic: *topicval
     answer: 1
     free: true
+    app: *appID
     
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Which of the following is NOT a type of deed?
     choice1: Full convenant and warranty
     choice2: Bargain and sale
@@ -604,9 +660,10 @@
     choice5: Auctioned or Foreclosed
     topic: *topicval
     answer: 5
-    free: true 
+    free: true
+    app: *appID 
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: A deed issued by a court is known as a
     choice1: Clerk's deed
     choice2: Judge's deed
@@ -615,9 +672,10 @@
     choice5: Magistrate's deed
     topic: *topicval
     answer: 3
-    free: true 
+    free: true
+    app: *appID 
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Ownership is transferred when which of the following occurs
     choice1: Buyer puts in an offer
     choice2: Handshake
@@ -627,8 +685,9 @@
     topic: *topicll
     answer: 5
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Tom wishes to sell his house quickly and drops the price from $475,000 to $450,000. A buyer puts in an offer at $460,000. Which of the following is true?
     choice1: Offer and acceptance has occurred
     choice2: Seller has not accepted
@@ -638,8 +697,9 @@
     topic: *topicll
     answer: 2
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Article 12A of the NY State Real Property Law is known as
     choice1: Building zoning regulation
     choice2: Salesperson Regulation
@@ -649,8 +709,9 @@
     topic: *topicll
     answer: 3
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Which of the following is NOT associated with violations of Article 12A?
     choice1: $1000 fine
     choice2: 1 year in jail
@@ -660,8 +721,9 @@
     topic: *topicll
     answer: 5
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: New York Real Estate License law is Article
     choice1: 12A
     choice2: 12
@@ -671,8 +733,9 @@
     topic: *topicll
     answer: 1
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: If a broker's license is suspended, the licenses of their salespersons is
     choice1: Revoked
     choice2: Also suspended
@@ -682,8 +745,9 @@
     topic: *topicll
     answer: 2
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Bradley is a broker and just had his license suspended. Erica and Wayne work as salesperson for Bradley. Their licenses are now
     choice1: Upgraded to a broker's license
     choice2: Suspended
@@ -693,8 +757,9 @@
     topic: *topicll
     answer: 2
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Indira's broker license was revoked. How long does she need to wait to reinstate it?
     choice1: At minimum a year, and it's not guaranteed to be re-issued
     choice2: Depends on the judge
@@ -704,8 +769,9 @@
     topic: *topicll
     answer: 1
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: In the context of Article 12A, a licensee is
     choice1: A broker or salesperson
     choice2: A broker
@@ -715,8 +781,9 @@
     topic: *topicll
     answer: 1
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: A salesperson can only represent a buyer or seller by first associating with a broker
     choice1: False, a salesperson is an independent contractor
     choice2: True, a salesperson must work with a licensed broker
@@ -726,8 +793,9 @@
     topic: *topicll
     answer: 2
     free: true
+    app: *appID
     
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: What are PCBs in the context of real estate?
     choice1: Poly-chlorinated Biphenyls
     choice2: PC Boards
@@ -736,9 +804,10 @@
     choice5: Photocopy of a Band-Aid
     topic: *topicll
     answer: 1
-    free: true    
+    free: true
+    app: *appID    
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Liquids used to cool power plants are called
     choice1: PCs
     choice2: PCDs
@@ -747,9 +816,10 @@
     choice5: PDC
     topic: *topicll
     answer: 3
-    free: true  
+    free: true
+    app: *appID  
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: The acronym for Poly-chlorinated Biphenyls is
     choice1: PC
     choice2: PCB
@@ -759,8 +829,9 @@
     topic: *topicll
     answer: 2
     free: true
+    app: *appID
     
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Who is required to fill out the Property Condition Disclosure Statement?
     choice1: Buyer's agent
     choice2: Attorney
@@ -769,9 +840,10 @@
     choice5: Buyer
     topic: *topicll
     answer: 4
-    free: true    
+    free: true
+    app: *appID    
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: If the basement has a sink hole, on which document does the seller disclose it?
     choice1: Property Condition Disclosure Statement
     choice2: Nowhere
@@ -781,8 +853,9 @@
     topic: *topicll
     answer: 1
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: If the seller does not provide the a Property Condition Disclosure document, how much is the buyer entitled to?
     choice1: $75
     choice2: $100
@@ -792,8 +865,9 @@
     topic: *topicll
     answer: 3
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Kim is buying a home and the seller declines to produce a Property Condition Disclosure. How much money is Kim entitled to at closing?
     choice1: $500
     choice2: $400
@@ -803,8 +877,9 @@
     topic: *topicll
     answer: 1
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Property Condition Disclosures are NOT required in which of the following
     choice1: Commercial sales
     choice2: Residential sales
@@ -814,8 +889,9 @@
     topic: *topicll
     answer: 1
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Capital gains are defined as
     choice1: Excess profits from the sale of only condos
     choice2: Taxable profits from a sale of an asset
@@ -825,8 +901,9 @@
     topic: *topicll
     answer: 2
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: For a single, unmarried person, how much of profit is initially tax-free on the sale of an asset?
     choice1: $50,000
     choice2: $205,000
@@ -836,8 +913,9 @@
     topic: *topicll
     answer: 3
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: John buys a home in 2008 for $320,000. Three years later he sells it for $580,000. What is his taxable capital gains?
     choice1: $250,000
     choice2: $580,000
@@ -847,8 +925,9 @@
     topic: *topicll
     answer: 4
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Veronica sells her home for $820,000, owning it for 5 years. Her accountant says her taxable capital gains is $100,000. How much did she buy the home for?
     choice1: $570,000 
     choice2: $100,000
@@ -858,8 +937,9 @@
     topic: *topicll
     answer: 5
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Grigorio does quick flips and buys a home for $120,000 only to sell it a week later for $140,000. What is his taxable capital gains?
     choice1: $140,000
     choice2: $0
@@ -869,8 +949,9 @@
     topic: *topicll
     answer: 4
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: How much profit is tax-exempt on a sale of home owned by a married couple?
     choice1: $250,000
     choice2: $500,000
@@ -880,8 +961,9 @@
     topic: *topicll
     answer: 2
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: George and Georgina have been married for the past 10 years and own a Manhattan studio for 3 years. If they decide to sell it, how much profit is tax-free?
     choice1: $0
     choice2: Depends on purchase and sale price
@@ -891,8 +973,9 @@
     topic: *topicll
     answer: 5
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Frank and Aleena married last week and decided to sell Frank's Upper East Side co-op to fund a world trip. How much profit is tax-free?
     choice1: Cannot be determined from the given information
     choice2: $250,000
@@ -902,8 +985,9 @@
     topic: *topicll
     answer: 1
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: You plan on purchasing a property for $100,000. How many years do you need to hold it before your first $250k in profits are tax-exempt?
     choice1: 2 years
     choice2: 5 years
@@ -913,8 +997,9 @@
     topic: *topicll
     answer: 1
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: A blind advertisement
     choice1: Has insufficient or vague information
     choice2: Is printed without thought
@@ -924,8 +1009,9 @@
     topic: *topicll
     answer: 1
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Moe places an ad in the classified sections of the Times and states only the following '3 Bedroom, $3900, UES'. This is known as a
     choice1: Quickie ad
     choice2: Blind ad
@@ -935,8 +1021,9 @@
     topic: *topicll
     answer: 2
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Catherine takes an ad out in the Times and states a rental unit, address and her name and that she's an agent. This is not a blind ad because
     choice1: It's in the Times
     choice2: Catherine paid for it
@@ -946,8 +1033,9 @@
     topic: *topicll
     answer: 4
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Do foreclosure sales require a Property Condition Disclosure Statement?
     choice1: Yes, it is still a sale
     choice2: No, the law makes an exception for foreclosures
@@ -957,8 +1045,9 @@
     topic: *topicll
     answer: 2
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: If owning is called freehold, then leasing is
     choice1: Freelease
     choice2: Freeleasing
@@ -968,8 +1057,9 @@
     topic: *topicll
     answer: 4
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: If leasing is called leasehold, then owning is
     choice1: Ownhold
     choice2: Freehold
@@ -979,8 +1069,9 @@
     topic: *topicll
     answer: 2
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: The most common form of freehold bundle of rights is
     choice1: Simple and freehold
     choice2: Simply free
@@ -990,8 +1081,9 @@
     topic: *topicll
     answer: 5
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Having all the rights of ownership is referred to as
     choice1: Fee simple absolute
     choice2: Seizin
@@ -1001,8 +1093,9 @@
     topic: *topicll
     answer: 1
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: The most common form of freehold is
     choice1: Coops
     choice2: Bargain and sale
@@ -1012,8 +1105,9 @@
     topic: *topicval
     answer: 4
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Which of the following is NOT a right of ownership?
     choice1: Disposition
     choice2: Control
@@ -1023,8 +1117,9 @@
     topic: *topicval
     answer: 4
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Which right of ownership gives the owner the ability to renovate?
     choice1: Control
     choice2: Possession
@@ -1034,8 +1129,9 @@
     topic: *topicval
     answer: 1
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Which right of ownership gives the owner access to the property?
     choice1: Induction
     choice2: Possession
@@ -1045,8 +1141,9 @@
     topic: *topicval
     answer: 2
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Quit enjoyment entitles to the owner to an environment with the following EXCEPT
     choice1: Nuisance
     choice2: Noise
@@ -1056,8 +1153,9 @@
     topic: *topicval
     answer: 4
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: The following right best allows an owner to disallow public access, if s/he so chooses
     choice1: Barrier and Moats Act
     choice2: Privacy rights
@@ -1067,8 +1165,9 @@
     topic: *topicval
     answer: 5
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: A deed, in the context of real estate, is
     choice1: Created at the bank
     choice2: An owner
@@ -1078,8 +1177,9 @@
     topic: *topicval
     answer: 4
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Which of the following is a document that demonstrates ownership of property
     choice1: Lease
     choice2: Deed
@@ -1089,8 +1189,9 @@
     topic: *topicmortgage
     answer: 2
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: The difference between a deed and title is
     choice1: Deed is the paper demonstrating ownership; Title is the concept of ownership
     choice2: Deed is the concept of ownership; Title is the paper demonstrating ownership
@@ -1100,8 +1201,9 @@
     topic: *topicmortgage
     answer: 1
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: The conveyance of title means that
     choice1: Title is transferred via a deed
     choice2: Seller is made aware of title costs
@@ -1111,8 +1213,9 @@
     topic: *topicmortgage
     answer: 1
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: In the context of real estate, what is flashing?
     choice1: Security panel fixes
     choice2: Front porch lighting system
@@ -1122,8 +1225,9 @@
     topic: *topicmortgage
     answer: 4
     free: true
+    app: *appID
 
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: To become a broker, you have to take these many hous of classes in total
     choice1: 120
     choice2: 75
@@ -1133,8 +1237,9 @@
     topic: *topicmortgage
     answer: 1
     free: true
+    app: *appID
     
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: An additional these many hours of class are required beyond the salesperson class to be a broker
     choice1: 55
     choice2: 40
@@ -1144,8 +1249,9 @@
     topic: *topicmortgage
     answer: 5
     free: true
+    app: *appID
     
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: John is 18. What is earliest age he can be a broker, assuming he is a salesperson now?
     choice1: 23
     choice2: 22
@@ -1155,8 +1261,9 @@
     topic: *topicmortgage
     answer: 5
     free: true
+    app: *appID
     
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: How many class hours is the real estate salesperson requirement?
     choice1: 40
     choice2: 120
@@ -1166,8 +1273,9 @@
     topic: *topicmortgage
     answer: 4
     free: true
+    app: *appID
     
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Alicia is 20 years old and a broker. She got her salesperson license at what age?
     choice1: 17
     choice2: 18
@@ -1177,8 +1285,9 @@
     topic: *topicmortgage
     answer: 2
     free: true
+    app: *appID
     
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: An aluminum material used to cover cracks and waterproofing roofs is called
     choice1: Spackle
     choice2: Flashing
@@ -1188,8 +1297,9 @@
     topic: *topicmortgage
     answer: 2
     free: true
+    app: *appID
     
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Do two parties in a joint tenancy have right of survivorship if one dies?
     choice1: Yes
     choice2: No, if one dies the other loses the property
@@ -1199,8 +1309,9 @@
     topic: *topicmortgage
     answer: 1
     free: true
+    app: *appID
     
-- !!models.ptbe.QuestionBank
+- !!models.raven.QuestionBank
     question: Margaret and Thompson are married and since bought a townhouse in the Upper East Side. This ownership is known as
     choice1: Ownership by Entirety
     choice2: For Better Or Worse Tenancy
@@ -1210,12 +1321,9 @@
     topic: *topicmortgage
     answer: 1
     free: true
+    app: *appID
                     
-- !!models.raven.APIRegistry
-    appID: 1
-    apiKey: abc123
-    majorVersion: 1
-    minorVersion: 2
+
 
 - &nycsales !!models.raven.SecurityRole
     name: NYC Salesperson
@@ -1238,10 +1346,10 @@
     message: This is a test MOTD
     disabled: false
     
-- !!models.ptbe.Topic
+- !!models.raven.quiz.Topic
     name: Real Estate License Law
 
-- !!models.ptbe.Topic
+- !!models.raven.quiz.Topic
     name: Law of Agency
     
 
