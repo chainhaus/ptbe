@@ -1,5 +1,9 @@
 # No tabs allowed in this file
 
+- &nycsales !!models.raven.SecurityRole
+    name: NYC Salesperson
+    publicFacing: true
+
 - &jamielau !!models.raven.AuthenticatedUser
     fname: jamiel
     email: i@jamiel.net
@@ -13,7 +17,7 @@
     picURL: https://lh3.googleusercontent.com/-1LR2CL6M6CE/AAAAAAAAAAI/AAAAAAAAAAA/3pTen0oTK0s/photo.jpg
     slackID:  jamiel
     
-- &appID !!models.raven.APIRegistry
+- &appID !!models.raven.AppRegistry
     appID: 1
     apiKey: abc123
     majorVersion: 1
@@ -1336,13 +1340,7 @@
     answer: 1
     free: true
     app: *appID
-                    
-
-
-- &nycsales !!models.raven.SecurityRole
-    name: NYC Salesperson
-    publicFacing: true
-    
+                        
 - !!models.ptbe.MOTD
     message: This is a test MOTD
     disabled: false
