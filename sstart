@@ -1,0 +1,4 @@
+/home/ec2-user/activator/bin/activator clean-files
+/home/ec2-user/activator/bin/activator clean
+/home/ec2-user/activator/bin/activator stage
+/home/ec2-user/ptbe/target/universal/stage/bin/ptbe -Dconfig.resource=prod.conf -Dplay.crypto.secret="secretptbe!321" -J-server -J-XX:+UseConcMarkSweepGC &
