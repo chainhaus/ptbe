@@ -14,13 +14,13 @@ import com.fasterxml.jackson.databind.JsonNode;
 
 import controllers.raven.BaseAPIController;
 import controllers.raven.BaseAPIController.GenericResponseJSON;
-import forms.ptbe.TestResultForm;
-import models.ptbe.Ad;
-import models.ptbe.MOTD;
-import models.ptbe.QuestionBank;
-import models.ptbe.TestResult;
-import models.ptbe.Topic;
+import models.raven.Ad;
+import models.raven.AppRegistry;
 import models.raven.AuthenticatedUser;
+import models.raven.MOTD;
+import models.raven.quiz.QuestionBank;
+import models.raven.quiz.TestResult;
+import models.raven.quiz.Topic;
 import play.Configuration;
 import play.data.Form;
 import play.libs.Json;
@@ -28,6 +28,7 @@ import play.mvc.Result;
 import raven.forms.ChangePasswordForm;
 import raven.forms.ResetPasswordForm;
 import raven.forms.SignInForm;
+import raven.forms.quiz.TestResultForm;
 
 public class PTBEController extends BaseAPIController {
 	
@@ -112,8 +113,8 @@ public class PTBEController extends BaseAPIController {
 		if(email==null || email.isEmpty())
 			return ok(cachedErrorInvalidKey);
 		
-		
-		AuthenticatedUser u = AuthenticatedUser.findUserByEmail(email);
+		AppRegistry r = getAppRegistry();
+		AuthenticatedUser u = r.findUserByEmail(email);
 		
 		if(u==null) 
 			return ok(cachedErrorUserNotFound);
@@ -145,7 +146,8 @@ public class PTBEController extends BaseAPIController {
 		if(email==null || email.isEmpty())
 			return ok(cachedErrorInvalidKey);
 		
-		AuthenticatedUser u = AuthenticatedUser.findUserByEmail(email);
+		AppRegistry r = getAppRegistry();
+		AuthenticatedUser u = r.findUserByEmail(email);
 		
 		if(u==null) 
 			return ok(cachedErrorUserNotFound);
@@ -193,7 +195,8 @@ public class PTBEController extends BaseAPIController {
 		String linkUUID = request().getQueryString("linkuuid");
 		if(linkUUID==null || linkUUID.isEmpty())
 			return ok(cachedErrorNoLinkUUID);
-		AuthenticatedUser u = AuthenticatedUser.findUserByLinkUUID(linkUUID);
+		AppRegistry r = getAppRegistry();
+		AuthenticatedUser u = r.findUserByLinkUUID(linkUUID);
 		if(u==null)
 			return ok(cachedErrorUserNotFound);
 		if(u.isDisabled())
@@ -213,7 +216,8 @@ public class PTBEController extends BaseAPIController {
 		String linkUUID = rp.getLinkUUID();
 		if(linkUUID==null || linkUUID.isEmpty())
 			return ok(cachedErrorNoLinkUUID);
-		AuthenticatedUser u = AuthenticatedUser.findUserByLinkUUID(linkUUID);
+		AppRegistry r = getAppRegistry();
+		AuthenticatedUser u = r.findUserByLinkUUID(linkUUID);
 		if(u==null)
 			return ok(cachedErrorUserNotFound);
 		if(u.isDisabled())

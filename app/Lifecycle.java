@@ -3,8 +3,8 @@ import java.util.concurrent.CompletableFuture;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import models.ptbe.QuestionBank;
 import models.raven.AuthenticatedUser;
+import models.raven.quiz.QuestionBank;
 import play.Application;
 import play.Configuration;
 import play.Environment;
