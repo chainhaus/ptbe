@@ -39,17 +39,17 @@ public class PTBEController extends BaseAPIController {
 		if(Ad.find.findRowCount()<1) {
 			Ad ad = null;
 			ad = new Ad();
-			ad.setAdImageURL("http://52.206.94.249:5000/assets/img/adDelease.png");
+			ad.setAdImageURL("http://s3.amazonaws.com/passthebrokerexam/adDelease.png");
 			ad.setAdClickURL("http://beta.delease.com");
 			Ebean.save(ad);
 
 			ad = new Ad();
-			ad.setAdImageURL("http://52.206.94.249:5000/assets/img/adMaven.png");
+			ad.setAdImageURL("http://s3.amazonaws.com/passthebrokerexam/adMaven.png");
 			ad.setAdClickURL("http://mavennewyork.com");
 			Ebean.save(ad);
 			
 			ad = new Ad();
-			ad.setAdImageURL("http://52.206.94.249:5000/assets/img/adBIQ.png");
+			ad.setAdImageURL("http://s3.amazonaws.com/passthebrokerexam/adBIQ.png");
 			ad.setAdClickURL("http://brokerageiq.com");
 			Ebean.save(ad);	
 		}
