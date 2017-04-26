@@ -21,8 +21,10 @@ public class Lifecycle extends BaseLifecycle {
 	public Lifecycle(Environment env, Configuration conf, Application app, ApplicationLifecycle al, ImageService is) {
 		super(env, conf, app, al, is);
 
-		if (QuestionBank.find.findRowCount() == 0) {
+		if (QuestionBank.find.findRowCount() < 1) {
 			loadAndSave("questionbank.yml");
+		} else {
+			Logger.info("Not loading YML");
 		}
 		
 
