@@ -243,6 +243,8 @@ create table question_bank (
   free                          boolean,
   disabled                      boolean,
   answer                        integer,
+  difficulty                    integer,
+  solution_description          varchar(255),
   version                       bigint not null,
   created_at                    DATETIME not null,
   updated_at                    DATETIME not null,
@@ -318,6 +320,19 @@ create table site_visitor (
   created_at                    DATETIME not null,
   updated_at                    DATETIME not null,
   constraint pk_site_visitor primary key (id)
+);
+
+create table team (
+  id                            bigint auto_increment not null,
+  uuid                          varchar(255),
+  org_id                        bigint,
+  name                          varchar(255),
+  slack_url                     varchar(255),
+  version                       bigint not null,
+  created_at                    DATETIME not null,
+  updated_at                    DATETIME not null,
+  constraint uq_team_org_id unique (org_id),
+  constraint pk_team primary key (id)
 );
 
 create table test_result (
@@ -401,6 +416,8 @@ create index ix_question_bank_app_registry_question_bank on question_bank_app_re
 alter table question_bank_app_registry add constraint fk_question_bank_app_registry_app_registry foreign key (app_registry_id) references app_registry (id) on delete restrict on update restrict;
 create index ix_question_bank_app_registry_app_registry on question_bank_app_registry (app_registry_id);
 
+alter table team add constraint fk_team_org_id foreign key (org_id) references organization (id) on delete restrict on update restrict;
+
 alter table test_result add constraint fk_test_result_u_id foreign key (u_id) references authenticated_user (id) on delete restrict on update restrict;
 create index ix_test_result_u_id on test_result (u_id);
 
@@ -442,6 +459,8 @@ drop index if exists ix_question_bank_app_registry_question_bank;
 
 alter table question_bank_app_registry drop constraint if exists fk_question_bank_app_registry_app_registry;
 drop index if exists ix_question_bank_app_registry_app_registry;
+
+alter table team drop constraint if exists fk_team_org_id;
 
 alter table test_result drop constraint if exists fk_test_result_u_id;
 drop index if exists ix_test_result_u_id;
@@ -489,6 +508,8 @@ drop table if exists sms;
 drop table if exists security_role;
 
 drop table if exists site_visitor;
+
+drop table if exists team;
 
 drop table if exists test_result;
 
