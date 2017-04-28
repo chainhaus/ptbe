@@ -37,7 +37,6 @@ public class PTBEController extends BaseAPIController {
 	@Inject
 	public PTBEController(Configuration conf) {
 		super(conf);		
-		loadAdCache();
 	}
 	
 	private void loadAdCache() {
@@ -284,7 +283,7 @@ public class PTBEController extends BaseAPIController {
 	public Result getAd() {
 		if(!isValidAPIKey() || !isValidSessionKey())
 			return ok(cachedErrorInvalidKey);	
-	
+		if (this.ads==null) loadAdCache();
 		l("Ads retrieved by " + getEmailKey());
 		return ok(Json.toJson(this.ads));
 	}
