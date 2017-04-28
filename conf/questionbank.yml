@@ -1,4 +1,16 @@
 # No tabs allowed in this file
+- !!models.raven.Ad
+    adImageURL: http://s3.amazonaws.com/passthebrokerexam/adDelease.png
+    adClickURL: http://beta.delease.com
+
+- !!models.raven.Ad
+    adImageURL: http://s3.amazonaws.com/passthebrokerexam/adMaven.png
+    adClickURL: http://mavennewyork.com
+
+- !!models.raven.Ad
+    adImageURL: http://s3.amazonaws.com/passthebrokerexam/adBIQ.png
+    adClickURL: http://brokerageiq.com
+
 
   
 - &nysalesapp !!models.raven.AppRegistry

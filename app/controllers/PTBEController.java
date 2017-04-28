@@ -36,25 +36,7 @@ public class PTBEController extends BaseAPIController {
 	
 	@Inject
 	public PTBEController(Configuration conf) {
-		super(conf);
-		if(Ad.find.findRowCount()<1) {
-			Ad ad = null;
-			ad = new Ad();
-			ad.setAdImageURL("http://s3.amazonaws.com/passthebrokerexam/adDelease.png");
-			ad.setAdClickURL("http://beta.delease.com");
-			Ebean.save(ad);
-
-			ad = new Ad();
-			ad.setAdImageURL("http://s3.amazonaws.com/passthebrokerexam/adMaven.png");
-			ad.setAdClickURL("http://mavennewyork.com");
-			Ebean.save(ad);
-			
-			ad = new Ad();
-			ad.setAdImageURL("http://s3.amazonaws.com/passthebrokerexam/adBIQ.png");
-			ad.setAdClickURL("http://brokerageiq.com");
-			Ebean.save(ad);	
-		}
-		
+		super(conf);		
 		loadAdCache();
 	}
 	
