@@ -236,7 +236,13 @@ public class PTBEController extends BaseAPIController {
 			return ok(cachedErrorInvalidKey);	
 		l("Question bank retrieved by " + getEmailKey());
 		QuestionBankResponseJSON json = new QuestionBankResponseJSON();
-		List<QuestionBank> qb = QuestionBank.find.where().eq("free", true).and().eq("disabled", false).findList();
+		String emailKey = getEmailKey();
+		List<QuestionBank> qb = null;
+		if(!emailKey.equals("NONE")) 
+			 qb = QuestionBank.getFreeAndRegisteredQuestions();
+		else
+			 qb = QuestionBank.getFreeOnlyQuestions();
+		
 		List<QuestionBankItemResponseJSON> qbi = new ArrayList<QuestionBankItemResponseJSON>(qb.size());
 		for(QuestionBank q : qb) {
 			q.shuffleStem();
@@ -255,7 +261,7 @@ public class PTBEController extends BaseAPIController {
 
 		l("Question premium bank retrieved by " + getEmailKey());
 		QuestionBankResponseJSON json = new QuestionBankResponseJSON();
-		List<QuestionBank> qb = QuestionBank.find.where().eq("disabled", false).findList();
+		List<QuestionBank> qb = QuestionBank.getAllCurrent();
 		List<QuestionBankItemResponseJSON> qbi = new ArrayList<QuestionBankItemResponseJSON>(qb.size());
 		for(QuestionBank q : qb) {
 			q.shuffleStem();
