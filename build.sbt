@@ -17,3 +17,7 @@ libraryDependencies += filters
 
 // Specificy which are Ebeans, application.conf is not sufficient
 playEbeanModels in Compile := Seq("models.ptbe.*")
+
+// do not copy docs to distribution
+sources in (Compile, doc) := Seq.empty
+publishArtifact in (Compile, packageDoc) := false
