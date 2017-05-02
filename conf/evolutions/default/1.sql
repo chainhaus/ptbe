@@ -241,6 +241,7 @@ create table question_bank (
   choice5                       varchar(255),
   topic_id                      bigint,
   free                          boolean,
+  registered                    boolean,
   disabled                      boolean,
   answer                        integer,
   difficulty                    integer,
