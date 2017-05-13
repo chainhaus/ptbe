@@ -94,8 +94,10 @@ public class PTBEController extends BaseAPIController {
 		if(email==null || email.isEmpty())
 			return ok(cachedErrorInvalidKey);
 		
-		AppRegistry r = getAppRegistry();
-		AuthenticatedUser u = r.findUserByEmail(email);
+		AppRegistry ar = getAppRegistry();
+		if(ar==null)
+			return ok(cachedAppNotFound);
+		AuthenticatedUser u = ar.findUserByEmail(email);
 		
 		if(u==null) 
 			return ok(cachedErrorUserNotFound);
@@ -127,8 +129,10 @@ public class PTBEController extends BaseAPIController {
 		if(email==null || email.isEmpty())
 			return ok(cachedErrorInvalidKey);
 		
-		AppRegistry r = getAppRegistry();
-		AuthenticatedUser u = r.findUserByEmail(email);
+		AppRegistry ar = getAppRegistry();
+		if(ar==null)
+			return ok(cachedAppNotFound);
+		AuthenticatedUser u = ar.findUserByEmail(email);
 		
 		if(u==null) 
 			return ok(cachedErrorUserNotFound);
@@ -176,8 +180,10 @@ public class PTBEController extends BaseAPIController {
 		String linkUUID = request().getQueryString("linkuuid");
 		if(linkUUID==null || linkUUID.isEmpty())
 			return ok(cachedErrorNoLinkUUID);
-		AppRegistry r = getAppRegistry();
-		AuthenticatedUser u = r.findUserByLinkUUID(linkUUID);
+		AppRegistry ar = getAppRegistry();
+		if(ar==null)
+			return ok(cachedAppNotFound);
+		AuthenticatedUser u = ar.findUserByLinkUUID(linkUUID);
 		if(u==null)
 			return ok(cachedErrorUserNotFound);
 		if(u.isDisabled())
@@ -197,8 +203,10 @@ public class PTBEController extends BaseAPIController {
 		String linkUUID = rp.getLinkUUID();
 		if(linkUUID==null || linkUUID.isEmpty())
 			return ok(cachedErrorNoLinkUUID);
-		AppRegistry r = getAppRegistry();
-		AuthenticatedUser u = r.findUserByLinkUUID(linkUUID);
+		AppRegistry ar = getAppRegistry();
+		if(ar==null)
+			return ok(cachedAppNotFound);
+		AuthenticatedUser u = ar.findUserByLinkUUID(linkUUID);
 		if(u==null)
 			return ok(cachedErrorUserNotFound);
 		if(u.isDisabled())
@@ -234,15 +242,18 @@ public class PTBEController extends BaseAPIController {
 	public Result getQuestionBank() {
 		if(!isValidAPIKey() || !isValidSessionKey())
 			return ok(cachedErrorInvalidKey);	
-		l("Question bank retrieved by " + getEmailKey());
-		QuestionBankResponseJSON json = new QuestionBankResponseJSON();
-		String emailKey = getEmailKey();
+		String email = getEmailKey();
+		l("Question bank retrieved by " + email);	
+		AppRegistry ar = getAppRegistry();
+		if(ar==null)
+			return ok(cachedAppNotFound);
 		List<QuestionBank> qb = null;
-		if(!emailKey.equals("NONE")) 
-			 qb = QuestionBank.getFreeAndRegisteredQuestions();
+		if(!email.equals("NONE")) 
+			qb = QuestionBank.getFreeAndRegisteredQuestions(ar);
 		else
-			 qb = QuestionBank.getFreeOnlyQuestions();
-		
+			qb = QuestionBank.getFreeOnlyQuestions(ar);
+	
+		QuestionBankResponseJSON json = new QuestionBankResponseJSON();
 		List<QuestionBankItemResponseJSON> qbi = new ArrayList<QuestionBankItemResponseJSON>(qb.size());
 		for(QuestionBank q : qb) {
 			q.shuffleStem();

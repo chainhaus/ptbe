@@ -1,0 +1,107 @@
+# No tabs allowed in this file
+- !!models.raven.Ad
+    adImageURL: http://s3.amazonaws.com/passthebrokerexam/adMaven.png
+    adClickURL: http://mavennewyork.com
+
+- !!models.raven.Ad
+    adImageURL: http://s3.amazonaws.com/passthebrokerexam/adTransactFund.png
+    adClickURL: http://transactfund.com
+
+
+- &nysalesapp !!models.raven.AppRegistry
+    appName: NY Salesperson
+    apiKey: 78f64513888c4ea6a8b6f04162e60bba
+    resetPasswordURL: https://api.passthebrokerexam.com/resetPassword
+    resetPasswordEmailTemplate: b4c8d0ab-ce5f-43d8-a41e-f88b03af5f0d
+    confirmEmailURL: https://api.passthebrokerexam.com/verifyEmail
+    confirmEmailEmailTemplate: 09b341b2-7369-4155-b497-ccf0d96d0908
+    majorVersion: 1
+    minorVersion: 1
+
+- &nysalesapp !!models.raven.AppRegistry
+    appName: NY Broker
+    apiKey: b5fa48e9ce2a43c0a1e16601dc3ad649
+    resetPasswordURL: https://api.passthebrokerexam.com/resetPassword
+    resetPasswordEmailTemplate: b4c8d0ab-ce5f-43d8-a41e-f88b03af5f0d
+    confirmEmailURL: https://api.passthebrokerexam.com/verifyEmail
+    confirmEmailEmailTemplate: 09b341b2-7369-4155-b497-ccf0d96d0908
+    majorVersion: 1
+    minorVersion: 1
+
+- &nysalesapp !!models.raven.AppRegistry
+    appName: NJ Salesperson
+    apiKey: 69e8e568502346cca5569f548956007e
+    resetPasswordURL: https://api.passthebrokerexam.com/resetPassword
+    resetPasswordEmailTemplate: b4c8d0ab-ce5f-43d8-a41e-f88b03af5f0d
+    confirmEmailURL: https://api.passthebrokerexam.com/verifyEmail
+    confirmEmailEmailTemplate: 09b341b2-7369-4155-b497-ccf0d96d0908
+    majorVersion: 1
+    minorVersion: 1
+    
+- &nysalesapp !!models.raven.AppRegistry
+    appName: NJ Broker
+    apiKey: 72254e9cfa034bc1a1dec6af8bd17a61
+    resetPasswordURL: https://api.passthebrokerexam.com/resetPassword
+    resetPasswordEmailTemplate: b4c8d0ab-ce5f-43d8-a41e-f88b03af5f0d
+    confirmEmailURL: https://api.passthebrokerexam.com/verifyEmail
+    confirmEmailEmailTemplate: 09b341b2-7369-4155-b497-ccf0d96d0908
+    majorVersion: 1
+    minorVersion: 1
+
+- !!models.raven.quiz.Topic
+    name: License Law
+- !!models.raven.quiz.Topic
+    name: Law of Agency
+- !!models.raven.quiz.Topic
+    name: Easement and Liens
+- !!models.raven.quiz.Topic
+    name: Deeds
+- !!models.raven.quiz.Topic
+    name: Closings
+- !!models.raven.quiz.Topic
+    name: Estates and Interests
+- !!models.raven.quiz.Topic
+    name: Land Use Regulation
+- !!models.raven.quiz.Topic
+    name: Construction
+- !!models.raven.quiz.Topic
+    name: Environmental Issues
+- &topicval !!models.raven.quiz.Topic
+    name: Valuation and Pricing
+- !!models.raven.quiz.Topic
+    name: Real Estate Math
+- !!models.raven.quiz.Topic
+    name: Fair Housing
+- !!models.raven.quiz.Topic
+    name: Contracts
+- !!models.raven.quiz.Topic
+    name: Leases
+- !!models.raven.quiz.Topic
+    name: Finance and Economics
+- &topicmortgage !!models.raven.quiz.Topic
+    name: Mortgage
+- !!models.raven.quiz.Topic
+    name: Municipal
+- !!models.raven.quiz.Topic
+    name: Property Insurance
+- !!models.raven.quiz.Topic
+    name: Taxes and Assessments
+- !!models.raven.quiz.Topic
+    name: Income Tax
+- !!models.raven.quiz.Topic
+    name: Condos and Coops
+- !!models.raven.quiz.Topic
+    name: Property Management
+- !!models.raven.quiz.Topic
+    name: Commercial / Investment
+                        
+- !!models.raven.MOTD
+    message: This is a test MOTD
+    disabled: false
+    
+
+    
+
+
+
+   
