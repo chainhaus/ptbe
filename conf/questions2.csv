@@ -1,7 +1,7 @@
-question,choice1,choice2,choice3,choice4,choice5,answer,difficulty,topic,free,registered
-How many years is a salesperson license valid for?,2,5,1,Indefinite,3,1,1,Real Estate License Law,1,1
-What does the acronym GCI stand for?,Gross Commission Income,Guest Common Incentive,"Gas, Car and Incidentals",Geographic Commission Income,Global Committee on Interest,1,2,Finance and Economics,1,1
-What is the minimum age required to be a broker?,19,21,18,20,16,4,1,Real Estate License Law,1,1
+question,choice1,choice2,choice3,choice4,choice5,answer,difficulty,topic,free,unregistered
+How many years is a salesperson license valid for?,2,5,1,Indefinite,3,1,1,License Law,1,1
+What does the acronym GCI stand for?,Gross Commission Income,Guest Common Incentive,"Gas, Car and Incidentals",Geographic Commission Income,Global Committee on Interest,1,2,Real Estate Finance,1,1
+What is the minimum age required to be a broker?,19,21,18,20,16,4,1,License Law,1,1
 A NYS disclosure form is required from,Buyers,Sellers,Tenants,Landlords,All,5,1,Law of Agency,1,1
 Sheathing is,Cancelling a contract a day before,Waterproof exterior panels on a house,Wiring money without a beneficiary,Removal of bad title on a house,Protection clause in a contract,2,1,Construction,1,1
 A condo is considered to be,An apartment,A unit in a building,Shares in a corporation,Real property,Government housing,4,2,Condos and Coops,1,1
@@ -157,7 +157,7 @@ The mortgagee is the,Borrower,Bank,Buyer,Lender,Seller,3,3,Mortgage,,
 "Technically, the mortgagor gives the bank a ",Mortgage note,Money,Best effort commitment,Collateral,Cash,1,3,Mortgage,,
 Having Equivalent experience means you can become,A salesperson without taking the exam,A broker without being a salesperson,A broker without taking the class,Don't need any points,Are automatically a broker,2,2,License Law,,
 The number of points needed with equivalent experience to be a broker is,3500,5000,5250,27800,6500,3,2,License Law,,
-The following are true of equivalent experience EXCEPT,5250 points are required,Lawyers are automatically brokers,Administrative work does not count as equivalent work,It's an alternative method to get the real estate license,It is not applicable in New York,5,2,License Law,,
+The following are true of equivalent experience EXCEPT,5250 points are required,Lawyers are automatically brokers,Administrative work does not count as equivalent work,It provides a means to get a real estate license,It is not applicable in New York,5,2,License Law,,
 "Vijay is a salesperson and has 5200 points from rentals. He wishes to be a broker, does he qualify?","No, he needs 5250 points","Yes, he only needs 3500 points","No, he has no equivalent experience","Yes, he will need all 5200 points",None of these,2,3,License Law,,1
 Arthur has worked the past three years as a filing clerk at a major real estate brokerage. Does he have equivalent experience?,"Yes, only two years are required","No, he has no exposure to the business",It is entirely up to the brokerage,None of these,"No, administravie work doesn't count",5,3,License Law,,
 Angelica has been an attorney for 6 months. Can she be a broker?,"No, 6 months is insufficient","Yes, attornies are automatically brokers",Only if she has enough points,None of these,She needs the law firms permission,2,3,License Law,,
@@ -202,7 +202,7 @@ A wall stud is a,Vertical beam behind a wall,Horizontal beam,Roof beam,Support f
 "For commercial transactions, how many years should an agent keep its records?",6 months,2 years,3 years,7 years,Till the closing,4,3,Law of Agency,,
 Anita lists a 7 unit building for sale. How long should she keep her listing agreement for?,7 years,Until it is sold,3 years,Indefinitely,As long as the seller requires,1,3,Law of Agency,,
 The Clean Air Act regulates the which of the following,Pollutants,Chloro-fluoro-carbons emissions,Air filter density,Air conditioners,Carbon monoxide emissions,2,2,Environmental Issues,,
-CFCs are gases regulated by which legislation?,Ozone Protection Act,Environmental Protection Act,Global Warming Protection Act,Air conditioner safety Act,Clean Air Act,5,2,Environmental Issues,,1
+CFCs are gases regulated by which legislation?,Ozone Protection Act,Environmental Protection Act,Refrigeration Act,Air Clean Act,Clean Air Act,5,2,Environmental Issues,,1
 "In the context of an agent, Title X is most closely associated with",Lead-based Paint Disclosure,Lead,Paint,Lead Disclosure,Lead-based Paint,1,3,Environmental Issues,1,1
 The presence of lead-based paint is likely if the house was built before,2002,1978,1987,1897,1877,2,2,Environmental Issues,,
 The federal government banned consumer use of lead-containing paint in,1992,1988,1978,1987,1897,3,2,Environmental Issues,,
@@ -277,7 +277,7 @@ A title abstract is useful because title reports are,Lengthy,Expensive,Usually i
 Peter leases a retail store for 5 years. Each year the rent goes up by 3%. This type of lease is known as,Stepup,Inclining,Inflationary,Graduated,Highline,4,2,Leases,,
 Graduated leases,None of these,Are for college dorms,Expire at graduation,Automatically extend,Increase annually,5,2,Leases,,
 Graduated leases are most commonly used in what type of leases,Residential,Commercial,Factories,Two family homes,Studio apartments,2,2,Leases,,
-"When the rent increases at fixed intervals, the lease is called",Stepup,Inclining,Inflationary,Jacked,Graduated,4,2,Leases,,
+"When the rent increases at fixed intervals, the lease is called",Stepup,Inclining,Inflationary,Jacked,Graduated,5,2,Leases,,
 "General agents, as opposed to special agents, work on",One thing,A number of things,Anything,Nothing,Only certain periods,2,2,Law of Agency,,1
 "Special agents, as opposed to general agents, work on",One thing,A number of things,Anything,Nothing,Weekdays only,1,2,Law of Agency,,
 A property manager is an example of what type of agency,Restricted,Local,Special,General,Generic,4,2,Law of Agency,,
@@ -608,12 +608,12 @@ A party consents to dual agency by,Reviewing the Agent Disclosure Form,Agreeing 
 Agent Linda and agent Vasquez agree to co-broke on a rental. This means that they will,Split commissions,Go broke,Share each other's clients,Invoice landlord jointly,Invoice tenant jointly,1,2,Real Estate Math,,
 "In a co-broke, commissions are typically split",50% / 50%,30% / 70%,Favoring the seller's agent,Favoring the buyer's agent,By statute,1,2,Real Estate Math,,
 "Agent Augustus and agent Mandel agree to co-broke on a sale. The commission is 6%, how much does each get?",Augustus gets 4%,6%,3%,Mandel gets 3.5%,Depends on the mortgage amount,2,2,Real Estate Math,,
-"Agent Augustus and agent Mandel agree to co-broke on a sale. The total commission is 5%, how much does each get?",Augustus gets 4%,5%,2.50%,Mandel gets 3.5%,Title company will set that,2,2,Real Estate Math,1,1
-Broker Gus and broker Alonzo agree to co-broke on a $2000 rental. The commission is one month's rent. How much money does each get?,$500 ,$250 ,"$2,000 ",$800 ,"$1,000 ",5,2,Real Estate Math,,
+"Agent Augustus and agent Mandel agree to co-broke on a sale. The total commission is 5%, how much does each get?",Augustus gets 4%,5%,2.5%,Mandel gets 3.5%,Title company will set that,2,2,Real Estate Math,1,1
+Broker Gus and broker Alonzo agree to co-broke on a $2000 rental. The commission is one month's rent. How much money does each get?,$500 ,$250 ,"$2,000 ","$3,000 ","$1,000 ",5,2,Real Estate Math,,
 Agent Axelrod agrees to take 2% for bringing a buyer to seller's agent Martinez. The sale transacted at $1.1M at 6% commission. How much does Martinez take?,"$22,000 ","$66,000 ","$44,000 ","$20,000 ","$2,200 ",1,2,Real Estate Math,,
 "A brokerage splits favorably to agents at 70 / 30. On a $2390 commission, an agent at the brokerage would receive",Under $1600 because of tax deductions,$717 ,Under $717 because of tax deductions,"$1,673 ",$167.30 ,4,2,Real Estate Math,,
 "A brokerage splits favorably to agents at 60 / 40. On a $3500 commission, an agent at the brokerage would receive",None of these,"$1,400 ","$2,300 ",$220 ,$210.00 ,1,2,Real Estate Math,,1
-"A brokerage splits favorably to agents at 90 / 10. On a $4800 commission, an agent at the brokerage would receive","$4,320 ",$480 ,"$43,200 ",$0 ,$750.00 ,4,2,Real Estate Math,,
+"A brokerage splits favorably to agents at 90 / 10. On a $4800 commission, an agent at the brokerage would receive","$4,320 ",$480 ," $43,200 ",$0 ,$750.00 ,4,2,Real Estate Math,,
 "A brokerage splits favorably to agents at 85 / 15. On a $15,500 commission, an agent at the brokerage would receive","$13,175 ","$2,325 ","$15,500 ",$0 ,None of these,1,2,Real Estate Math,,
 "A brokerage splits favorably to agents at 30 / 70. On a $12,000 commission, an agent at the brokerage would receive","$8,400 ",$36 ,"$36,000 ",$360 ,"$3,600.00 ",1,2,Real Estate Math,,
 A brokerage splits 50 / 50 with its agent. Their agent Lowe co-brokes on a rental. The rental is $2300 and the commission is 15% of annual. How much does the brokerage keep?,"$1,035 ","$2,070 ","$2,300 ",$518 ,None of these,1,3,Real Estate Math,,
@@ -936,34 +936,34 @@ Radon can enter a home from,The roof,Sunlight through windows,Underground,Water 
 "A commercial property generates of $200,000 of income a year and has a market value of $1,000,000. What is the capitalization rate?",10.00%,20%,25%,12.88%,22%,2,2,Finance and Economics,,
 "A commercial property generates of $50,000 of income a year and has a market value of $350,000. What is the capitalization rate?",14.29%,700%,"$600,000 ",16.67%,100%,1,2,Finance and Economics,,1
 "A commercial property generates of $1,200,000 of income a year and has a market value of $10,700,000. What is the capitalization rate?",11.21%,10%,22.42%,8.92%,9%,1,2,Finance and Economics,,
-"A commercial property generates of $37,200 of income a year and has a market value of $100,000. What is the capitalization rate?",37.20%,0.04%,4%,4.10%,3.72%,5,2,Finance and Economics,,
+"A commercial property generates of $37,200 of income a year and has a market value of $100,000. What is the capitalization rate?",37.20%,0.037%,4%,4.10%,3.72%,5,2,Finance and Economics,,
 "A commercial property generates of $10,000 of income a year and has a market value of $70,000. What is the capitalization rate?",14.29%,700%,"$600,000 ",16.67%,100%,1,2,Finance and Economics,,
 "A commercial property generates no income and has a market value of $1,700,000. What is the capitalization rate?",1.70%,0%,3.40%,-100.00%,100%,2,2,Finance and Economics,,
-"A commercial property has a cap rate of 7.3% and market value of $3,500,000. How much income does it generate annually?","$250,500 ","$255,500 ","$250,000 ","$22,000 ","$25,500 ",2,2,Finance and Economics,,
-"A commercial property has a cap rate of 2.67% and market value of $280,000. How much income does it generate annually?","$8,968 ","$7,960 ","$7,690 ","$76,900 ","$67,900 ",3,2,Finance and Economics,,
-"A commercial property has a cap rate of 5% and market value of $50,000. How much income does it generate annually?","$2,500 ","$5,200 ","$25,000 ","$52,000 ",$520 ,1,2,Finance and Economics,,
-"A commercial property has a cap rate of 8% and market value of $347,000. How much income does it generate annually?","$2,800 ","$2,767 ","$26,670 ","$27,760 ","$2,776 ",4,2,Finance and Economics,1,1
-"A commercial property has a cap rate of 9% and market value of $2,300,000. How much income does it generate annually?","$207,000 ","$20,700 ","$270,000 ","$2,700 ","$702,000 ",1,2,Finance and Economics,,
-"A commercial property has a cap rate of 10% and income of $34,000 annually. What is its market value?","$3,400 ","$340,000 ","$34,000 ","$43,000 ","$403,000 ",3,2,Finance and Economics,,
-"A commercial property has a cap rate of 12% and income of $180,000 annually. What is its market value?","$5,100,000 ","$1,500,000 ","$51,000 ","$15,000 ","$1,500 ",2,2,Finance and Economics,,1
-"A commercial property has a cap rate of 13% and income of $550,000 annually. What is its market value?","$4,230,769 ","$4,320,769 ","$423,077 ","$42,307 ","$47,203 ",1,2,Finance and Economics,,
-"A commercial property has a cap rate of 3% and income of $3,600,000 annually. What is its market value?","$12,000 ","$120,000 ","$12,000,000 ","$1,200,000 ","$120,000,000 ",5,2,Finance and Economics,,
-"A commercial property has a cap rate of 24.5% and income of $42,000,000 annually. What is its market value?","$171,428,571 ","$174,278,571 ","$171,448,571 ","$171,482,571 ","$171,428,517 ",1,2,Finance and Economics,,1
+"A commercial property has a cap rate of 7.3% and market value of $3,500,000. How much income does it generate annually?","$250,500","$255,500","$250,000","$22,000","$25,500",2,2,Finance and Economics,,
+"A commercial property has a cap rate of 2.67% and market value of $280,000. How much income does it generate annually?","$8,968","$7,960","$7,690","$76,900","$67,900",3,2,Finance and Economics,,
+"A commercial property has a cap rate of 5% and market value of $50,000. How much income does it generate annually?","$2,500","$5,200","$25,000","$52,000",$520,1,2,Finance and Economics,,
+"A commercial property has a cap rate of 8% and market value of $347,000. How much income does it generate annually?","$2,800","$2,767","$26,670","$27,760","$2,776",4,2,Finance and Economics,1,1
+"A commercial property has a cap rate of 9% and market value of $2,300,000. How much income does it generate annually?","$207,000","$20,700","$270,000","$2,700","$702,000",1,2,Finance and Economics,,
+"A commercial property has a cap rate of 10% and income of $34,000 annually. What is its market value?","$3,400","$340,000","$34,000","$43,000","$403,000",3,2,Finance and Economics,,
+"A commercial property has a cap rate of 12% and income of $180,000 annually. What is its market value?"," $5,100,000 "," $1,500,000 "," $51,000 "," $15,000 "," $1,500 ",2,2,Finance and Economics,,1
+"A commercial property has a cap rate of 13% and income of $550,000 annually. What is its market value?"," $4,230,769 "," $4,320,769 "," $423,077 "," $42,307 "," $47,203 ",1,2,Finance and Economics,,
+"A commercial property has a cap rate of 3% and income of $3,600,000 annually. What is its market value?"," $12,000 "," $120,000 "," $12,000,000 "," $1,200,000 "," $120,000,000 ",5,2,Finance and Economics,,
+"A commercial property has a cap rate of 24.5% and income of $42,000,000 annually. What is its market value?"," $171,428,571 "," $174,278,571 "," $171,448,571 "," $171,482,571 "," $171,428,517 ",1,2,Finance and Economics,,1
 The formula for computing the capitalization rate on an income producing property is, Income divided by market value , Market value divided by income , Market value divided by interest rate , Income multiplied by interest rate , None of the above ,1,2,Finance and Economics,,
 The formula for computing the capitalization rate on an income producing property is, None of these , Market value divided by income , Market value divided by interest rate , Income multiplied by interest rate , Market rate multiplied by income ,1,2,Finance and Economics,,
 The formula for computing the market value of an income producing property is,Income divided by the market value,Income divided by the capitalization rate,Income multiplied by the capitalization rate,Capitalization rate divided by the market value,Capitalization rate multiplied by the market value,2,2,Finance and Economics,,
 The formula for computing the income of a property given a capitalization rate and market value is,Capitalization rate multiplied by the market value,Income divided by the capitalization rate,Income multiplied by the capitalization rate,Capitalization rate divided by the market value,Income divided by the market value,1,2,Finance and Economics,,
-1 acre equals how many square feet?,"43,560","34,650","46,530","34,560","43,056",1,2,Real Estate Math,,
-How many square feet are in 1 acre?,"43,560","34,650","46,530","34,560","43,056",1,2,Real Estate Math,,
-How many square feet are in 1 acre?,"43,560","34,650","46,530","34,560","43,056",1,2,Real Estate Math,,
-Yolanda buys an acre of land for $3 per square foot. How much did she pay?,"$43,560 ","$130,680 ","$168,300 ","$34,650 ","$130,860 ",2,2,Real Estate Math,1,1
+1 acre equals how many square feet?," 43,560 "," 34,650 "," 46,530 "," 34,560 "," 43,056 ",1,2,Real Estate Math,,
+How many square feet are in 1 acre?," 43,560 "," 34,650 "," 46,530 "," 34,560 "," 43,056 ",1,2,Real Estate Math,,
+How many square feet are in 1 acre?," 43,560 "," 34,650 "," 46,530 "," 34,560 "," 43,056 ",1,2,Real Estate Math,,
+Yolanda buys an acre of land for $3 per square foot. How much did she pay?,"$43,560","$130,680","$168,300","$34,650","$130,860",2,2,Real Estate Math,1,1
 "Jamal bought land at $4.50 per square foot. He paid $98,010 for the land. How many acres did he purchase?",Half,One,One a half,Two,2.78 acres,1,2,Real Estate Math,,
-"Porter purchased three quarters of an acre for $49,005. How much did he pay per square foot?",$3.75 ,$1.50 ,$15.00 ,$0.15 ,$1.00 ,2,2,Real Estate Math,,1
+"Porter purchased three quarters of an acre for $49,005. How much did he pay per square foot?",$3.75,$1.50,$15.00,$0.15,$1.00,2,2,Real Estate Math,,1
 In what type of water supply can radon be found?,Water wells,Cooled water,Iced water,Sewage water,Waste water,1,2,Environmental Issues,,
 Radon can be found in what type of water supply?,Water wells,Chilled water,Air conditioner vent,Sewage water,Waste water,1,2,Environmental Issues,,
 "Linda bought land for $1 per square foot. She paid $43,560 for it. How many acres did she purchase?",43560,1,2,34560,4,2,2,Real Estate Math,,
-Nadia bought 2 acres of land at $2 per square foot. How much did she pay in total?,"$43,560 ","$87,210 ","$174,240 ","$45,360 ","$174,204 ",3,2,Real Estate Math,,
-7 acres is how many square feet?,"309,240","87,120","70,000","304,920","280,233",4,2,Real Estate Math,,
+Nadia bought 2 acres of land at $2 per square foot. How much did she pay in total?,"$43,560","$87,210","$174,240","$45,360","$174,204",3,2,Real Estate Math,,
+7 acres is how many square feet?," 309,240 "," 87,120 "," 70,000 "," 304,920 "," 280,233 ",4,2,Real Estate Math,,
 "How many acres is 87,210 square feet?",3,2.5,1.5,1,2,5,2,Real Estate Math,,
 Muhummad bought 3.5 acres of land at $1.25 per square feet. How much did he pay in total?,15557,190575,19575,1905.75,121968,2,2,Real Estate Math,,
 Which agent is responsible for protecting wetlands?,New York State Department of Health,Army Corps of Engineers,New York Board of Water,New York Department of Finance,New York Department of Buildings,2,2,Environmental Issues,,
@@ -1039,11 +1039,13 @@ Lori states she wishes to receive $1.2 million on the sale of her Lower East Sid
 "Assuming no other costs besides commission, seller Marika nets $100MM, paying a 1% commission. How much did Marika's building sell for?","$101,010,101 ","$101,110,010 ","$101,111,000 ","$101,101,101 ","$10,000,101 ",1,2,Real Estate Math,,
 A financial method property investors may used to evaluate the return on their investments is,Yield curve,Racks on racks,Stacks on stacks,Cash on cash,Discounted coupon flow,4,2,Commercial / Investment,,1
 The formula for cash on cash returns on a property is,Income divided by down payment,Income divided by the capitalization rate,Income divided by market value,Market value divided by down payment,Down payment,1,2,Commercial / Investment,,1
-"Terence invests in a property that produces $100K a year of income. He put $40,000 down and got a $300,000 mortgage at 3.7% interest. The market value of the property is $500,000. What's his cash on cash return?",20%,33.30%,40%,250%,3.70%,4,2,Commercial / Investment,,1
-"Terence invests in a property that produces $100K a year of income. He put $40,000 down and got a $600,000 mortgage at 3.7% interest. The market value of the property is $1,000,000. What's his cash on cash return?",16.70%,10%,60%,250%,3.70%,4,2,Commercial / Investment,1,1
+"Terence invests in a property that produces $100K a year of income. He put $40,000 down and got a $300,000 mortgage at 3.7% interest. The market value of the property is $500,000. What's his cash on cash return?",20%,33.3%,40%,250%,3.7%,4,2,Commercial / Investment,,1
+"Terence invests in a property that produces $100K a year of income. He put $40,000 down and got a $600,000 mortgage at 3.7% interest. The market value of the property is $1,000,000. What's his cash on cash return?",16.7%,10%,60%,250%,3.70%,4,2,Commercial / Investment,1,1
 "Clark invests in a property that produces $50K a year of income. He put $25,000 down and got a $500,000 mortgage at 3% interest. The market value of the property is $680,000. What's his cash on cash return?",200%,250%,10%,3%,25%,1,2,Commercial / Investment,,
 Calculating the return on investment on a property using its annual income and down payment is called,Cash on cash,ROI,Capitalization rate,Return on asset,Down payment returns,1,2,Commercial / Investment,,1
 Construction specifications state,Architectural drawings,Construction drawings,Specific boundaries,List and amounts of materials to be used in a construction project,The laws it chooses to follow,4,2,Construction,,
 Construction specifications state,Architectural drawings,Construction drawings,Specific boundaries,None of these,The laws it chooses to follow,4,2,Construction,,1
 "With accession rights, the owner has rights to",Anything that crosses over the property,Anything the property produces,Control over neighbors property if vacant for 5 years,Gradual expansive control,Inherit property from heirs,2,2,Estates and Interests,,
 The right to all things produced by a property is called,Production de natural,Acquisition,Succession,Accession,Accretion,4,2,Estates and Interests,,1
+,,,,,,,,,,
+,,,,,,,,,,
