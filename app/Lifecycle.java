@@ -35,26 +35,26 @@ public class Lifecycle extends BaseLifecycle {
 		super(env, conf, app, al, is);
 		if(QuestionBank.find.findRowCount() < 1) {
 			try {
-				Reader in = new FileReader("conf/questions.csv");
+				Reader in = new FileReader("conf/questions2.csv");
 				Iterable<CSVRecord> records = CSVFormat.EXCEL.withFirstRecordAsHeader().parse(in);
 				AppRegistry ar = AppRegistry.getAppByAPIKey("78f64513888c4ea6a8b6f04162e60bba");
 				QuestionBank q = null;
 				for (CSVRecord r : records) {
 					q = new QuestionBank();
 					System.out.println(r.getRecordNumber());
-					q.setQuestion(r.get("Question"));
-					q.setChoice1(r.get("Choice1"));
-					q.setChoice2(r.get("Choice2"));
-					q.setChoice3(r.get("Choice3"));
-					q.setChoice4(r.get("Choice4"));
-					q.setChoice5(r.get("Choice5"));
-					q.setAnswer(Integer.valueOf(r.get("Answer")));
-					q.setDifficulty(Integer.valueOf(r.get("Difficulty")));
-					q.setTopic(Topic.findTopicByName(r.get("Topic")));
-					String free = r.get("Free");
+					q.setQuestion(r.get("question"));
+					q.setChoice1(r.get("choice1"));
+					q.setChoice2(r.get("choice2"));
+					q.setChoice3(r.get("choice3"));
+					q.setChoice4(r.get("choice4"));
+					q.setChoice5(r.get("choice5"));
+					q.setAnswer(Integer.valueOf(r.get("answer")));
+					q.setDifficulty(Integer.valueOf(r.get("difficulty")));
+					q.setTopic(Topic.findTopicByName(r.get("topic")));
+					String free = r.get("free");
 					if(free.contains("1"))
 						q.setFree(true);
-					String registered = r.get("Registered");
+					String registered = r.get("registered");
 					if(registered.contains("1"))
 						q.setRegistered(true);
 					q.addApp(ar);

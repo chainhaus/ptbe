@@ -66,8 +66,6 @@
     name: Construction
 - !!models.raven.quiz.Topic
     name: Environmental Issues
-- &topicval !!models.raven.quiz.Topic
-    name: Valuation and Pricing
 - !!models.raven.quiz.Topic
     name: Real Estate Math
 - !!models.raven.quiz.Topic

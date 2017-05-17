@@ -109,16 +109,29 @@ create table contact_form (
   uuid                          varchar(255),
   name                          varchar(255),
   email                         varchar(255),
+  phone_number                  varchar(255),
+  app_name                      varchar(255),
   message                       TEXT,
   ip                            varchar(255),
   referer                       varchar(255),
   user_agent                    varchar(255),
-  app                           varchar(255),
   other                         varchar(255),
   version                       bigint not null,
   created_at                    DATETIME not null,
   updated_at                    DATETIME not null,
   constraint pk_contact_form primary key (id)
+);
+
+create table contact_form_forwardees (
+  id                            bigint auto_increment not null,
+  uuid                          varchar(255),
+  app_id                        bigint,
+  to_name                       varchar(255),
+  to_email                      varchar(255),
+  version                       bigint not null,
+  created_at                    DATETIME not null,
+  updated_at                    DATETIME not null,
+  constraint pk_contact_form_forwardees primary key (id)
 );
 
 create table image_meta (
@@ -402,6 +415,9 @@ create index ix_authenticated_user_user_permission_authenticated_user on authent
 alter table authenticated_user_user_permission add constraint fk_authenticated_user_user_permission_user_permission foreign key (user_permission_id) references user_permission (id) on delete restrict on update restrict;
 create index ix_authenticated_user_user_permission_user_permission on authenticated_user_user_permission (user_permission_id);
 
+alter table contact_form_forwardees add constraint fk_contact_form_forwardees_app_id foreign key (app_id) references app_registry (id) on delete restrict on update restrict;
+create index ix_contact_form_forwardees_app_id on contact_form_forwardees (app_id);
+
 alter table inbox_message add constraint fk_inbox_message_sender_id foreign key (sender_id) references authenticated_user (id) on delete restrict on update restrict;
 create index ix_inbox_message_sender_id on inbox_message (sender_id);
 
@@ -446,6 +462,9 @@ drop index if exists ix_authenticated_user_user_permission_authenticated_user;
 alter table authenticated_user_user_permission drop constraint if exists fk_authenticated_user_user_permission_user_permission;
 drop index if exists ix_authenticated_user_user_permission_user_permission;
 
+alter table contact_form_forwardees drop constraint if exists fk_contact_form_forwardees_app_id;
+drop index if exists ix_contact_form_forwardees_app_id;
+
 alter table inbox_message drop constraint if exists fk_inbox_message_sender_id;
 drop index if exists ix_inbox_message_sender_id;
 
@@ -481,6 +500,8 @@ drop table if exists authenticated_user_security_role;
 drop table if exists authenticated_user_user_permission;
 
 drop table if exists contact_form;
+
+drop table if exists contact_form_forwardees;
 
 drop table if exists image_meta;
 
