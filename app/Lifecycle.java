@@ -37,7 +37,7 @@ public class Lifecycle extends BaseLifecycle {
 			try {
 				Reader in = new FileReader("conf/questions2.csv");
 				Iterable<CSVRecord> records = CSVFormat.EXCEL.withFirstRecordAsHeader().parse(in);
-				AppRegistry ar = AppRegistry.getAppByAPIKey("78f64513888c4ea6a8b6f04162e60bba");
+				AppRegistry ar = AppRegistry.getAppByAPIKey("de83bbbc4acb49baa217bf7ff63658bc");
 				QuestionBank q = null;
 				for (CSVRecord r : records) {
 					q = new QuestionBank();
