@@ -1,6 +1,6 @@
 question,choice1,choice2,choice3,choice4,choice5,answer,difficulty,topic,free,registered
 How many years is a salesperson license valid for?,2,5,1,Indefinite,3,1,1,Real Estate License Law,1,1
-What does the acronym GCI stand for?,Gross Commission Income,Guest Common Incentive,"Gas, Car and Incidentals",Geographic Commission Income,Global Committee on Interest,1,2,Real Estate Finance,1,1
+What does the acronym GCI stand for?,Gross Commission Income,Guest Common Incentive,"Gas, Car and Incidentals",Geographic Commission Income,Global Committee on Interest,1,2,Finance and Economics,1,1
 What is the minimum age required to be a broker?,19,21,18,20,16,4,1,Real Estate License Law,1,1
 A NYS disclosure form is required from,Buyers,Sellers,Tenants,Landlords,All,5,1,Law of Agency,1,1
 Sheathing is,Cancelling a contract a day before,Waterproof exterior panels on a house,Wiring money without a beneficiary,Removal of bad title on a house,Protection clause in a contract,2,1,Construction,1,1
@@ -17,12 +17,12 @@ A flip tax is,Optional costs incurred by brokerages,Tax on property that?s flipp
 The covenant of seizin promises,You can cancel a contract within a number of days,"If you seize it, it's yours",Allows delays by plaintiff,The grantor indeed owns the property,Authorizes the Sherifff to posses land if mortgage is delinquent,4,2,Deeds,1,1
 The covenant that promises that the grantor owns the property sold is called,Laches,Seizin,Acceleration,Ensurement,Confirmation,2,2,Deeds,1,1
 The covenant of seizin is contained in the,City register,Sales contract,Lease,Deed,Title policy,4,2,Deeds,1,1
-A rise in the CPI most probably indicates,Deflation,Inflation,Stagflation,Negative GDP growth,Positive GDP growth,2,3,Real Estate Finance & Economics,1,1
-An economic inflation is necessarily when there is,A general increase in prices of goods,An increase in workforce productivity,A very high broker commission,A real estate bubble,An increase in purchasing power,1,3,Real Estate Finance & Economics,1,1
-An economic inflation is necessarily when there is,A real estate bubble,A decrease in workforce productivity,An increase in minimum wage,Reveral of GDP stagflation,A fall in purchasing power,5,3,Real Estate Finance & Economics,1,1
-An economic deflation is necessarily when,Markets cool down,Prices decrease,Condo demand peaks,The Fed drops interest rates,Staglfation rises,2,2,Real Estate Finance & Economics,1,1
-An economic stagflation is necessarily when there is,Zero growth,Rapid growth cycles,A drop in inflation twice,Inflation followed by deflation,Stagnant employment numbers,5,2,Real Estate Finance & Economics,1,1
-"When the CPI index drops and purchasing power increases, it's called",Deflation,Staflation,Stagnation,Reverse bubble,Inflation,1,2,Real Estate Finance & Economics,1,1
+A rise in the CPI most probably indicates,Deflation,Inflation,Stagflation,Negative GDP growth,Positive GDP growth,2,3,Finance and Economics,1,1
+An economic inflation is necessarily when there is,A general increase in prices of goods,An increase in workforce productivity,A very high broker commission,A real estate bubble,An increase in purchasing power,1,3,Finance and Economics,1,1
+An economic inflation is necessarily when there is,A real estate bubble,A decrease in workforce productivity,An increase in minimum wage,Reveral of GDP stagflation,A fall in purchasing power,5,3,Finance and Economics,1,1
+An economic deflation is necessarily when,Markets cool down,Prices decrease,Condo demand peaks,The Fed drops interest rates,Staglfation rises,2,2,Finance and Economics,1,1
+An economic stagflation is necessarily when there is,Zero growth,Rapid growth cycles,A drop in inflation twice,Inflation followed by deflation,Stagnant employment numbers,5,2,Finance and Economics,1,1
+"When the CPI index drops and purchasing power increases, it's called",Deflation,Staflation,Stagnation,Reverse bubble,Inflation,1,2,Finance and Economics,1,1
 Illegal mixing of funds that should have been isolated is called,Mixer,Comixing,Commingling,Ponzi,Mingling,3,2,Law of Agency,1,1
 The FHA refers to an act and stands for,Fair Housing Act,Free Home Act,Federal Home Act,Federal Housing Accord,Federal Housing Acts,1,1,Fair Housing,1,1
 The Fair Housing Act was passed in,1969,1968,1966,1967,1939,2,2,Fair Housing,,
@@ -119,21 +119,21 @@ The type of ownership that represents the full bundle of rights is known as,Free
 Josh rents an apartment from Karen for $900. He then subleases it to Chris for $1000. Chris stops paying rent. Who owes Karen rent?,"Chris, he agreed to pay rent on behalf of Josh","Josh, as long as Chris pays","Josh, he is on the lease and owes Karen",Karen needs to take it up with Chris,Chris must be evicted first,3,3,Leases,,
 These type of panels that waterproof a house,Sheathing,Aluminum foil,Drain panels,Absorbents,Styrofoam,1,1,Construction,,
 "A house is owned by two individuals, one dies and the other inherits the house. This type of ownership is called",Joint,Jointed tenancy,Joint tenants,Joint in common,Ownership by entirety,3,3,Estates and Interests,,
-Depreciation can be characterized as,"A decrease in an asset's value, typically gradual",An unexpected loss in an asset's value,A sudden and large decline in an asset's value,A decline in an asset's market price,None of these,1,1,Finance & Economics,,
-Which of the following does NOT characterize depreciation,Wear and tear on a property due to passage of time,May have some tax breaks,Starts off at $0 at purchase,Impacts residential and commercial properties,Is a decline in an asset's value,3,3,Finance & Economics,,1
-"In years, what is the depreciation period for a 10 story office building?",27.5,22.5,33.5,39,75,4,2,Finance & Economics,,
-"John is doing his taxes and owns a one-family house, what is the maximum depreciation years  he could file?",22.5,35,75,27.5,18,4,2,Finance & Economics,,
-An apartment's annual depreciation rate is about,27.50%,3.60%,39%,10%,1%,2,3,Finance & Economics,,
-An office building's annual depreciation rate is about,39%,2.50%,75%,10%,3.60%,2,3,Finance & Economics,,
-Greg built a new 6 unit residential building. What is the duration of the depreciation period?,39 months,10 years,27.5 years,22 years,39 years,5,2,Finance & Economics,,
-Agent Samantha is asked by buyer client what the depreciation period is on a commercial property they wish to purchase. Her should response should be ,39 years,20 years,27.5,5,10,1,2,Finance & Economics,,
-"When an equal amount of an asset's price is depreciated, the method used is called",Equal,Default approach,Double,Straight-line,Average,4,2,Finance & Economics,,
-"For the past 10 years, Armando has been depreciating his property at $20k a year. The depreciation method he is using is",Straight-line,Flat,Constant depreciation,SLB,Zero vol,1,2,Finance & Economics,,
-"A house sold for $570,000. The new owners can depreciate how approximately much per year?","$20,700 ","$57,000 ","$5,700 ","$20,000 ","$570,000 ",1,2,Finance & Economics,,
-Greenview Capital buys a 100-unit office building for $10 million. Their accountant can expect to depreciate how much on their annual tax filings?,"$363,300 ","$360,000 ","$25,600 ","$100,000 ","$256,000 ",5,3,Finance & Economics,,1
-The following can be depreciated on tax filings EXCEPT,Land,Residential,Commercial,Foreclosed,Flips,1,2,Finance & Economics,,
-Land can be depreciated for how many years?,39,27.5,Land cannot be depreciated,33.5,37.5,3,2,Finance & Economics,,
-Which are valid maximum tax depreciation periods?,12,27,33.5,75,None of these,5,3,Finance & Economics,1,1
+Depreciation can be characterized as,"A decrease in an asset's value, typically gradual",An unexpected loss in an asset's value,A sudden and large decline in an asset's value,A decline in an asset's market price,None of these,1,1,Finance and Economics,,
+Which of the following does NOT characterize depreciation,Wear and tear on a property due to passage of time,May have some tax breaks,Starts off at $0 at purchase,Impacts residential and commercial properties,Is a decline in an asset's value,3,3,Finance and Economics,,1
+"In years, what is the depreciation period for a 10 story office building?",27.5,22.5,33.5,39,75,4,2,Finance and Economics,,
+"John is doing his taxes and owns a one-family house, what is the maximum depreciation years  he could file?",22.5,35,75,27.5,18,4,2,Finance and Economics,,
+An apartment's annual depreciation rate is about,27.50%,3.60%,39%,10%,1%,2,3,Finance and Economics,,
+An office building's annual depreciation rate is about,39%,2.50%,75%,10%,3.60%,2,3,Finance and Economics,,
+Greg built a new 6 unit residential building. What is the duration of the depreciation period?,39 months,10 years,27.5 years,22 years,39 years,5,2,Finance and Economics,,
+Agent Samantha is asked by buyer client what the depreciation period is on a commercial property they wish to purchase. Her should response should be ,39 years,20 years,27.5,5,10,1,2,Finance and Economics,,
+"When an equal amount of an asset's price is depreciated, the method used is called",Equal,Default approach,Double,Straight-line,Average,4,2,Finance and Economics,,
+"For the past 10 years, Armando has been depreciating his property at $20k a year. The depreciation method he is using is",Straight-line,Flat,Constant depreciation,SLB,Zero vol,1,2,Finance and Economics,,
+"A house sold for $570,000. The new owners can depreciate how approximately much per year?","$20,700 ","$57,000 ","$5,700 ","$20,000 ","$570,000 ",1,2,Finance and Economics,,
+Greenview Capital buys a 100-unit office building for $10 million. Their accountant can expect to depreciate how much on their annual tax filings?,"$363,300 ","$360,000 ","$25,600 ","$100,000 ","$256,000 ",5,3,Finance and Economics,,1
+The following can be depreciated on tax filings EXCEPT,Land,Residential,Commercial,Foreclosed,Flips,1,2,Finance and Economics,,
+Land can be depreciated for how many years?,39,27.5,Land cannot be depreciated,33.5,37.5,3,2,Finance and Economics,,
+Which are valid maximum tax depreciation periods?,12,27,33.5,75,None of these,5,3,Finance and Economics,1,1
 Tax depreciation rules are set by the,DOB,DOS,IRS,DEP,None of these,3,2,Mortgage,,
 Which best describes what amortization is,Paying down a mortgage,A new lease,Increase mortgage amount,Interest-only payments,Tax benefits for mortgage note holders,1,2,Mortgage,,1
 The balance due after the last payment on an amortized mortgage would be,One month,Remaining interest,Principal amount,Zero,Closing costs,4,2,Mortgage,,
@@ -192,9 +192,9 @@ Plessy v Ferguson was overturned by,Brown v. Mayer,Civil Rights Act of 1968,Brow
 Plessy v Ferguson was overturned in,1988,1905,1954,1888,1998,3,2,Fair Housing,1,1
 Brown v Board overturned which prior case?,Board of Education v. Brown,Civil Rights Act of 1968,Plesy v. Ferguson,1866 Civil Rights Act,Plessy v Ferguson,5,3,Fair Housing,,
 Brown v Board overturned which prior case?,Board of Education v. Brown,Civil Rights Act of 1968,Ferguson v. Plessy,Brown v. Mayer,None of these,5,3,Fair Housing,,
-A pro forma is,A financial forecast,A building with solid architecture,A tax abatement,An illegal encroachment,The historic value of a property,1,2,Finance & Economics,,
-A financial projection of the income of a property is referred to as a,Comp,Valuation,Assessment,Appraisal,Pro forma,5,2,Finance & Economics,,
-Mark is considering investing in a 5-unit apartment building. The asking price is $2.2M. What should Mark prepare to evaluate the property's future income?,Pro forma,Balance sheet,Trial balance,CMA,Audit report,1,2,Finance & Economics,,
+A pro forma is,A financial forecast,A building with solid architecture,A tax abatement,An illegal encroachment,The historic value of a property,1,2,Finance and Economics,,
+A financial projection of the income of a property is referred to as a,Comp,Valuation,Assessment,Appraisal,Pro forma,5,2,Finance and Economics,,
+Mark is considering investing in a 5-unit apartment building. The asking price is $2.2M. What should Mark prepare to evaluate the property's future income?,Pro forma,Balance sheet,Trial balance,CMA,Audit report,1,2,Finance and Economics,,
 The phyisical column behind and supporting a wall is called a,Crossbeam,Beam,Stud,Brace,Rider,3,2,Construction,,1
 A wall stud is a,Vertical beam behind a wall,Horizontal beam,Roof beam,Support for the foundation,Carries the major weight of a house,1,2,Construction,,
 "In a residential brokerage, real estate records should be kept for ",6 months,2 years,3 years,7 years,Till the closing,3,2,Law of Agency,,
@@ -248,10 +248,10 @@ A building has 114 apartment units with several doctor offices on the ground flo
 Spot zoning is when,A neighborhood is rezoned,Zoning is done on the spot,A single parcel is illegaly rezoned,Parking in front of a building is limited,None of these,3,2,Land Use Regulation,1,1
 The mayor of a small city changes the zoning rules for his house only. This is known as,Rezoning,Blockbusting,Redlining,Spot zoning,Disclosure violation,4,2,Land Use Regulation,,
 Martha applies for a variance and is denied. Her rich neighbor applies for the same variance and receives it. This situation is known as,Spot zoning,Grandfathered zoning,Gentrification,ECB violation,An illegal violation,1,3,Land Use Regulation,,
-The valuation of a property is an estimate of the property's,Size,Market value,Construction cost,Replacement cost,Rehab cost,2,2,Finance & Economics,,
-An evaluation of a property is,An opinion on the strategy for a property,Valuation,Comps,Assessment,Audit report,1,2,Finance & Economics,,1
+The valuation of a property is an estimate of the property's,Size,Market value,Construction cost,Replacement cost,Rehab cost,2,2,Finance and Economics,,
+An evaluation of a property is,An opinion on the strategy for a property,Valuation,Comps,Assessment,Audit report,1,2,Finance and Economics,,1
 "In the context of mortgages, the acronym FHA stands for",Federal Housing Authority,Federal Housing Administration,Fair Housing Act,Federal Homeowners Association,First Housing Administration,2,2,Mortgage,,
-The difference between valuation and evaluation is,Valuation is an opinion; Evaluation is an appraisal,There is no difference,Valuation is the opposite of evaluation,Valuation is a financial estimate; Evaluation is an opinion,Evaluation can only be performed by someone licensed,4,3,Finance & Economics,,
+The difference between valuation and evaluation is,Valuation is an opinion; Evaluation is an appraisal,There is no difference,Valuation is the opposite of evaluation,Valuation is a financial estimate; Evaluation is an opinion,Evaluation can only be performed by someone licensed,4,3,Finance and Economics,,
 "In the context of mortgages, the acronym FHA stands for",Federal Housing Authority,None of these,Fair Housing Act,Federal Homeowners Association,First Housing Administration,2,2,Mortgage,,
 "In the context of mortgages, the acronym VA stands for",Very Affordable rated,Very Afforable mortgage,Veterans Affairs,Veterans Act,Volitile ARM,3,2,Mortgage,,
 "In the context of mortgages, SONYMA stands for",State of NY Matrimonial Act,SONY Music & Arts,State of NY Mortgage Association,State of NY Mortgage Agency,State of NY Mortgage Act,4,3,Mortgage,,
@@ -539,10 +539,10 @@ Which fiduciary responsibility would an agent drafting a sale contract MOST jeap
 Which of the following is an activity an agent cannot perform on behalf of a client?,Provide a comps analysis to a buyer,Request a home inspector talk to a buyer,Offer friendly legal advice to a seller,Negotiate the best price on behalf of the client,All of these,3,2,License Law,,
 Which of the following is an activity an agent cannot perform on behalf of a client?,Provide a comps analysis to a buyer,Request a home inspector talk to a buyer,Do a basic title search,Negotiate the best price on behalf of the client,All of these,3,2,License Law,,
 Which of the following is an activity an agent cannot perform on behalf of a client?,Modify a comparative market analysis,Request a home inspector talk to a buyer,Modify a sales contract,Recommend 2-3 title insurance companies,None of these,3,2,License Law,,
-Usury is defined as,Usage variance,Charging an interest rate slightly below the legal limit,Current credit card rates,Rates above the Fed Funds rate,Charging an interest rate beyond the legal limit,5,2,Finance & Economics,1,1
-Usury is defined as,Usage variance,Charging an interest rate slightly below the legal limit,Current credit card rates,Rates above the Fed Funds rate,None of these,5,2,Finance & Economics,,1
-The legal maximum interest rate is 17%. Bill wants to charge 18% on a personal loan to Vinny. This is known as,Seller financing,Reverse mortgage,Purchase money mortgage,Usury,Adjustable-rate,4,2,Finance & Economics,,
-Charging an interest rate above the legal limit is legally known as,Binging,Usury,Extortion,Loan sharking,Shark tank,2,2,Finance & Economics,,
+Usury is defined as,Usage variance,Charging an interest rate slightly below the legal limit,Current credit card rates,Rates above the Fed Funds rate,Charging an interest rate beyond the legal limit,5,2,Finance and Economics,1,1
+Usury is defined as,Usage variance,Charging an interest rate slightly below the legal limit,Current credit card rates,Rates above the Fed Funds rate,None of these,5,2,Finance and Economics,,1
+The legal maximum interest rate is 17%. Bill wants to charge 18% on a personal loan to Vinny. This is known as,Seller financing,Reverse mortgage,Purchase money mortgage,Usury,Adjustable-rate,4,2,Finance and Economics,,
+Charging an interest rate above the legal limit is legally known as,Binging,Usury,Extortion,Loan sharking,Shark tank,2,2,Finance and Economics,,
 Property insurance on a property covers,Damage to the property,Injury to people,Damage and injury,Fire only,Rare situations only,1,2,Property Insurance,,
 Which of the following is NOT covered by property insurance?,Wind damage,Fire damage,Flooding damage,Bodily injury,Earthquake damage,4,2,Property Insurance,,1
 Which of the following is NOT covered by liability insurance?,Slips and falls,Bodily injury,Accidents,Hurricane damage,Injury from tripping on construction site,4,2,Property Insurance,,
@@ -608,12 +608,12 @@ A party consents to dual agency by,Reviewing the Agent Disclosure Form,Agreeing 
 Agent Linda and agent Vasquez agree to co-broke on a rental. This means that they will,Split commissions,Go broke,Share each other's clients,Invoice landlord jointly,Invoice tenant jointly,1,2,Real Estate Math,,
 "In a co-broke, commissions are typically split",50% / 50%,30% / 70%,Favoring the seller's agent,Favoring the buyer's agent,By statute,1,2,Real Estate Math,,
 "Agent Augustus and agent Mandel agree to co-broke on a sale. The commission is 6%, how much does each get?",Augustus gets 4%,6%,3%,Mandel gets 3.5%,Depends on the mortgage amount,2,2,Real Estate Math,,
-"Agent Augustus and agent Mandel agree to co-broke on a sale. The total commission is 5%, how much does each get?",Augustus gets 4%,5%,2.5%,Mandel gets 3.5%,Title company will set that,2,2,Real Estate Math,1,1
+"Agent Augustus and agent Mandel agree to co-broke on a sale. The total commission is 5%, how much does each get?",Augustus gets 4%,5%,2.50%,Mandel gets 3.5%,Title company will set that,2,2,Real Estate Math,1,1
 Broker Gus and broker Alonzo agree to co-broke on a $2000 rental. The commission is one month's rent. How much money does each get?,$500 ,$250 ,"$2,000 ",$800 ,"$1,000 ",5,2,Real Estate Math,,
 Agent Axelrod agrees to take 2% for bringing a buyer to seller's agent Martinez. The sale transacted at $1.1M at 6% commission. How much does Martinez take?,"$22,000 ","$66,000 ","$44,000 ","$20,000 ","$2,200 ",1,2,Real Estate Math,,
 "A brokerage splits favorably to agents at 70 / 30. On a $2390 commission, an agent at the brokerage would receive",Under $1600 because of tax deductions,$717 ,Under $717 because of tax deductions,"$1,673 ",$167.30 ,4,2,Real Estate Math,,
 "A brokerage splits favorably to agents at 60 / 40. On a $3500 commission, an agent at the brokerage would receive",None of these,"$1,400 ","$2,300 ",$220 ,$210.00 ,1,2,Real Estate Math,,1
-"A brokerage splits favorably to agents at 90 / 10. On a $4800 commission, an agent at the brokerage would receive","$4,320 ",$480 ," $43,200 ",$0 ,$750.00 ,4,2,Real Estate Math,,
+"A brokerage splits favorably to agents at 90 / 10. On a $4800 commission, an agent at the brokerage would receive","$4,320 ",$480 ,"$43,200 ",$0 ,$750.00 ,4,2,Real Estate Math,,
 "A brokerage splits favorably to agents at 85 / 15. On a $15,500 commission, an agent at the brokerage would receive","$13,175 ","$2,325 ","$15,500 ",$0 ,None of these,1,2,Real Estate Math,,
 "A brokerage splits favorably to agents at 30 / 70. On a $12,000 commission, an agent at the brokerage would receive","$8,400 ",$36 ,"$36,000 ",$360 ,"$3,600.00 ",1,2,Real Estate Math,,
 A brokerage splits 50 / 50 with its agent. Their agent Lowe co-brokes on a rental. The rental is $2300 and the commission is 15% of annual. How much does the brokerage keep?,"$1,035 ","$2,070 ","$2,300 ",$518 ,None of these,1,3,Real Estate Math,,
@@ -761,12 +761,12 @@ Collection loss can be defined as,Cost it takes to hire a collection agency,Rent
 Which is the following is the formula for calculating effective gross income?,Potential gross income + other income - vacancy and collection loss,Potential income / vacancy rate,Potential income x Occupancy rate,Gross income less expenses,NOI less expenses,1,2,Commercial / Investment,,
 Max's building's potential gross income is $200K with a 5% vacancy rate. His effective gross income is,"$200,000 ","$210,000 ","$190,000 ","$4,000,000 ",None of these,3,2,Commercial / Investment,,
 Which is the following is the formula for calculating effective gross income?,None of these,Potential income / vacancy rate,Potential income x Occupancy rate,Gross income less expenses,NOI less expenses,1,2,Commercial / Investment,1,1
-"In the context of real esate finance, the acronym NOI stands for",No Offer Indicated,New Operating Income,Net Operating Income,No Operating Income,Next Operating Income,2,2,Finance & Economics,,
-Net operating income is calculated as,Effective gross income less expenses,Revenues plus expenses,Assets plus liabilities,Assets less liabilities,Potential gross income less vacancy loss,1,2,Finance & Economics,,
-Net operating income is calculated as,None of these,Revenues plus expenses,Assets plus liabilities,Assets less liabilities,Potential gross income less vacancy loss,1,2,Finance & Economics,,
-Net operating income is calculated as,PGI + Other Income - Vacancy and collection losses - expenses,Revenues plus expenses,Assets plus liabilities,Shareholer's equity plus liabilities,Potential gross income less vacancy loss,1,2,Finance & Economics,,1
-Vacancy and collection loss is typically estimated to be,10%,7%,5%,50%,100%,3,2,Finance & Economics,,
-The relationship between potential gross income (PGI) and effective gross income (EGI) is,PGI is always less than the value of the property,EGI is always more than PGI,NOI = PGI + EGI,EGI is PGI less vacancy and collection losses,None of these,4,2,Finance & Economics,,
+"In the context of real esate finance, the acronym NOI stands for",No Offer Indicated,New Operating Income,Net Operating Income,No Operating Income,Next Operating Income,2,2,Finance and Economics,,
+Net operating income is calculated as,Effective gross income less expenses,Revenues plus expenses,Assets plus liabilities,Assets less liabilities,Potential gross income less vacancy loss,1,2,Finance and Economics,,
+Net operating income is calculated as,None of these,Revenues plus expenses,Assets plus liabilities,Assets less liabilities,Potential gross income less vacancy loss,1,2,Finance and Economics,,
+Net operating income is calculated as,PGI + Other Income - Vacancy and collection losses - expenses,Revenues plus expenses,Assets plus liabilities,Shareholer's equity plus liabilities,Potential gross income less vacancy loss,1,2,Finance and Economics,,1
+Vacancy and collection loss is typically estimated to be,10%,7%,5%,50%,100%,3,2,Finance and Economics,,
+The relationship between potential gross income (PGI) and effective gross income (EGI) is,PGI is always less than the value of the property,EGI is always more than PGI,NOI = PGI + EGI,EGI is PGI less vacancy and collection losses,None of these,4,2,Finance and Economics,,
 Constructive eviction is,When a landlord criticizes the tenant,An eviction through the courts,When a landlord makes an apartment difficult to live in,An eviction where all parties agree,An eviction before construction work commences,3,2,Property Management,,
 When a landlord shuts off the light in order to force a tenant out the landlord is performing a,Estate at sufferance eviction,Constructive eviction,Dereliction eviction,Eviction for non-payment,Court eviction,2,2,Property Management,,
 Constructive evictions are considered to be,Legal,Illegal for commercial properties only,Legal for residential properties,Illegal for residential properties,Extremely effective,4,2,Property Management,,
@@ -837,10 +837,10 @@ Which of the following is an example of the use of police power,Eminent domain,S
 Which of the following is an example of the use of police power,Zoning laws,Seizin,Defeasance,Escheat,Bipartisan action,1,2,Land Use Regulation,,
 Which of the following is an example of the use of police power,Taxation,Seizin,Foreclosure,Escheat,Bipartisan action,1,2,Land Use Regulation,,
 Which of the following is an example of the use of police power,Real estate license requirement,Seizin,Foreclosing,Umbrella insurance,Bipartisan action,1,2,Land Use Regulation,,
-"In the context of finance, leverage is",Negotiating from a stronger position in a sale,When a landlord demands the tenant increase the security deposit,When a tenant demands the landlor reduce the security deposity,None of these,Use of borrowed capital to increase profits,5,2,Finance & Economics,,
-The use of borrowed capital to potentially increase return on an investment is called,Debting,Lending Institution,Leverge,Buyout,Profit maximization,3,2,Finance & Economics,,
-Buyer Morty is looking to increase his cash on cash returns by borrowing. This method of increasing potential returns is called,Leverage,Raising capital,Debt loading,Unloading debt,Balance sheet ramp up,1,2,Finance & Economics,,
-An increase in buying power through borrowing is called,Leverage,Raising capital,Shareholder equity,Unloading debt,Value investing,1,2,Finance & Economics,,
+"In the context of finance, leverage is",Negotiating from a stronger position in a sale,When a landlord demands the tenant increase the security deposit,When a tenant demands the landlor reduce the security deposity,None of these,Use of borrowed capital to increase profits,5,2,Finance and Economics,,
+The use of borrowed capital to potentially increase return on an investment is called,Debting,Lending Institution,Leverge,Buyout,Profit maximization,3,2,Finance and Economics,,
+Buyer Morty is looking to increase his cash on cash returns by borrowing. This method of increasing potential returns is called,Leverage,Raising capital,Debt loading,Unloading debt,Balance sheet ramp up,1,2,Finance and Economics,,
+An increase in buying power through borrowing is called,Leverage,Raising capital,Shareholder equity,Unloading debt,Value investing,1,2,Finance and Economics,,
 An exclusive agency agreement means,"No matter if the broker or seller find a buyer, the broker will still get a commission",The broker gets a commission only if the broker finds a buyer and no commission if the seller finds a buyer,Any broker can find a buyer and get a commission,The broker will need to cobroke with the seller,The broker is guaranteed a comission regardless if there is a sale or not,2,2,Law of Agency,,
 An exclusive agency agreement means,"No matter if the broker or seller find a buyer, the broker will still get a commission",None of these,Any broker can find a buyer and get a commission,The broker will need to cobroke with the seller,The broker is guaranteed a comission regardless if there is a sale or not,2,2,Law of Agency,,
 An exclusive right to sell means,"No matter if the broker or seller find a buyer, the broker will still get a commission",The broker gets a commission only if the broker finds a buyer and no commission if the seller finds a buyer,Any broker can find a buyer and get a commission,The broker will need to cobroke with the seller,The broker is guaranteed a comission regardless if there is a sale or not,2,2,Law of Agency,,
@@ -932,38 +932,38 @@ R-value is computed by,Multiplying R-factor with the amount of the material,Addi
 "If the R-factor for a material is 5 and there is 2lbs of it, the R-value is",2/5ths,10,2.5,40,20,2,2,Construction,,
 "If a sheet of glass has an R-factor of 3 and is installed in a window frame in 3 layers, the R-value of the window is",1,3,1/3rd,9,1/9th,4,2,Construction,,
 Radon can enter a home from,The roof,Sunlight through windows,Underground,Water system,Termite decay,3,2,Environmental Issues,,
-"A commercial property generates of $100,000 of income a year and has a market value of $700,000. What is the capitalization rate?",14.29%,700%,"$600,000 ",16.67%,100%,1,2,Finance & Economics,,
-"A commercial property generates of $200,000 of income a year and has a market value of $1,000,000. What is the capitalization rate?",10.00%,20%,25%,12.88%,22%,2,2,Finance & Economics,,
-"A commercial property generates of $50,000 of income a year and has a market value of $350,000. What is the capitalization rate?",14.29%,700%,"$600,000 ",16.67%,100%,1,2,Finance & Economics,,1
-"A commercial property generates of $1,200,000 of income a year and has a market value of $10,700,000. What is the capitalization rate?",11.21%,10%,22.42%,8.92%,9%,1,2,Finance & Economics,,
-"A commercial property generates of $37,200 of income a year and has a market value of $100,000. What is the capitalization rate?",37.20%,0.037%,4%,4.10%,3.72%,5,2,Finance & Economics,,
-"A commercial property generates of $10,000 of income a year and has a market value of $70,000. What is the capitalization rate?",14.29%,700%,"$600,000 ",16.67%,100%,1,2,Finance & Economics,,
-"A commercial property generates no income and has a market value of $1,700,000. What is the capitalization rate?",1.70%,0%,3.40%,-100.00%,100%,2,2,Finance & Economics,,
-"A commercial property has a cap rate of 7.3% and market value of $3,500,000. How much income does it generate annually?","$250,500","$255,500","$250,000","$22,000","$25,500",2,2,Finance & Economics,,
-"A commercial property has a cap rate of 2.67% and market value of $280,000. How much income does it generate annually?","$8,968","$7,960","$7,690","$76,900","$67,900",3,2,Finance & Economics,,
-"A commercial property has a cap rate of 5% and market value of $50,000. How much income does it generate annually?","$2,500","$5,200","$25,000","$52,000",$520,1,2,Finance & Economics,,
-"A commercial property has a cap rate of 8% and market value of $347,000. How much income does it generate annually?","$2,800","$2,767","$26,670","$27,760","$2,776",4,2,Finance & Economics,1,1
-"A commercial property has a cap rate of 9% and market value of $2,300,000. How much income does it generate annually?","$207,000","$20,700","$270,000","$2,700","$702,000",1,2,Finance & Economics,,
-"A commercial property has a cap rate of 10% and income of $34,000 annually. What is its market value?","$3,400","$340,000","$34,000","$43,000","$403,000",3,2,Finance & Economics,,
-"A commercial property has a cap rate of 12% and income of $180,000 annually. What is its market value?"," $5,100,000 "," $1,500,000 "," $51,000 "," $15,000 "," $1,500 ",2,2,Finance & Economics,,1
-"A commercial property has a cap rate of 13% and income of $550,000 annually. What is its market value?"," $4,230,769 "," $4,320,769 "," $423,077 "," $42,307 "," $47,203 ",1,2,Finance & Economics,,
-"A commercial property has a cap rate of 3% and income of $3,600,000 annually. What is its market value?"," $12,000 "," $120,000 "," $12,000,000 "," $1,200,000 "," $120,000,000 ",5,2,Finance & Economics,,
-"A commercial property has a cap rate of 24.5% and income of $42,000,000 annually. What is its market value?"," $171,428,571 "," $174,278,571 "," $171,448,571 "," $171,482,571 "," $171,428,517 ",1,2,Finance & Economics,,1
-The formula for computing the capitalization rate on an income producing property is, Income divided by market value , Market value divided by income , Market value divided by interest rate , Income multiplied by interest rate , None of the above ,1,2,Finance & Economics,,
-The formula for computing the capitalization rate on an income producing property is, None of these , Market value divided by income , Market value divided by interest rate , Income multiplied by interest rate , Market rate multiplied by income ,1,2,Finance & Economics,,
-The formula for computing the market value of an income producing property is,Income divided by the market value,Income divided by the capitalization rate,Income multiplied by the capitalization rate,Capitalization rate divided by the market value,Capitalization rate multiplied by the market value,2,2,Finance & Economics,,
-The formula for computing the income of a property given a capitalization rate and market value is,Capitalization rate multiplied by the market value,Income divided by the capitalization rate,Income multiplied by the capitalization rate,Capitalization rate divided by the market value,Income divided by the market value,1,2,Finance & Economics,,
-1 acre equals how many square feet?," 43,560 "," 34,650 "," 46,530 "," 34,560 "," 43,056 ",1,2,Real Estate Math,,
-How many square feet are in 1 acre?," 43,560 "," 34,650 "," 46,530 "," 34,560 "," 43,056 ",1,2,Real Estate Math,,
-How many square feet are in 1 acre?," 43,560 "," 34,650 "," 46,530 "," 34,560 "," 43,056 ",1,2,Real Estate Math,,
-Yolanda buys an acre of land for $3 per square foot. How much did she pay?,"$43,560","$130,680","$168,300","$34,650","$130,860",2,2,Real Estate Math,1,1
+"A commercial property generates of $100,000 of income a year and has a market value of $700,000. What is the capitalization rate?",14.29%,700%,"$600,000 ",16.67%,100%,1,2,Finance and Economics,,
+"A commercial property generates of $200,000 of income a year and has a market value of $1,000,000. What is the capitalization rate?",10.00%,20%,25%,12.88%,22%,2,2,Finance and Economics,,
+"A commercial property generates of $50,000 of income a year and has a market value of $350,000. What is the capitalization rate?",14.29%,700%,"$600,000 ",16.67%,100%,1,2,Finance and Economics,,1
+"A commercial property generates of $1,200,000 of income a year and has a market value of $10,700,000. What is the capitalization rate?",11.21%,10%,22.42%,8.92%,9%,1,2,Finance and Economics,,
+"A commercial property generates of $37,200 of income a year and has a market value of $100,000. What is the capitalization rate?",37.20%,0.04%,4%,4.10%,3.72%,5,2,Finance and Economics,,
+"A commercial property generates of $10,000 of income a year and has a market value of $70,000. What is the capitalization rate?",14.29%,700%,"$600,000 ",16.67%,100%,1,2,Finance and Economics,,
+"A commercial property generates no income and has a market value of $1,700,000. What is the capitalization rate?",1.70%,0%,3.40%,-100.00%,100%,2,2,Finance and Economics,,
+"A commercial property has a cap rate of 7.3% and market value of $3,500,000. How much income does it generate annually?","$250,500 ","$255,500 ","$250,000 ","$22,000 ","$25,500 ",2,2,Finance and Economics,,
+"A commercial property has a cap rate of 2.67% and market value of $280,000. How much income does it generate annually?","$8,968 ","$7,960 ","$7,690 ","$76,900 ","$67,900 ",3,2,Finance and Economics,,
+"A commercial property has a cap rate of 5% and market value of $50,000. How much income does it generate annually?","$2,500 ","$5,200 ","$25,000 ","$52,000 ",$520 ,1,2,Finance and Economics,,
+"A commercial property has a cap rate of 8% and market value of $347,000. How much income does it generate annually?","$2,800 ","$2,767 ","$26,670 ","$27,760 ","$2,776 ",4,2,Finance and Economics,1,1
+"A commercial property has a cap rate of 9% and market value of $2,300,000. How much income does it generate annually?","$207,000 ","$20,700 ","$270,000 ","$2,700 ","$702,000 ",1,2,Finance and Economics,,
+"A commercial property has a cap rate of 10% and income of $34,000 annually. What is its market value?","$3,400 ","$340,000 ","$34,000 ","$43,000 ","$403,000 ",3,2,Finance and Economics,,
+"A commercial property has a cap rate of 12% and income of $180,000 annually. What is its market value?","$5,100,000 ","$1,500,000 ","$51,000 ","$15,000 ","$1,500 ",2,2,Finance and Economics,,1
+"A commercial property has a cap rate of 13% and income of $550,000 annually. What is its market value?","$4,230,769 ","$4,320,769 ","$423,077 ","$42,307 ","$47,203 ",1,2,Finance and Economics,,
+"A commercial property has a cap rate of 3% and income of $3,600,000 annually. What is its market value?","$12,000 ","$120,000 ","$12,000,000 ","$1,200,000 ","$120,000,000 ",5,2,Finance and Economics,,
+"A commercial property has a cap rate of 24.5% and income of $42,000,000 annually. What is its market value?","$171,428,571 ","$174,278,571 ","$171,448,571 ","$171,482,571 ","$171,428,517 ",1,2,Finance and Economics,,1
+The formula for computing the capitalization rate on an income producing property is, Income divided by market value , Market value divided by income , Market value divided by interest rate , Income multiplied by interest rate , None of the above ,1,2,Finance and Economics,,
+The formula for computing the capitalization rate on an income producing property is, None of these , Market value divided by income , Market value divided by interest rate , Income multiplied by interest rate , Market rate multiplied by income ,1,2,Finance and Economics,,
+The formula for computing the market value of an income producing property is,Income divided by the market value,Income divided by the capitalization rate,Income multiplied by the capitalization rate,Capitalization rate divided by the market value,Capitalization rate multiplied by the market value,2,2,Finance and Economics,,
+The formula for computing the income of a property given a capitalization rate and market value is,Capitalization rate multiplied by the market value,Income divided by the capitalization rate,Income multiplied by the capitalization rate,Capitalization rate divided by the market value,Income divided by the market value,1,2,Finance and Economics,,
+1 acre equals how many square feet?,"43,560","34,650","46,530","34,560","43,056",1,2,Real Estate Math,,
+How many square feet are in 1 acre?,"43,560","34,650","46,530","34,560","43,056",1,2,Real Estate Math,,
+How many square feet are in 1 acre?,"43,560","34,650","46,530","34,560","43,056",1,2,Real Estate Math,,
+Yolanda buys an acre of land for $3 per square foot. How much did she pay?,"$43,560 ","$130,680 ","$168,300 ","$34,650 ","$130,860 ",2,2,Real Estate Math,1,1
 "Jamal bought land at $4.50 per square foot. He paid $98,010 for the land. How many acres did he purchase?",Half,One,One a half,Two,2.78 acres,1,2,Real Estate Math,,
-"Porter purchased three quarters of an acre for $49,005. How much did he pay per square foot?",$3.75,$1.50,$15.00,$0.15,$1.00,2,2,Real Estate Math,,1
+"Porter purchased three quarters of an acre for $49,005. How much did he pay per square foot?",$3.75 ,$1.50 ,$15.00 ,$0.15 ,$1.00 ,2,2,Real Estate Math,,1
 In what type of water supply can radon be found?,Water wells,Cooled water,Iced water,Sewage water,Waste water,1,2,Environmental Issues,,
 Radon can be found in what type of water supply?,Water wells,Chilled water,Air conditioner vent,Sewage water,Waste water,1,2,Environmental Issues,,
 "Linda bought land for $1 per square foot. She paid $43,560 for it. How many acres did she purchase?",43560,1,2,34560,4,2,2,Real Estate Math,,
-Nadia bought 2 acres of land at $2 per square foot. How much did she pay in total?,"$43,560","$87,210","$174,240","$45,360","$174,204",3,2,Real Estate Math,,
-7 acres is how many square feet?," 309,240 "," 87,120 "," 70,000 "," 304,920 "," 280,233 ",4,2,Real Estate Math,,
+Nadia bought 2 acres of land at $2 per square foot. How much did she pay in total?,"$43,560 ","$87,210 ","$174,240 ","$45,360 ","$174,204 ",3,2,Real Estate Math,,
+7 acres is how many square feet?,"309,240","87,120","70,000","304,920","280,233",4,2,Real Estate Math,,
 "How many acres is 87,210 square feet?",3,2.5,1.5,1,2,5,2,Real Estate Math,,
 Muhummad bought 3.5 acres of land at $1.25 per square feet. How much did he pay in total?,15557,190575,19575,1905.75,121968,2,2,Real Estate Math,,
 Which agent is responsible for protecting wetlands?,New York State Department of Health,Army Corps of Engineers,New York Board of Water,New York Department of Finance,New York Department of Buildings,2,2,Environmental Issues,,
@@ -1039,8 +1039,8 @@ Lori states she wishes to receive $1.2 million on the sale of her Lower East Sid
 "Assuming no other costs besides commission, seller Marika nets $100MM, paying a 1% commission. How much did Marika's building sell for?","$101,010,101 ","$101,110,010 ","$101,111,000 ","$101,101,101 ","$10,000,101 ",1,2,Real Estate Math,,
 A financial method property investors may used to evaluate the return on their investments is,Yield curve,Racks on racks,Stacks on stacks,Cash on cash,Discounted coupon flow,4,2,Commercial / Investment,,1
 The formula for cash on cash returns on a property is,Income divided by down payment,Income divided by the capitalization rate,Income divided by market value,Market value divided by down payment,Down payment,1,2,Commercial / Investment,,1
-"Terence invests in a property that produces $100K a year of income. He put $40,000 down and got a $300,000 mortgage at 3.7% interest. The market value of the property is $500,000. What's his cash on cash return?",20%,33.3%,40%,250%,3.7%,4,2,Commercial / Investment,,1
-"Terence invests in a property that produces $100K a year of income. He put $40,000 down and got a $600,000 mortgage at 3.7% interest. The market value of the property is $1,000,000. What's his cash on cash return?",16.7%,10%,60%,250%,3.70%,4,2,Commercial / Investment,1,1
+"Terence invests in a property that produces $100K a year of income. He put $40,000 down and got a $300,000 mortgage at 3.7% interest. The market value of the property is $500,000. What's his cash on cash return?",20%,33.30%,40%,250%,3.70%,4,2,Commercial / Investment,,1
+"Terence invests in a property that produces $100K a year of income. He put $40,000 down and got a $600,000 mortgage at 3.7% interest. The market value of the property is $1,000,000. What's his cash on cash return?",16.70%,10%,60%,250%,3.70%,4,2,Commercial / Investment,1,1
 "Clark invests in a property that produces $50K a year of income. He put $25,000 down and got a $500,000 mortgage at 3% interest. The market value of the property is $680,000. What's his cash on cash return?",200%,250%,10%,3%,25%,1,2,Commercial / Investment,,
 Calculating the return on investment on a property using its annual income and down payment is called,Cash on cash,ROI,Capitalization rate,Return on asset,Down payment returns,1,2,Commercial / Investment,,1
 Construction specifications state,Architectural drawings,Construction drawings,Specific boundaries,List and amounts of materials to be used in a construction project,The laws it chooses to follow,4,2,Construction,,
