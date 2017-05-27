@@ -317,7 +317,10 @@ public class PTBEController extends BaseAPIController {
 		qbi.choice5 = qb.getChoice5();
 		qbi.topicId = qb.getTopic().getId();
 		qbi.topicName = qb.getTopic().getName();
-		qbi.solutionDescription = qb.getSolutionDescription();
+		if(qb.getSolutionDescription()==null)
+			qbi.solutionDescription = "";
+		else
+			qbi.solutionDescription = qb.getSolutionDescription();
 		return qbi;
 	}
 		
