@@ -317,6 +317,7 @@ public class PTBEController extends BaseAPIController {
 		qbi.choice5 = qb.getChoice5();
 		qbi.topicId = qb.getTopic().getId();
 		qbi.topicName = qb.getTopic().getName();
+		qbi.solutionDescription = qb.getSolutionDescription();
 		return qbi;
 	}
 		
@@ -384,6 +385,8 @@ public class PTBEController extends BaseAPIController {
 		public Long topicId;
 		public String topicName;
 		public int answer;
+		public String solutionDescription;
+		
 		public String getQuestion() {
 			return question;
 		}
@@ -413,6 +416,9 @@ public class PTBEController extends BaseAPIController {
 		}
 		public String getTopicName() {
 			return topicName;
+		}
+		public String getSolutionDescription() {
+			return solutionDescription;
 		}
 	}
 	
