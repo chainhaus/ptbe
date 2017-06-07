@@ -188,7 +188,7 @@ public class PTBEController extends BaseAPIController {
 			return ok(cachedErrorUserNotFound);
 		if(u.isDisabled())
 			return ok(cachedErrorUserDisabled);
-		return ok(views.html.ptbe.ViewResetPassword.render(linkUUID));
+		return ok(views.html.ptbe.ViewResetPassword.render(linkUUID,ar.getUuid()));
 	}
 	
 	public Result submitResetPassword() {
@@ -203,7 +203,7 @@ public class PTBEController extends BaseAPIController {
 		String linkUUID = rp.getLinkUUID();
 		if(linkUUID==null || linkUUID.isEmpty())
 			return ok(cachedErrorNoLinkUUID);
-		AppRegistry ar = getAppRegistry();
+		AppRegistry ar = getAppRegistryFromQueryString();
 		if(ar==null)
 			return ok(cachedAppNotFound);
 		AuthenticatedUser u = ar.findUserByLinkUUID(linkUUID);
