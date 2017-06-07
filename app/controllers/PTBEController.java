@@ -213,7 +213,7 @@ public class PTBEController extends BaseAPIController {
 			return ok(cachedErrorUserDisabled);	
 		u.setPassword(rp.getNewPassword());
 		Ebean.update(u);
-		return ok(cachedSuccess);
+		return ok("Your password has been reset. Thank you!");
 	}
 
 
