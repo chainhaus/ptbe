@@ -180,7 +180,7 @@ public class PTBEController extends BaseAPIController {
 		String linkUUID = request().getQueryString("linkuuid");
 		if(linkUUID==null || linkUUID.isEmpty())
 			return ok(cachedErrorNoLinkUUID);
-		AppRegistry ar = getAppRegistry();
+		AppRegistry ar = getAppRegistryFromQueryString();
 		if(ar==null)
 			return ok(cachedAppNotFound);
 		AuthenticatedUser u = ar.findUserByLinkUUID(linkUUID);
