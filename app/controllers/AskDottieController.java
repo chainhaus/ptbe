@@ -17,7 +17,7 @@ public class AskDottieController extends BaseController {
 	}
 	
 	public String returnData() {
-		return response.replaceAll("SPEAK_MESSAGE", "There are 5 open houses in the area right now");
+		return response.replaceAll("SPEAK_MSG", "There are 5 open houses in the area right now");
 	}
 	
 	private static String response = "{		  \"version\": \"1.0\",		  \"response\": {		    \"outputSpeech\": {		      \"type\": \"SSML\",		      \"ssml\": \"<speak> SPEAK_MSG </speak>\"		    },		    \"card\": {		      \"content\": \"SPEAK_MSG\",		      \"title\": \"Space Facts\",		      \"type\": \"Simple\"		    },		    \"shouldEndSession\": true		  },		  \"sessionAttributes\": {}		}";
