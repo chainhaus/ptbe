@@ -15,6 +15,9 @@ libraryDependencies ++= Seq(
 libraryDependencies += evolutions
 libraryDependencies += filters
 
+// https://mvnrepository.com/artifact/com.amazon.alexa/alexa-skills-kit
+libraryDependencies += "com.amazon.alexa" % "alexa-skills-kit" % "1.3.1"
+
 // Specificy which are Ebeans, application.conf is not sufficient
 playEbeanModels in Compile := Seq("models.ptbe.*")
 
