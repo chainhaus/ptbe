@@ -42,7 +42,7 @@ public class Lifecycle extends BaseLifecycle {
 				for (CSVRecord r : records) {
 					q = new QuestionBank();
 					System.out.println(r.getRecordNumber());
-					q.setQuestion(r.get("question"));
+					q.setQuestion("T2 - " + r.get("question"));
 					q.setChoice1(r.get("choice1"));
 					q.setChoice2(r.get("choice2"));
 					q.setChoice3(r.get("choice3"));
@@ -59,8 +59,30 @@ public class Lifecycle extends BaseLifecycle {
 						q.setRegistered(true);
 					q.addApp(ar);
 					Ebean.save(q);
-					
 				}
+				ar = AppRegistry.getAppByAPIKey("b5fa48e9ce2a43c0a1e16601dc3ad649");
+				for (CSVRecord r : records) {
+					q = new QuestionBank();
+					System.out.println(r.getRecordNumber());
+					q.setQuestion("T2 - " + r.get("question"));
+					q.setChoice1(r.get("choice1"));
+					q.setChoice2(r.get("choice2"));
+					q.setChoice3(r.get("choice3"));
+					q.setChoice4(r.get("choice4"));
+					q.setChoice5(r.get("choice5"));
+					q.setAnswer(Integer.valueOf(r.get("answer")));
+					q.setDifficulty(Integer.valueOf(r.get("difficulty")));
+					q.setTopic(Topic.findTopicByName(r.get("topic")));
+					String free = r.get("free");
+					if(free.contains("1"))
+						q.setFree(true);
+					String registered = r.get("registered");
+					if(registered.contains("1"))
+						q.setRegistered(true);
+					q.addApp(ar);
+					Ebean.save(q);
+				}
+				
 				
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
