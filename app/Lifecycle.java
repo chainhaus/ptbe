@@ -2,8 +2,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
-import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 import javax.inject.Inject;
@@ -34,15 +32,44 @@ public class Lifecycle extends BaseLifecycle {
 	public Lifecycle(Environment env, Configuration conf, Application app, ApplicationLifecycle al, ImageService is) {
 		super(env, conf, app, al, is);
 		if(QuestionBank.find.findRowCount() < 1) {
+			Logger.info("Loading question bank");
 			try {
 				Reader in = new FileReader("conf/questions2.csv");
 				Iterable<CSVRecord> records = CSVFormat.EXCEL.withFirstRecordAsHeader().parse(in);
-				AppRegistry ar = AppRegistry.getAppByAPIKey("78f64513888c4ea6a8b6f04162e60bba");
 				QuestionBank q = null;
+				AppRegistry ar = AppRegistry.getAppByAPIKey("8df7340a493240ff889060c9f26081bc");
+				for (CSVRecord r : records) {
+						if(r.get("free").contains("1")) {
+							q = new QuestionBank();
+							System.out.println("Free - " + r.getRecordNumber());
+							q.setQuestion("Free - " + r.get("question"));
+							q.setChoice1(r.get("choice1"));
+							q.setChoice2(r.get("choice2"));
+							q.setChoice3(r.get("choice3"));
+							q.setChoice4(r.get("choice4"));
+							q.setChoice5(r.get("choice5"));
+							q.setAnswer(Integer.valueOf(r.get("answer")));
+							q.setDifficulty(Integer.valueOf(r.get("difficulty")));
+							q.setTopic(Topic.findTopicByName(r.get("topic")));
+							String free = r.get("free");
+							if(free.contains("1"))
+								q.setFree(true);
+							String registered = r.get("registered");
+							if(registered.contains("1"))
+								q.setRegistered(true);
+							q.addApp(ar);
+							Ebean.save(q);
+						}
+				}
+				
+				in = new FileReader("conf/questions2.csv");
+				records = CSVFormat.EXCEL.withFirstRecordAsHeader().parse(in);
+				ar = AppRegistry.getAppByAPIKey("78f64513888c4ea6a8b6f04162e60bba");
+				
 				for (CSVRecord r : records) {
 					q = new QuestionBank();
-					System.out.println(r.getRecordNumber());
-					q.setQuestion("T2 - " + r.get("question"));
+					System.out.println("T1 - " + r.getRecordNumber());
+					q.setQuestion("T1 - " + r.get("question"));
 					q.setChoice1(r.get("choice1"));
 					q.setChoice2(r.get("choice2"));
 					q.setChoice3(r.get("choice3"));
@@ -60,10 +87,13 @@ public class Lifecycle extends BaseLifecycle {
 					q.addApp(ar);
 					Ebean.save(q);
 				}
+				
+				in = new FileReader("conf/questions2.csv");
+				records = CSVFormat.EXCEL.withFirstRecordAsHeader().parse(in);
 				ar = AppRegistry.getAppByAPIKey("b5fa48e9ce2a43c0a1e16601dc3ad649");
 				for (CSVRecord r : records) {
 					q = new QuestionBank();
-					System.out.println(r.getRecordNumber());
+					System.out.println("T2 - " + r.getRecordNumber());
 					q.setQuestion("T2 - " + r.get("question"));
 					q.setChoice1(r.get("choice1"));
 					q.setChoice2(r.get("choice2"));
@@ -91,6 +121,8 @@ public class Lifecycle extends BaseLifecycle {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			
+			Logger.info("Load complete");
 		}
 		
 		

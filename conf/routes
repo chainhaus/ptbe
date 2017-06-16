@@ -20,7 +20,6 @@ GET		/verifyEmail					controllers.PTBEController.verifyEmail(ticket:String)
 
 # api
 GET		/api/1/getQuestionBank			controllers.PTBEController.getQuestionBank()
-GET		/api/1/getQuestionBankPremium	controllers.PTBEController.getQuestionBankPremium()
 POST	/api/1/resetPassword			controllers.PTBEController.resetPassword()
 POST	/api/1/authenticateUser			controllers.PTBEController.authenticateUser()
 GET		/api/1/getVersion				controllers.PTBEController.getVersionJSON()
@@ -32,8 +31,3 @@ GET		/api/1/getTopics				controllers.PTBEController.getTopics()
 GET		/api/1/getTestHistory			controllers.PTBEController.getTestHistory()
 GET		/api/1/getMOTD					controllers.PTBEController.getMOTD()
 GET		/ping							controllers.PTBEController.ping()
-
-
-# ask dottie
-GET		/askdottie						controllers.AskDottieController.processRequestGet()
-POST	/askdottie						controllers.AskDottieController.processRequestPost()

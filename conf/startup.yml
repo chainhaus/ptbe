@@ -7,6 +7,16 @@
     adImageURL: http://s3.amazonaws.com/passthebrokerexam/adTransactFund.png
     adClickURL: http://transactfund.com
 
+- &nysalesfree !!models.raven.AppRegistry
+    appName: NY Salesperson Free
+    apiKey: 8df7340a493240ff889060c9f26081bc
+    resetPasswordURL: https://api.passthebrokerexam.com/resetPassword
+    resetPasswordEmailTemplate: b4c8d0ab-ce5f-43d8-a41e-f88b03af5f0d
+    confirmEmailURL: https://api.passthebrokerexam.com/verifyEmail
+    confirmEmailEmailTemplate: 09b341b2-7369-4155-b497-ccf0d96d0908
+    majorVersion: 1
+    minorVersion: 1
+
 
 - &nysalesapp !!models.raven.AppRegistry
     appName: NY Salesperson

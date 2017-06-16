@@ -239,7 +239,7 @@ public class PTBEController extends BaseAPIController {
 		return redirect(routes.PTBEController.viewAddQuestion());
 	}
 	
-	public Result getQuestionBank() {
+/*	public Result getQuestionBank() {
 		if(!isValidAPIKey() || !isValidSessionKey())
 			return ok(cachedErrorInvalidKey);	
 		String email = getEmailKey();
@@ -262,9 +262,9 @@ public class PTBEController extends BaseAPIController {
 		json.statusCode = 0;
 		json.questions = qbi;
 		return ok(Json.toJson(json));
-	}
+	}*/
 
-	public Result getQuestionBankPremium() {
+	public Result getQuestionBank() {
 		if(!isValidAPIKey() || !isValidSessionKey())
 			return ok(cachedErrorInvalidKey);	
 		//if(!isPurchasedInApp())
